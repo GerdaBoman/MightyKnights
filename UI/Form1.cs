@@ -1,14 +1,15 @@
 using DataAccess.Data;
 using FontAwesome.Sharp;
+
 namespace UI
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class Form1 : Form
     {
         private IconButton currentButton;
         private Panel leftBorderButton;
         private System.Windows.Forms.Form currentChildForm;
 
-        public Form()
+        public Form1()
         {
             InitializeComponent();
             MightyKnightsContext db = new();
@@ -17,8 +18,48 @@ namespace UI
             leftBorderButton = new Panel();
             leftBorderButton.Size = new Size(7, 60);
             MenuPanel.Controls.Add(leftBorderButton);
-            //OpenChildForm(new FormHome());
+            OpenChildForm(new FormHome());
         }
+
+        #region Buttons
+        private void logoButton_Click(object sender, EventArgs e)
+        {
+            currentChildForm.Close();
+            DisableHighlightButton();
+            OpenChildForm(new FormHome());
+            currentChildButton.IconChar = IconChar.Home;
+
+        }
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            HighlightButton(sender, Color.FromArgb(56, 111, 164));
+            OpenChildForm(new FormHome());
+        }
+
+        private void ParkingLotButton_Click(object sender, EventArgs e)
+        {
+            HighlightButton(sender, Color.FromArgb(56, 111, 164));
+            OpenChildForm(new FormParkingLot());
+        }
+
+        private void VehicleManagementButton_Click(object sender, EventArgs e)
+        {
+            HighlightButton(sender, Color.FromArgb(56, 111, 164));
+            OpenChildForm(new FormVehicleManagement());
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            HighlightButton(sender, Color.FromArgb(56, 111, 164));
+            OpenChildForm(new FormSettings());
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            HighlightButton(sender, Color.FromArgb(56, 111, 164));
+            Application.Exit();
+        }
+        #endregion
 
         private void OpenChildForm(System.Windows.Forms.Form childForm)
         {
@@ -37,36 +78,7 @@ namespace UI
             currentChildFormLabel.Text = childForm.Text;
         }
 
-
-        private void HomeButton_Click(object sender, EventArgs e)
-        {
-            HighlightButton(sender, Color.FromArgb(56, 111, 164));
-            //OpenChildForm(new FormHome());
-        }
-
-        private void parkingLotButton_Click(object sender, EventArgs e)
-        {
-            HighlightButton(sender, Color.FromArgb(56, 111, 164));
-            //OpenChildForm(new FormParkingLot());
-        }
-
-        private void vehicleManagementButton_Click(object sender, EventArgs e)
-        {
-            HighlightButton(sender, Color.FromArgb(56, 111, 164));
-            //OpenChildForm(new FormVehicleManagement());
-        }
-
-        private void settingButton_Click(object sender, EventArgs e)
-        {
-            HighlightButton(sender, Color.FromArgb(56, 111, 164));
-            //OpenChildForm(new FormSettings());
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            HighlightButton(sender, Color.FromArgb(56, 111, 164));
-            Application.Exit();
-        }
+        #region Button Highlights
 
         private void HighlightButton(object selectedButton, Color colour)
         {
@@ -108,14 +120,8 @@ namespace UI
 
             }
         }
+        #endregion
 
-        private void logoButton_Click(object sender, EventArgs e)
-        {
-            currentChildForm.Close();
-            DisableHighlightButton();
-            //OpenChildForm(new FormHome());
-            currentChildButton.IconChar = IconChar.Home;
 
-        }
     }
 }
