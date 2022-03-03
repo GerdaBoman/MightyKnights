@@ -16,7 +16,7 @@ namespace DataAccess.Data
         {
         }
 
-        public virtual DbSet<AllVehicle> AllVehicles { get; set; } = null!;
+        public virtual DbSet<Vehicle> Vehicles { get; set; } = null!;
         public virtual DbSet<HistoryLogg> HistoryLoggs { get; set; } = null!;
         public virtual DbSet<ParkingLot> ParkingLots { get; set; } = null!;
 
@@ -30,7 +30,7 @@ namespace DataAccess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<AllVehicle>(entity =>
+            modelBuilder.Entity<Vehicle>(entity =>
             {
                 entity.HasKey(e => e.VehicleId)
                     .HasName("PK__AllVehic__476B54B2ABF03991");
@@ -41,7 +41,7 @@ namespace DataAccess.Data
 
                 entity.Property(e => e.LicancePlate).HasMaxLength(50);
 
-                entity.Property(e => e.VechileType).HasMaxLength(50);
+                entity.Property(e => e.VehicleType).HasMaxLength(50);
             });
 
             modelBuilder.Entity<HistoryLogg>(entity =>
@@ -85,7 +85,7 @@ namespace DataAccess.Data
                     .WithMany(p => p.ParkingSpots)
                     .UsingEntity<Dictionary<string, object>>(
                         "ParkedVehicle",
-                        l => l.HasOne<AllVehicle>().WithMany().HasForeignKey("VehicleId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_ParkedVehicles_AllVehicles"),
+                        l => l.HasOne<Vehicle>().WithMany().HasForeignKey("VehicleId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_ParkedVehicles_AllVehicles"),
                         r => r.HasOne<ParkingLot>().WithMany().HasForeignKey("ParkingSpotId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_ParkedVehicles_ParkingLot"),
                         j =>
                         {

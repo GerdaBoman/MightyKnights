@@ -79,9 +79,9 @@
             this.pSpot48 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.ParkingSpots = new System.Windows.Forms.ColumnHeader();
+            this.licancePlate = new System.Windows.Forms.ColumnHeader();
             this.vehicleType = new System.Windows.Forms.ColumnHeader();
-            this.RegNumber = new System.Windows.Forms.ColumnHeader();
-            this.date = new System.Windows.Forms.ColumnHeader();
+            this.checkInDate = new System.Windows.Forms.ColumnHeader();
             this.selectButton = new System.Windows.Forms.Button();
             this.ParkLabel = new System.Windows.Forms.Label();
             this.parkingSpotBox = new System.Windows.Forms.TextBox();
@@ -632,12 +632,12 @@
             this.listView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ParkingSpots,
+            this.licancePlate,
             this.vehicleType,
-            this.RegNumber,
-            this.date});
+            this.checkInDate});
             this.listView1.Location = new System.Drawing.Point(807, 339);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(401, 167);
+            this.listView1.Size = new System.Drawing.Size(459, 167);
             this.listView1.TabIndex = 18;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -647,20 +647,20 @@
             this.ParkingSpots.Text = "Parking Spot";
             this.ParkingSpots.Width = 100;
             // 
+            // licancePlate
+            // 
+            this.licancePlate.Text = "Licance Plate";
+            this.licancePlate.Width = 100;
+            // 
             // vehicleType
             // 
             this.vehicleType.Text = "Vehicle Type";
             this.vehicleType.Width = 100;
             // 
-            // RegNumber
+            // checkInDate
             // 
-            this.RegNumber.Text = "Registration Number";
-            this.RegNumber.Width = 100;
-            // 
-            // date
-            // 
-            this.date.Text = "Date";
-            this.date.Width = 80;
+            this.checkInDate.Text = "Check In Date";
+            this.checkInDate.Width = 150;
             // 
             // selectButton
             // 
@@ -1441,9 +1441,9 @@
         private Button pSpot48;
         private ListView listView1;
         private ColumnHeader ParkingSpots;
+        private ColumnHeader licancePlate;
         private ColumnHeader vehicleType;
-        private ColumnHeader RegNumber;
-        private ColumnHeader date;
+        private ColumnHeader checkInDate;
         private Button selectButton;
         private Label ParkLabel;
         private TextBox parkingSpotBox;

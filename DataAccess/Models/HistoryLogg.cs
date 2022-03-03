@@ -11,6 +11,6 @@ namespace DataAccess.Models
         public decimal? Price { get; set; }
         public decimal? PaidAmount { get; set; }
 
-        public virtual AllVehicle Vehicle { get; set; } = null!;
+        public virtual Vehicle Vehicle { get; set; } = null!;
     }
 }
