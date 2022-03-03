@@ -56,7 +56,6 @@ namespace DataAccess.Data
                     .HasColumnName("ParkingSpotID");
 
                 entity.Property(e => e.VehicleId)
-                    .HasMaxLength(50)
                     .HasColumnName("VehicleID");
 
                 entity.HasMany(d => d.Vehicles)

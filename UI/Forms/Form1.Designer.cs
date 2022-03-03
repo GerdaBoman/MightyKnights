@@ -58,7 +58,7 @@
             this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(200, 777);
+            this.MenuPanel.Size = new System.Drawing.Size(200, 811);
             this.MenuPanel.TabIndex = 0;
             // 
             // SettingsButton
@@ -73,7 +73,7 @@
             this.SettingsButton.IconColor = System.Drawing.Color.Gainsboro;
             this.SettingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SettingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SettingsButton.Location = new System.Drawing.Point(0, 637);
+            this.SettingsButton.Location = new System.Drawing.Point(0, 671);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.SettingsButton.Size = new System.Drawing.Size(200, 70);
@@ -95,7 +95,7 @@
             this.ExitButton.IconColor = System.Drawing.Color.Gainsboro;
             this.ExitButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ExitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ExitButton.Location = new System.Drawing.Point(0, 707);
+            this.ExitButton.Location = new System.Drawing.Point(0, 741);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ExitButton.Size = new System.Drawing.Size(200, 70);
@@ -192,7 +192,7 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDashboard.Location = new System.Drawing.Point(200, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1142, 70);
+            this.panelDashboard.Size = new System.Drawing.Size(1184, 70);
             this.panelDashboard.TabIndex = 1;
             // 
             // currentChildButton
@@ -226,7 +226,7 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(200, 70);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1142, 707);
+            this.panelDesktop.Size = new System.Drawing.Size(1184, 741);
             this.panelDesktop.TabIndex = 2;
             // 
             // panelShadow
@@ -235,14 +235,14 @@
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(0, 0);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1142, 10);
+            this.panelShadow.Size = new System.Drawing.Size(1184, 10);
             this.panelShadow.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1342, 777);
+            this.ClientSize = new System.Drawing.Size(1384, 811);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.MenuPanel);
