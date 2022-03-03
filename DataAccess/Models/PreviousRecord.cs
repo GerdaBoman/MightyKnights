@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccess.Models
 {
-    public partial class HistoryLogg
+    public partial class PreviousRecord
     {
         public int VehicleId { get; set; }
         public int? ParkingSpotId { get; set; }
