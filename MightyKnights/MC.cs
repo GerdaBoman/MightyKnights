@@ -16,6 +16,26 @@ public class Mc : Vehicle
                 UnitSize = 2
             };
             context.Vehicles.Add(mc);
+            context.SaveChanges();
+        }
+    }
+
+    public void ParkMc(int parkingSpot, string licancePlate)
+    {
+        using (var context = new MightyKnightsContext())
+        {
+            var vehicleId = (from v in context.Vehicles
+                             where v.LicancePlate == licancePlate
+                             select v.VehicleId).FirstOrDefault();
+
+            ParkingLot parkingMc = new ParkingLot();
+
+            parkingMc.ParkingSpotId = parkingSpot;
+            parkingMc.VehicleId = vehicleId;
+            parkingMc.CheckInDate = DateTime.Now;
+
+            context.ParkingLots.Add(parkingMc);
+            context.SaveChanges();
         }
     }
 }

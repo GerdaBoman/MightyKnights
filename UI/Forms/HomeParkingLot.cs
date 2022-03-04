@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI.ListViewer;
+using UI.ParkingSpotCosmetic;
 
 namespace UI
 {
@@ -17,13 +18,14 @@ namespace UI
     {
         ListViewRefresh refresh = new ();
         CheckDbForData check = new();
+        ParkingSpotColor color = new();
 
 
         public FormParkingLot()
         {
             InitializeComponent();
 
-            //Filling in "full spots" 
+            
             using (MightyKnightsContext context = new MightyKnightsContext())
             {
                 var fullSpots = (from p in context.ParkingLots
@@ -33,8 +35,8 @@ namespace UI
                     string chosenSpot = "pSpot" + spot;
 
                     Button myButton = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
-                    myButton.Tag = spot;
-                    myButton.BackColor = Color.Red;
+
+                    color.SpotsStatus(spot, myButton);
 
                 }
             }
@@ -52,20 +54,25 @@ namespace UI
 
         private void CheckInButton_Click(object sender, EventArgs e)
         {
-            bool? spotStatus = null;
-            
+            string vehicleType = vehicleCombo.GetItemText(vehicleCombo.SelectedItem.ToString());
+            bool? spotStatus;
 
-            if(vehicleCombo.GetItemText(vehicleCombo.SelectedItem) == "Car")
+            int parkingSpot = int.Parse(parkingSpotBox.Text);
+            string chosenSpot = "pSpot" + parkingSpotBox.Text;
+            Button takenSpot = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
+            bool checkLicancePlate = check.CheckIfVehicleExist(regPlateTextBox.Text.ToString());
+
+            switch (vehicleType)
             {
-                int parkingSpot = int.Parse(parkingSpotBox.Text);
-                string chosenSpot = "pSpot" + parkingSpotBox.Text;
-                Button takenSpot = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
+                case "Car":
 
-               bool checkLicancePlate = check.CheckIfVehicleExist(regPlateTextBox.Text.ToString());
+                    #region Adding Car
+           
                 if(checkLicancePlate == true)
                 {
                     MessageBox.Show("This vechile is already in parking lot");
                     regPlateTextBox.Clear();
+                        break;
                 }
                 else
                 {
@@ -74,13 +81,16 @@ namespace UI
                     {
                         MessageBox.Show("Chosen parking spot is already full!");
                         parkingSpotBox.Clear();
+                            break;
                     }
                     else
                     {
                         Car car = new Car();
                         car.AddCar(regPlateTextBox.Text.ToString());
                         car.ParkCar(parkingSpot, regPlateTextBox.Text.ToString());
-                        takenSpot.BackColor = Color.Red;
+
+
+                       color.SpotsStatus(parkingSpot, takenSpot);
 
                         regPlateTextBox.Clear();
                         vehicleCombo.ResetText();
@@ -88,11 +98,49 @@ namespace UI
 
                         listView1.Items.Clear();
                         refresh.RefreshListViewer(listView1);
+                            break;
                     }
 
                 }
+                #endregion
 
-                
+                case "Motercycle":
+
+                    #region Adding Motercycle
+                    if (checkLicancePlate == true)
+                    {
+                        MessageBox.Show("This vechile is already in parking lot");
+                        regPlateTextBox.Clear();
+                        break;
+                    }
+                    else
+                    {
+                        spotStatus = check.CheckIfSpotFull(parkingSpot);
+                        if (spotStatus == true)
+                        {
+                            MessageBox.Show("Chosen parking spot is already full!");
+                            parkingSpotBox.Clear();
+                            break;
+                        }
+                        else
+                        {
+                            Mc mc = new Mc();
+                            mc.AddMc(regPlateTextBox.Text.ToString());
+                            mc.ParkMc(parkingSpot, regPlateTextBox.Text.ToString());
+
+                            color.SpotsStatus(parkingSpot, takenSpot);
+
+                            regPlateTextBox.Clear();
+                            vehicleCombo.ResetText();
+                            parkingSpotBox.Clear();
+
+                            listView1.Items.Clear();
+                            refresh.RefreshListViewer(listView1);
+                            break;
+                        }
+
+                    }
+                    #endregion
             }
         }
     }

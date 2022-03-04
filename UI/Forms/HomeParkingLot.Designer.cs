@@ -1350,9 +1350,7 @@
             this.vehicleCombo.FormattingEnabled = true;
             this.vehicleCombo.Items.AddRange(new object[] {
             "Car",
-            "Motercycle",
-            "Bicycle",
-            "Bus"});
+            "Motercycle"});
             this.vehicleCombo.Location = new System.Drawing.Point(974, 149);
             this.vehicleCombo.Name = "vehicleCombo";
             this.vehicleCombo.Size = new System.Drawing.Size(134, 23);
