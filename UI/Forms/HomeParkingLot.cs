@@ -16,7 +16,8 @@ namespace UI
     public partial class FormParkingLot : Form
     {
         ListViewRefresh refresh = new ();
-        ParkingSpotStatus status = new ParkingSpotStatus ();
+        CheckDbForData check = new();
+
 
         public FormParkingLot()
         {
@@ -52,40 +53,36 @@ namespace UI
         private void CheckInButton_Click(object sender, EventArgs e)
         {
             bool? spotStatus = null;
+            
 
             if(vehicleCombo.GetItemText(vehicleCombo.SelectedItem) == "Car")
             {
                 int parkingSpot = int.Parse(parkingSpotBox.Text);
                 string chosenSpot = "pSpot" + parkingSpotBox.Text;
                 Button takenSpot = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
-                try
+
+               bool checkLicancePlate = check.CheckIfVehicleExist(regPlateTextBox.Text.ToString());
+                if(checkLicancePlate == true)
                 {
-                     spotStatus = int.TryParse(takenSpot.Tag.ToString(), out int spotSize);
+                    MessageBox.Show("This vechile is already in parking lot");
                 }
-                catch
+                else
                 {
-                     spotStatus = false;
-                }
-                finally
-                {
-                    if (spotStatus == false)
+                    spotStatus = check.CheckIfSpotFull(parkingSpot);
+                    if(spotStatus == true)
+                    {
+                        MessageBox.Show("Chosen parking spot is already full!");
+                    }
+                    else
                     {
                         Car car = new Car();
                         car.AddCar(regPlateTextBox.Text.ToString());
                         car.ParkCar(parkingSpot, regPlateTextBox.Text.ToString());
-
-                        takenSpot.Tag = status.CarSize(regPlateTextBox.Text.ToString());
                         takenSpot.BackColor = Color.Red;
+                    }
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Chosen parking space is already full");
-                    }
                 }
-                
-                
- 
+
                 regPlateTextBox.Clear();
                 vehicleCombo.ResetText();
                 parkingSpotBox.Clear();
