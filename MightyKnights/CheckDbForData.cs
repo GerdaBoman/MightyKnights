@@ -45,7 +45,7 @@ namespace Core
                                   where p.ParkingSpotId == parkingSpot
                                   select v.UnitSize).ToList();
                 
-            if (checkIfFull.Contains(4))
+            if (checkIfFull.Sum()== 4)
                 {
                     return true;
                 }
