@@ -11,7 +11,7 @@ namespace Core
     {
         public static bool DataExist()
         {
-            using (MightyKnightsContext db=new MightyKnightsContext())
+            using (var db=new MightyKnightsContext())
             {
                 if(!db.ParkingLots.Any())
                 {

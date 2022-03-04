@@ -13,7 +13,7 @@ namespace UI.ListViewer
         public void RefreshListViewer(ListView listViewer)
         {
 
-            using (MightyKnightsContext db = new MightyKnightsContext())
+            using (var db = new MightyKnightsContext())
             {
                 var parkingLotList = (from p in db.ParkingLots
                                 join v in db.Vehicles on p.VehicleId equals v.VehicleId
