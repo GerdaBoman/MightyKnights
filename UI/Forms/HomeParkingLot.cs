@@ -60,7 +60,7 @@ namespace UI
                 Button takenSpot = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
                 try
                 {
-                     spotStatus = bool.Parse(takenSpot.Tag.ToString());
+                     spotStatus = int.TryParse(takenSpot.Tag.ToString(), out int spotSize);
                 }
                 catch
                 {
