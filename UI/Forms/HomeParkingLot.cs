@@ -65,6 +65,7 @@ namespace UI
                 if(checkLicancePlate == true)
                 {
                     MessageBox.Show("This vechile is already in parking lot");
+                    regPlateTextBox.Clear();
                 }
                 else
                 {
@@ -72,6 +73,7 @@ namespace UI
                     if(spotStatus == true)
                     {
                         MessageBox.Show("Chosen parking spot is already full!");
+                        parkingSpotBox.Clear();
                     }
                     else
                     {
@@ -79,16 +81,18 @@ namespace UI
                         car.AddCar(regPlateTextBox.Text.ToString());
                         car.ParkCar(parkingSpot, regPlateTextBox.Text.ToString());
                         takenSpot.BackColor = Color.Red;
+
+                        regPlateTextBox.Clear();
+                        vehicleCombo.ResetText();
+                        parkingSpotBox.Clear();
+
+                        listView1.Items.Clear();
+                        refresh.RefreshListViewer(listView1);
                     }
 
                 }
 
-                regPlateTextBox.Clear();
-                vehicleCombo.ResetText();
-                parkingSpotBox.Clear();
-
-                listView1.Items.Clear();
-                refresh.RefreshListViewer(listView1);
+                
             }
         }
     }
