@@ -1,4 +1,5 @@
-﻿using Core;
+﻿
+using Core;
 using DataAccess.Data;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace UI
 {
     public partial class FormParkingLot : Form
     {
-        ListViewRefresh refresh = new ();
+        ListViewRefresh refresh = new();
         CheckDbForData check = new();
         ParkingSpotColor color = new();
 
@@ -25,11 +26,11 @@ namespace UI
         {
             InitializeComponent();
 
-            
+       
             using (MightyKnightsContext context = new MightyKnightsContext())
             {
                 var fullSpots = (from p in context.ParkingLots
-                                 select p.ParkingSpotId).ToList();
+                                 select p.ParkingSpot).ToList();
                 foreach (var spot in fullSpots)
                 {
                     string chosenSpot = "pSpot" + spot;
@@ -67,42 +68,44 @@ namespace UI
                 case "Car":
 
                     #region Adding Car
-           
-                if(checkLicancePlate == true)
-                {
-                    MessageBox.Show("This vechile is already in parking lot");
-                    regPlateTextBox.Clear();
-                        break;
-                }
-                else
-                {
-                    spotStatus = check.CheckIfSpotFull(parkingSpot);
-                    if(spotStatus == true)
+
+                    if (checkLicancePlate == true)
                     {
-                        MessageBox.Show("Chosen parking spot is already full!");
-                        parkingSpotBox.Clear();
-                            break;
+                        MessageBox.Show("This vechile is already in parking lot");
+                        regPlateTextBox.Clear();
+                        break;
                     }
                     else
                     {
-                        Car car = new Car();
-                        car.AddCar(regPlateTextBox.Text.ToString());
-                        car.ParkCar(parkingSpot, regPlateTextBox.Text.ToString());
-
-
-                       color.SpotsStatus(parkingSpot, takenSpot);
-
-                        regPlateTextBox.Clear();
-                        vehicleCombo.ResetText();
-                        parkingSpotBox.Clear();
-
-                        listView1.Items.Clear();
-                        refresh.RefreshListViewer(listView1);
+                        spotStatus = check.CheckIfSpotFull(parkingSpot);
+                        if (spotStatus == true)
+                        {
+                            MessageBox.Show("Chosen parking spot is already full!");
+                            parkingSpotBox.Clear();
                             break;
-                    }
+                        }
+                        else
+                        {
+                            Car car = new Car();
+                            car.AddCar(regPlateTextBox.Text.ToString());
+                            car.ParkCar(parkingSpot, regPlateTextBox.Text.ToString());
 
-                }
+
+                            color.SpotsStatus(parkingSpot, takenSpot);
+
+                            regPlateTextBox.Clear();
+                            vehicleCombo.ResetText();
+                            parkingSpotBox.Clear();
+
+                            listView1.Items.Clear();
+                            refresh.RefreshListViewer(listView1);
+                            break;
+                        }
+
+                    }
                 #endregion
+
+
 
                 case "Motercycle":
 
@@ -139,9 +142,13 @@ namespace UI
                             break;
                         }
 
+
                     }
                     #endregion
+
             }
         }
     }
 }
+    
+

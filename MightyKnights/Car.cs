@@ -1,5 +1,7 @@
 ﻿
 
+
+
 using DataAccess.Data;
 using DataAccess.Models;
 
@@ -14,7 +16,7 @@ public class Car : Vehicle
             var car = new Car()
             {
                 LicancePlate = licencePlate,
-                VehiclesTypes = "Car",
+                VehicleType = "Car",
                 UnitSize = 4
             };
             context.Vehicles.Add(car);
@@ -24,7 +26,7 @@ public class Car : Vehicle
 
     public void ParkCar(int parkingSpot, string licancePlate)
     {
-        using(var context = new MightyKnightsContext())
+        using (var context = new MightyKnightsContext())
         {
             var vehicleId = (from v in context.Vehicles
                              where v.LicancePlate == licancePlate
@@ -32,7 +34,7 @@ public class Car : Vehicle
 
             ParkingLot parkingCar = new ParkingLot();
 
-            parkingCar.ParkingSpotId = parkingSpot;
+            parkingCar.ParkingSpot = parkingSpot;
             parkingCar.VehicleId = vehicleId;
             parkingCar.CheckInDate = DateTime.Now;
 

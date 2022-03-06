@@ -11,11 +11,11 @@ namespace DataAccess.Models
         }
 
         public int VehicleId { get; set; }
-        public string LicancePlate { get; set; } = null!;
-        public string? VehiclesTypes { get; set; }
+        public string? LicancePlate { get; set; }
+        public string? VehicleType { get; set; }
         public int? UnitSize { get; set; }
 
-        public virtual PreviousRecord PreviousRecord { get; set; } = null!;
+        public virtual HistoryLog HistoryLog { get; set; } = null!;
 
         public virtual ICollection<ParkingLot> ParkingSpots { get; set; }
     }

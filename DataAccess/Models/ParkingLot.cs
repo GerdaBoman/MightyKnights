@@ -11,7 +11,8 @@ namespace DataAccess.Models
         }
 
         public int ParkingSpotId { get; set; }
-        public int VehicleId { get; set; } 
+        public int VehicleId { get; set; }
+        public int ParkingSpot { get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime? CheckOutDate { get; set; }
 

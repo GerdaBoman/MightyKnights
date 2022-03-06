@@ -12,7 +12,7 @@ public class Mc : Vehicle
             var mc = new Mc()
             {
                 LicancePlate = licencePlate,
-                VehiclesTypes = "MC",
+                VehicleType = "MC",
                 UnitSize = 2
             };
             context.Vehicles.Add(mc);
@@ -30,7 +30,7 @@ public class Mc : Vehicle
 
             ParkingLot parkingMc = new ParkingLot();
 
-            parkingMc.ParkingSpotId = parkingSpot;
+            parkingMc.ParkingSpot = parkingSpot;
             parkingMc.VehicleId = vehicleId;
             parkingMc.CheckInDate = DateTime.Now;
 

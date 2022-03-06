@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 
-namespace DataAccess.Data
+namespace UI.Data
 {
     public partial class MightyKnightsContext : DbContext
     {

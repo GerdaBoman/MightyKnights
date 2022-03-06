@@ -16,20 +16,20 @@ namespace UI.ListViewer
             using (var db = new MightyKnightsContext())
             {
                 var parkingLotList = (from p in db.ParkingLots
-                                join v in db.Vehicles on p.VehicleId equals v.VehicleId
-                                select new
-                                {
-                                   ParkingSpot = p.ParkingSpotId , 
-                                   LicancePlate = v.LicancePlate,
-                                   CheckInDate = p.CheckInDate
-                                }).ToList();
+                                      join v in db.Vehicles on p.VehicleId equals v.VehicleId
+                                      select new
+                                      {
+                                          ParkingSpot = p.ParkingSpotId,
+                                          LicancePlate = v.LicancePlate,
+                                          CheckInDate = p.CheckInDate
+                                      }).ToList();
 
                 foreach (var parkedVehicle in parkingLotList)
                 {
                     ListViewItem item = new ListViewItem(parkedVehicle.ParkingSpot.ToString());
                     item.SubItems.Add(parkedVehicle.LicancePlate.ToString());
                     item.SubItems.Add(parkedVehicle.CheckInDate.ToString());
-                   
+
                     listViewer.Items.Add(item);
                 }
 
