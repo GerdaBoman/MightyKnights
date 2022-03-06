@@ -21,6 +21,7 @@ namespace UI
             leftBorderButton.Size = new Size(7, 60);
             MenuPanel.Controls.Add(leftBorderButton);
             OpenChildForm(new FormHome());
+            timer.Start();
         }
 
         #region Buttons
@@ -122,8 +123,12 @@ namespace UI
 
             }
         }
+
         #endregion
 
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ClockStatusStrip.Text = DateTime.Now.ToString("T");
+        }
     }
 }

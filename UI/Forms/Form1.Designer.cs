@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MenuPanel = new System.Windows.Forms.Panel();
             this.SettingsButton = new FontAwesome.Sharp.IconButton();
             this.ExitButton = new FontAwesome.Sharp.IconButton();
@@ -40,10 +41,14 @@
             this.currentChildFormLabel = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelShadow = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ClockStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).BeginInit();
             this.panelDashboard.SuspendLayout();
             this.panelDesktop.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuPanel
@@ -222,6 +227,7 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(165)))), ((int)(((byte)(216)))));
+            this.panelDesktop.Controls.Add(this.statusStrip1);
             this.panelDesktop.Controls.Add(this.panelShadow);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(200, 70);
@@ -238,6 +244,30 @@
             this.panelShadow.Size = new System.Drawing.Size(1184, 10);
             this.panelShadow.TabIndex = 0;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ClockStatusStrip});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 711);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1184, 30);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStripBar";
+            // 
+            // ClockStatusStrip
+            // 
+            this.ClockStatusStrip.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClockStatusStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ClockStatusStrip.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ClockStatusStrip.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ClockStatusStrip.Name = "ClockStatusStrip";
+            this.ClockStatusStrip.Size = new System.Drawing.Size(82, 25);
+            this.ClockStatusStrip.Text = "00:00:00";
+            // 
+            // timer1
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -253,6 +283,9 @@
             this.panelDashboard.ResumeLayout(false);
             this.panelDashboard.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +304,8 @@
         private Panel panelShadow;
         private Label currentChildFormLabel;
         private FontAwesome.Sharp.IconButton currentChildButton;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel ClockStatusStrip;
+        private System.Windows.Forms.Timer timer;
     }
 }
