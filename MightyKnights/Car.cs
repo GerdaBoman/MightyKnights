@@ -32,7 +32,7 @@ public class Car : Vehicle
                              where v.LicancePlate == licancePlate
                              select v.VehicleId).FirstOrDefault();
 
-            ParkingLot parkingCar = new ParkingLot();
+            ParkingLot parkingCar = new ();
 
             parkingCar.ParkingSpot = parkingSpot;
             parkingCar.VehicleId = vehicleId;

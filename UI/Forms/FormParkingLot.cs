@@ -1,15 +1,7 @@
 ﻿
 using Core;
 using DataAccess.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using UI.ListViewer;
 using UI.ParkingSpotCosmetic;
 
@@ -106,7 +98,6 @@ namespace UI
                 #endregion
 
 
-
                 case "Motercycle":
 
                     #region Adding Motercycle
@@ -148,6 +139,19 @@ namespace UI
 
             }
         }
+
+       // Parking Spot Status
+        private void pSpot1_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            string buttonText = button.Text.ToString();
+            int selectedSpot = Int32.Parse(buttonText);
+
+           MessageBox.Show(check.CheckParkingSpotStatus(selectedSpot));
+
+        }
+
+        
     }
 }
     

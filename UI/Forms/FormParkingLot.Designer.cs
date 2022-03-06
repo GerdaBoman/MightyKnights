@@ -162,8 +162,10 @@
             this.pSpot1.Name = "pSpot1";
             this.pSpot1.Size = new System.Drawing.Size(60, 60);
             this.pSpot1.TabIndex = 0;
+            this.pSpot1.Tag = "1";
             this.pSpot1.Text = "1";
             this.pSpot1.UseVisualStyleBackColor = true;
+            this.pSpot1.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot2
             // 
@@ -172,8 +174,10 @@
             this.pSpot2.Name = "pSpot2";
             this.pSpot2.Size = new System.Drawing.Size(60, 60);
             this.pSpot2.TabIndex = 1;
+            this.pSpot2.Tag = "2";
             this.pSpot2.Text = "2";
             this.pSpot2.UseVisualStyleBackColor = true;
+            this.pSpot2.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot3
             // 
@@ -182,8 +186,10 @@
             this.pSpot3.Name = "pSpot3";
             this.pSpot3.Size = new System.Drawing.Size(60, 60);
             this.pSpot3.TabIndex = 2;
+            this.pSpot3.Tag = "3";
             this.pSpot3.Text = "3";
             this.pSpot3.UseVisualStyleBackColor = true;
+            this.pSpot3.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot4
             // 
@@ -192,8 +198,10 @@
             this.pSpot4.Name = "pSpot4";
             this.pSpot4.Size = new System.Drawing.Size(60, 60);
             this.pSpot4.TabIndex = 3;
+            this.pSpot4.Tag = "4";
             this.pSpot4.Text = "4";
             this.pSpot4.UseVisualStyleBackColor = true;
+            this.pSpot4.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot5
             // 
@@ -202,8 +210,10 @@
             this.pSpot5.Name = "pSpot5";
             this.pSpot5.Size = new System.Drawing.Size(60, 60);
             this.pSpot5.TabIndex = 4;
+            this.pSpot5.Tag = "5";
             this.pSpot5.Text = "5";
             this.pSpot5.UseVisualStyleBackColor = true;
+            this.pSpot5.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot6
             // 
@@ -212,8 +222,10 @@
             this.pSpot6.Name = "pSpot6";
             this.pSpot6.Size = new System.Drawing.Size(60, 60);
             this.pSpot6.TabIndex = 5;
+            this.pSpot6.Tag = "6";
             this.pSpot6.Text = "6";
             this.pSpot6.UseVisualStyleBackColor = true;
+            this.pSpot6.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot7
             // 
@@ -222,8 +234,10 @@
             this.pSpot7.Name = "pSpot7";
             this.pSpot7.Size = new System.Drawing.Size(60, 60);
             this.pSpot7.TabIndex = 6;
+            this.pSpot7.Tag = "7";
             this.pSpot7.Text = "7";
             this.pSpot7.UseVisualStyleBackColor = true;
+            this.pSpot7.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot8
             // 
@@ -232,8 +246,10 @@
             this.pSpot8.Name = "pSpot8";
             this.pSpot8.Size = new System.Drawing.Size(60, 60);
             this.pSpot8.TabIndex = 7;
+            this.pSpot8.Tag = "8";
             this.pSpot8.Text = "8";
             this.pSpot8.UseVisualStyleBackColor = true;
+            this.pSpot8.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot9
             // 
@@ -242,8 +258,10 @@
             this.pSpot9.Name = "pSpot9";
             this.pSpot9.Size = new System.Drawing.Size(60, 60);
             this.pSpot9.TabIndex = 8;
+            this.pSpot9.Tag = "9";
             this.pSpot9.Text = "9";
             this.pSpot9.UseVisualStyleBackColor = true;
+            this.pSpot9.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot10
             // 
@@ -252,8 +270,10 @@
             this.pSpot10.Name = "pSpot10";
             this.pSpot10.Size = new System.Drawing.Size(60, 60);
             this.pSpot10.TabIndex = 9;
+            this.pSpot10.Tag = "10";
             this.pSpot10.Text = "10";
             this.pSpot10.UseVisualStyleBackColor = true;
+            this.pSpot10.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot11
             // 
@@ -262,8 +282,10 @@
             this.pSpot11.Name = "pSpot11";
             this.pSpot11.Size = new System.Drawing.Size(60, 60);
             this.pSpot11.TabIndex = 10;
+            this.pSpot11.Tag = "11";
             this.pSpot11.Text = "11";
             this.pSpot11.UseVisualStyleBackColor = true;
+            this.pSpot11.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot12
             // 
@@ -272,8 +294,10 @@
             this.pSpot12.Name = "pSpot12";
             this.pSpot12.Size = new System.Drawing.Size(60, 60);
             this.pSpot12.TabIndex = 11;
+            this.pSpot12.Tag = "12";
             this.pSpot12.Text = "12";
             this.pSpot12.UseVisualStyleBackColor = true;
+            this.pSpot12.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot13
             // 
@@ -282,8 +306,10 @@
             this.pSpot13.Name = "pSpot13";
             this.pSpot13.Size = new System.Drawing.Size(60, 60);
             this.pSpot13.TabIndex = 12;
+            this.pSpot13.Tag = "13";
             this.pSpot13.Text = "13";
             this.pSpot13.UseVisualStyleBackColor = true;
+            this.pSpot13.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot14
             // 
@@ -292,8 +318,10 @@
             this.pSpot14.Name = "pSpot14";
             this.pSpot14.Size = new System.Drawing.Size(60, 60);
             this.pSpot14.TabIndex = 13;
+            this.pSpot14.Tag = "14";
             this.pSpot14.Text = "14";
             this.pSpot14.UseVisualStyleBackColor = true;
+            this.pSpot14.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot15
             // 
@@ -302,8 +330,10 @@
             this.pSpot15.Name = "pSpot15";
             this.pSpot15.Size = new System.Drawing.Size(60, 60);
             this.pSpot15.TabIndex = 14;
+            this.pSpot15.Tag = "15";
             this.pSpot15.Text = "15";
             this.pSpot15.UseVisualStyleBackColor = true;
+            this.pSpot15.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot16
             // 
@@ -312,8 +342,10 @@
             this.pSpot16.Name = "pSpot16";
             this.pSpot16.Size = new System.Drawing.Size(60, 60);
             this.pSpot16.TabIndex = 15;
+            this.pSpot16.Tag = "16";
             this.pSpot16.Text = "16";
             this.pSpot16.UseVisualStyleBackColor = true;
+            this.pSpot16.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot17
             // 
@@ -322,8 +354,10 @@
             this.pSpot17.Name = "pSpot17";
             this.pSpot17.Size = new System.Drawing.Size(60, 60);
             this.pSpot17.TabIndex = 16;
+            this.pSpot17.Tag = "17";
             this.pSpot17.Text = "17";
             this.pSpot17.UseVisualStyleBackColor = true;
+            this.pSpot17.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot18
             // 
@@ -332,8 +366,10 @@
             this.pSpot18.Name = "pSpot18";
             this.pSpot18.Size = new System.Drawing.Size(60, 60);
             this.pSpot18.TabIndex = 17;
+            this.pSpot18.Tag = "18";
             this.pSpot18.Text = "18";
             this.pSpot18.UseVisualStyleBackColor = true;
+            this.pSpot18.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot19
             // 
@@ -342,8 +378,10 @@
             this.pSpot19.Name = "pSpot19";
             this.pSpot19.Size = new System.Drawing.Size(60, 60);
             this.pSpot19.TabIndex = 18;
+            this.pSpot19.Tag = "19";
             this.pSpot19.Text = "19";
             this.pSpot19.UseVisualStyleBackColor = true;
+            this.pSpot19.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot20
             // 
@@ -352,8 +390,10 @@
             this.pSpot20.Name = "pSpot20";
             this.pSpot20.Size = new System.Drawing.Size(60, 60);
             this.pSpot20.TabIndex = 19;
+            this.pSpot20.Tag = "20";
             this.pSpot20.Text = "20";
             this.pSpot20.UseVisualStyleBackColor = true;
+            this.pSpot20.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot21
             // 
@@ -362,8 +402,10 @@
             this.pSpot21.Name = "pSpot21";
             this.pSpot21.Size = new System.Drawing.Size(60, 60);
             this.pSpot21.TabIndex = 20;
+            this.pSpot21.Tag = "21";
             this.pSpot21.Text = "21";
             this.pSpot21.UseVisualStyleBackColor = true;
+            this.pSpot21.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot22
             // 
@@ -372,8 +414,10 @@
             this.pSpot22.Name = "pSpot22";
             this.pSpot22.Size = new System.Drawing.Size(60, 60);
             this.pSpot22.TabIndex = 21;
+            this.pSpot22.Tag = "22";
             this.pSpot22.Text = "22";
             this.pSpot22.UseVisualStyleBackColor = true;
+            this.pSpot22.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot23
             // 
@@ -382,8 +426,10 @@
             this.pSpot23.Name = "pSpot23";
             this.pSpot23.Size = new System.Drawing.Size(60, 60);
             this.pSpot23.TabIndex = 22;
+            this.pSpot23.Tag = "23";
             this.pSpot23.Text = "23";
             this.pSpot23.UseVisualStyleBackColor = true;
+            this.pSpot23.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot24
             // 
@@ -392,8 +438,10 @@
             this.pSpot24.Name = "pSpot24";
             this.pSpot24.Size = new System.Drawing.Size(60, 60);
             this.pSpot24.TabIndex = 23;
+            this.pSpot24.Tag = "24";
             this.pSpot24.Text = "24";
             this.pSpot24.UseVisualStyleBackColor = true;
+            this.pSpot24.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot25
             // 
@@ -402,8 +450,10 @@
             this.pSpot25.Name = "pSpot25";
             this.pSpot25.Size = new System.Drawing.Size(60, 60);
             this.pSpot25.TabIndex = 24;
+            this.pSpot25.Tag = "25";
             this.pSpot25.Text = "25";
             this.pSpot25.UseVisualStyleBackColor = true;
+            this.pSpot25.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot26
             // 
@@ -412,8 +462,10 @@
             this.pSpot26.Name = "pSpot26";
             this.pSpot26.Size = new System.Drawing.Size(60, 60);
             this.pSpot26.TabIndex = 25;
+            this.pSpot26.Tag = "26";
             this.pSpot26.Text = "26";
             this.pSpot26.UseVisualStyleBackColor = true;
+            this.pSpot26.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot27
             // 
@@ -422,8 +474,10 @@
             this.pSpot27.Name = "pSpot27";
             this.pSpot27.Size = new System.Drawing.Size(60, 60);
             this.pSpot27.TabIndex = 26;
+            this.pSpot27.Tag = "27";
             this.pSpot27.Text = "27";
             this.pSpot27.UseVisualStyleBackColor = true;
+            this.pSpot27.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot28
             // 
@@ -432,8 +486,10 @@
             this.pSpot28.Name = "pSpot28";
             this.pSpot28.Size = new System.Drawing.Size(60, 60);
             this.pSpot28.TabIndex = 27;
+            this.pSpot28.Tag = "28";
             this.pSpot28.Text = "28";
             this.pSpot28.UseVisualStyleBackColor = true;
+            this.pSpot28.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot29
             // 
@@ -442,8 +498,10 @@
             this.pSpot29.Name = "pSpot29";
             this.pSpot29.Size = new System.Drawing.Size(60, 60);
             this.pSpot29.TabIndex = 28;
+            this.pSpot29.Tag = "29";
             this.pSpot29.Text = "29";
             this.pSpot29.UseVisualStyleBackColor = true;
+            this.pSpot29.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot30
             // 
@@ -452,8 +510,10 @@
             this.pSpot30.Name = "pSpot30";
             this.pSpot30.Size = new System.Drawing.Size(60, 60);
             this.pSpot30.TabIndex = 29;
+            this.pSpot30.Tag = "30";
             this.pSpot30.Text = "30";
             this.pSpot30.UseVisualStyleBackColor = true;
+            this.pSpot30.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot31
             // 
@@ -462,8 +522,10 @@
             this.pSpot31.Name = "pSpot31";
             this.pSpot31.Size = new System.Drawing.Size(60, 60);
             this.pSpot31.TabIndex = 30;
+            this.pSpot31.Tag = "31";
             this.pSpot31.Text = "31";
             this.pSpot31.UseVisualStyleBackColor = true;
+            this.pSpot31.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot32
             // 
@@ -472,8 +534,10 @@
             this.pSpot32.Name = "pSpot32";
             this.pSpot32.Size = new System.Drawing.Size(60, 60);
             this.pSpot32.TabIndex = 31;
+            this.pSpot32.Tag = "32";
             this.pSpot32.Text = "32";
             this.pSpot32.UseVisualStyleBackColor = true;
+            this.pSpot32.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot33
             // 
@@ -482,8 +546,10 @@
             this.pSpot33.Name = "pSpot33";
             this.pSpot33.Size = new System.Drawing.Size(60, 60);
             this.pSpot33.TabIndex = 32;
+            this.pSpot33.Tag = "33";
             this.pSpot33.Text = "33";
             this.pSpot33.UseVisualStyleBackColor = true;
+            this.pSpot33.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot34
             // 
@@ -492,8 +558,10 @@
             this.pSpot34.Name = "pSpot34";
             this.pSpot34.Size = new System.Drawing.Size(60, 60);
             this.pSpot34.TabIndex = 33;
+            this.pSpot34.Tag = "34";
             this.pSpot34.Text = "34";
             this.pSpot34.UseVisualStyleBackColor = true;
+            this.pSpot34.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot35
             // 
@@ -502,8 +570,10 @@
             this.pSpot35.Name = "pSpot35";
             this.pSpot35.Size = new System.Drawing.Size(60, 60);
             this.pSpot35.TabIndex = 34;
+            this.pSpot35.Tag = "35";
             this.pSpot35.Text = "35";
             this.pSpot35.UseVisualStyleBackColor = true;
+            this.pSpot35.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot36
             // 
@@ -512,8 +582,10 @@
             this.pSpot36.Name = "pSpot36";
             this.pSpot36.Size = new System.Drawing.Size(60, 60);
             this.pSpot36.TabIndex = 35;
+            this.pSpot36.Tag = "36";
             this.pSpot36.Text = "36";
             this.pSpot36.UseVisualStyleBackColor = true;
+            this.pSpot36.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot37
             // 
@@ -522,8 +594,10 @@
             this.pSpot37.Name = "pSpot37";
             this.pSpot37.Size = new System.Drawing.Size(60, 60);
             this.pSpot37.TabIndex = 36;
+            this.pSpot37.Tag = "37";
             this.pSpot37.Text = "37";
             this.pSpot37.UseVisualStyleBackColor = true;
+            this.pSpot37.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot38
             // 
@@ -532,8 +606,10 @@
             this.pSpot38.Name = "pSpot38";
             this.pSpot38.Size = new System.Drawing.Size(60, 60);
             this.pSpot38.TabIndex = 37;
+            this.pSpot38.Tag = "38";
             this.pSpot38.Text = "38";
             this.pSpot38.UseVisualStyleBackColor = true;
+            this.pSpot38.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot39
             // 
@@ -542,8 +618,10 @@
             this.pSpot39.Name = "pSpot39";
             this.pSpot39.Size = new System.Drawing.Size(60, 60);
             this.pSpot39.TabIndex = 38;
+            this.pSpot39.Tag = "39";
             this.pSpot39.Text = "39";
             this.pSpot39.UseVisualStyleBackColor = true;
+            this.pSpot39.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot40
             // 
@@ -552,8 +630,10 @@
             this.pSpot40.Name = "pSpot40";
             this.pSpot40.Size = new System.Drawing.Size(60, 60);
             this.pSpot40.TabIndex = 39;
+            this.pSpot40.Tag = "40";
             this.pSpot40.Text = "40";
             this.pSpot40.UseVisualStyleBackColor = true;
+            this.pSpot40.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot41
             // 
@@ -562,8 +642,10 @@
             this.pSpot41.Name = "pSpot41";
             this.pSpot41.Size = new System.Drawing.Size(60, 60);
             this.pSpot41.TabIndex = 40;
+            this.pSpot41.Tag = "41";
             this.pSpot41.Text = "41";
             this.pSpot41.UseVisualStyleBackColor = true;
+            this.pSpot41.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot42
             // 
@@ -572,8 +654,10 @@
             this.pSpot42.Name = "pSpot42";
             this.pSpot42.Size = new System.Drawing.Size(60, 60);
             this.pSpot42.TabIndex = 41;
+            this.pSpot42.Tag = "42";
             this.pSpot42.Text = "42";
             this.pSpot42.UseVisualStyleBackColor = true;
+            this.pSpot42.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot43
             // 
@@ -582,8 +666,10 @@
             this.pSpot43.Name = "pSpot43";
             this.pSpot43.Size = new System.Drawing.Size(60, 60);
             this.pSpot43.TabIndex = 42;
+            this.pSpot43.Tag = "43";
             this.pSpot43.Text = "43";
             this.pSpot43.UseVisualStyleBackColor = true;
+            this.pSpot43.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot44
             // 
@@ -592,8 +678,10 @@
             this.pSpot44.Name = "pSpot44";
             this.pSpot44.Size = new System.Drawing.Size(60, 60);
             this.pSpot44.TabIndex = 43;
+            this.pSpot44.Tag = "44";
             this.pSpot44.Text = "44";
             this.pSpot44.UseVisualStyleBackColor = true;
+            this.pSpot44.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot45
             // 
@@ -602,8 +690,10 @@
             this.pSpot45.Name = "pSpot45";
             this.pSpot45.Size = new System.Drawing.Size(60, 60);
             this.pSpot45.TabIndex = 44;
+            this.pSpot45.Tag = "45";
             this.pSpot45.Text = "45";
             this.pSpot45.UseVisualStyleBackColor = true;
+            this.pSpot45.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot46
             // 
@@ -612,8 +702,10 @@
             this.pSpot46.Name = "pSpot46";
             this.pSpot46.Size = new System.Drawing.Size(60, 60);
             this.pSpot46.TabIndex = 45;
+            this.pSpot46.Tag = "46";
             this.pSpot46.Text = "46";
             this.pSpot46.UseVisualStyleBackColor = true;
+            this.pSpot46.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot47
             // 
@@ -622,8 +714,10 @@
             this.pSpot47.Name = "pSpot47";
             this.pSpot47.Size = new System.Drawing.Size(60, 60);
             this.pSpot47.TabIndex = 46;
+            this.pSpot47.Tag = "47";
             this.pSpot47.Text = "47";
             this.pSpot47.UseVisualStyleBackColor = true;
+            this.pSpot47.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot48
             // 
@@ -632,8 +726,10 @@
             this.pSpot48.Name = "pSpot48";
             this.pSpot48.Size = new System.Drawing.Size(60, 60);
             this.pSpot48.TabIndex = 47;
+            this.pSpot48.Tag = "48";
             this.pSpot48.Text = "48";
             this.pSpot48.UseVisualStyleBackColor = true;
+            this.pSpot48.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // listView1
             // 
@@ -808,8 +904,10 @@
             this.pSpot49.Name = "pSpot49";
             this.pSpot49.Size = new System.Drawing.Size(60, 60);
             this.pSpot49.TabIndex = 48;
+            this.pSpot49.Tag = "49";
             this.pSpot49.Text = "49";
             this.pSpot49.UseVisualStyleBackColor = true;
+            this.pSpot49.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot50
             // 
@@ -818,8 +916,10 @@
             this.pSpot50.Name = "pSpot50";
             this.pSpot50.Size = new System.Drawing.Size(60, 60);
             this.pSpot50.TabIndex = 49;
+            this.pSpot50.Tag = "50";
             this.pSpot50.Text = "50";
             this.pSpot50.UseVisualStyleBackColor = true;
+            this.pSpot50.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot51
             // 
@@ -828,8 +928,10 @@
             this.pSpot51.Name = "pSpot51";
             this.pSpot51.Size = new System.Drawing.Size(60, 60);
             this.pSpot51.TabIndex = 50;
+            this.pSpot51.Tag = "51";
             this.pSpot51.Text = "51";
             this.pSpot51.UseVisualStyleBackColor = true;
+            this.pSpot51.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot52
             // 
@@ -838,8 +940,10 @@
             this.pSpot52.Name = "pSpot52";
             this.pSpot52.Size = new System.Drawing.Size(60, 60);
             this.pSpot52.TabIndex = 51;
+            this.pSpot52.Tag = "52";
             this.pSpot52.Text = "52";
             this.pSpot52.UseVisualStyleBackColor = true;
+            this.pSpot52.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot53
             // 
@@ -848,8 +952,10 @@
             this.pSpot53.Name = "pSpot53";
             this.pSpot53.Size = new System.Drawing.Size(60, 60);
             this.pSpot53.TabIndex = 52;
+            this.pSpot53.Tag = "53";
             this.pSpot53.Text = "53";
             this.pSpot53.UseVisualStyleBackColor = true;
+            this.pSpot53.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot54
             // 
@@ -858,8 +964,10 @@
             this.pSpot54.Name = "pSpot54";
             this.pSpot54.Size = new System.Drawing.Size(60, 60);
             this.pSpot54.TabIndex = 53;
+            this.pSpot54.Tag = "54";
             this.pSpot54.Text = "54";
             this.pSpot54.UseVisualStyleBackColor = true;
+            this.pSpot54.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot55
             // 
@@ -868,8 +976,10 @@
             this.pSpot55.Name = "pSpot55";
             this.pSpot55.Size = new System.Drawing.Size(60, 60);
             this.pSpot55.TabIndex = 54;
+            this.pSpot55.Tag = "55";
             this.pSpot55.Text = "55";
             this.pSpot55.UseVisualStyleBackColor = true;
+            this.pSpot55.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot56
             // 
@@ -878,8 +988,10 @@
             this.pSpot56.Name = "pSpot56";
             this.pSpot56.Size = new System.Drawing.Size(60, 60);
             this.pSpot56.TabIndex = 55;
+            this.pSpot56.Tag = "56";
             this.pSpot56.Text = "56";
             this.pSpot56.UseVisualStyleBackColor = true;
+            this.pSpot56.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot57
             // 
@@ -888,8 +1000,10 @@
             this.pSpot57.Name = "pSpot57";
             this.pSpot57.Size = new System.Drawing.Size(60, 60);
             this.pSpot57.TabIndex = 56;
+            this.pSpot57.Tag = "57";
             this.pSpot57.Text = "57";
             this.pSpot57.UseVisualStyleBackColor = true;
+            this.pSpot57.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot58
             // 
@@ -898,8 +1012,10 @@
             this.pSpot58.Name = "pSpot58";
             this.pSpot58.Size = new System.Drawing.Size(60, 60);
             this.pSpot58.TabIndex = 57;
+            this.pSpot58.Tag = "58";
             this.pSpot58.Text = "58";
             this.pSpot58.UseVisualStyleBackColor = true;
+            this.pSpot58.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot59
             // 
@@ -908,8 +1024,10 @@
             this.pSpot59.Name = "pSpot59";
             this.pSpot59.Size = new System.Drawing.Size(60, 60);
             this.pSpot59.TabIndex = 58;
+            this.pSpot59.Tag = "59";
             this.pSpot59.Text = "59";
             this.pSpot59.UseVisualStyleBackColor = true;
+            this.pSpot59.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot60
             // 
@@ -918,8 +1036,10 @@
             this.pSpot60.Name = "pSpot60";
             this.pSpot60.Size = new System.Drawing.Size(60, 60);
             this.pSpot60.TabIndex = 59;
+            this.pSpot60.Tag = "60";
             this.pSpot60.Text = "60";
             this.pSpot60.UseVisualStyleBackColor = true;
+            this.pSpot60.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot61
             // 
@@ -928,8 +1048,10 @@
             this.pSpot61.Name = "pSpot61";
             this.pSpot61.Size = new System.Drawing.Size(60, 60);
             this.pSpot61.TabIndex = 60;
+            this.pSpot61.Tag = "61";
             this.pSpot61.Text = "61";
             this.pSpot61.UseVisualStyleBackColor = true;
+            this.pSpot61.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot62
             // 
@@ -938,8 +1060,10 @@
             this.pSpot62.Name = "pSpot62";
             this.pSpot62.Size = new System.Drawing.Size(60, 60);
             this.pSpot62.TabIndex = 61;
+            this.pSpot62.Tag = "62";
             this.pSpot62.Text = "62";
             this.pSpot62.UseVisualStyleBackColor = true;
+            this.pSpot62.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot63
             // 
@@ -948,8 +1072,10 @@
             this.pSpot63.Name = "pSpot63";
             this.pSpot63.Size = new System.Drawing.Size(60, 60);
             this.pSpot63.TabIndex = 62;
+            this.pSpot63.Tag = "63";
             this.pSpot63.Text = "63";
             this.pSpot63.UseVisualStyleBackColor = true;
+            this.pSpot63.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot64
             // 
@@ -958,8 +1084,10 @@
             this.pSpot64.Name = "pSpot64";
             this.pSpot64.Size = new System.Drawing.Size(60, 60);
             this.pSpot64.TabIndex = 63;
+            this.pSpot64.Tag = "64";
             this.pSpot64.Text = "64";
             this.pSpot64.UseVisualStyleBackColor = true;
+            this.pSpot64.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot65
             // 
@@ -968,8 +1096,10 @@
             this.pSpot65.Name = "pSpot65";
             this.pSpot65.Size = new System.Drawing.Size(60, 60);
             this.pSpot65.TabIndex = 64;
+            this.pSpot65.Tag = "65";
             this.pSpot65.Text = "65";
             this.pSpot65.UseVisualStyleBackColor = true;
+            this.pSpot65.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot66
             // 
@@ -978,8 +1108,10 @@
             this.pSpot66.Name = "pSpot66";
             this.pSpot66.Size = new System.Drawing.Size(60, 60);
             this.pSpot66.TabIndex = 65;
+            this.pSpot66.Tag = "66";
             this.pSpot66.Text = "66";
             this.pSpot66.UseVisualStyleBackColor = true;
+            this.pSpot66.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot67
             // 
@@ -988,8 +1120,10 @@
             this.pSpot67.Name = "pSpot67";
             this.pSpot67.Size = new System.Drawing.Size(60, 60);
             this.pSpot67.TabIndex = 66;
+            this.pSpot67.Tag = "67";
             this.pSpot67.Text = "67";
             this.pSpot67.UseVisualStyleBackColor = true;
+            this.pSpot67.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot68
             // 
@@ -998,8 +1132,10 @@
             this.pSpot68.Name = "pSpot68";
             this.pSpot68.Size = new System.Drawing.Size(60, 60);
             this.pSpot68.TabIndex = 67;
+            this.pSpot68.Tag = "68";
             this.pSpot68.Text = "68";
             this.pSpot68.UseVisualStyleBackColor = true;
+            this.pSpot68.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot69
             // 
@@ -1008,8 +1144,10 @@
             this.pSpot69.Name = "pSpot69";
             this.pSpot69.Size = new System.Drawing.Size(60, 60);
             this.pSpot69.TabIndex = 68;
+            this.pSpot69.Tag = "69";
             this.pSpot69.Text = "69";
             this.pSpot69.UseVisualStyleBackColor = true;
+            this.pSpot69.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot70
             // 
@@ -1018,8 +1156,10 @@
             this.pSpot70.Name = "pSpot70";
             this.pSpot70.Size = new System.Drawing.Size(60, 60);
             this.pSpot70.TabIndex = 69;
+            this.pSpot70.Tag = "70";
             this.pSpot70.Text = "70";
             this.pSpot70.UseVisualStyleBackColor = true;
+            this.pSpot70.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot71
             // 
@@ -1028,8 +1168,10 @@
             this.pSpot71.Name = "pSpot71";
             this.pSpot71.Size = new System.Drawing.Size(60, 60);
             this.pSpot71.TabIndex = 70;
+            this.pSpot71.Tag = "71";
             this.pSpot71.Text = "71";
             this.pSpot71.UseVisualStyleBackColor = true;
+            this.pSpot71.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot72
             // 
@@ -1038,8 +1180,10 @@
             this.pSpot72.Name = "pSpot72";
             this.pSpot72.Size = new System.Drawing.Size(60, 60);
             this.pSpot72.TabIndex = 71;
+            this.pSpot72.Tag = "72";
             this.pSpot72.Text = "72";
             this.pSpot72.UseVisualStyleBackColor = true;
+            this.pSpot72.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot73
             // 
@@ -1048,8 +1192,10 @@
             this.pSpot73.Name = "pSpot73";
             this.pSpot73.Size = new System.Drawing.Size(60, 60);
             this.pSpot73.TabIndex = 72;
+            this.pSpot73.Tag = "73";
             this.pSpot73.Text = "73";
             this.pSpot73.UseVisualStyleBackColor = true;
+            this.pSpot73.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot74
             // 
@@ -1058,8 +1204,10 @@
             this.pSpot74.Name = "pSpot74";
             this.pSpot74.Size = new System.Drawing.Size(60, 60);
             this.pSpot74.TabIndex = 73;
+            this.pSpot74.Tag = "74";
             this.pSpot74.Text = "74";
             this.pSpot74.UseVisualStyleBackColor = true;
+            this.pSpot74.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot75
             // 
@@ -1068,8 +1216,10 @@
             this.pSpot75.Name = "pSpot75";
             this.pSpot75.Size = new System.Drawing.Size(60, 60);
             this.pSpot75.TabIndex = 74;
+            this.pSpot75.Tag = "75";
             this.pSpot75.Text = "75";
             this.pSpot75.UseVisualStyleBackColor = true;
+            this.pSpot75.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot76
             // 
@@ -1078,8 +1228,10 @@
             this.pSpot76.Name = "pSpot76";
             this.pSpot76.Size = new System.Drawing.Size(60, 60);
             this.pSpot76.TabIndex = 75;
+            this.pSpot76.Tag = "76";
             this.pSpot76.Text = "76";
             this.pSpot76.UseVisualStyleBackColor = true;
+            this.pSpot76.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot77
             // 
@@ -1088,8 +1240,10 @@
             this.pSpot77.Name = "pSpot77";
             this.pSpot77.Size = new System.Drawing.Size(60, 60);
             this.pSpot77.TabIndex = 76;
+            this.pSpot77.Tag = "77";
             this.pSpot77.Text = "77";
             this.pSpot77.UseVisualStyleBackColor = true;
+            this.pSpot77.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot78
             // 
@@ -1098,8 +1252,10 @@
             this.pSpot78.Name = "pSpot78";
             this.pSpot78.Size = new System.Drawing.Size(60, 60);
             this.pSpot78.TabIndex = 77;
+            this.pSpot78.Tag = "78";
             this.pSpot78.Text = "78";
             this.pSpot78.UseVisualStyleBackColor = true;
+            this.pSpot78.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot79
             // 
@@ -1108,8 +1264,10 @@
             this.pSpot79.Name = "pSpot79";
             this.pSpot79.Size = new System.Drawing.Size(60, 60);
             this.pSpot79.TabIndex = 78;
+            this.pSpot79.Tag = "79";
             this.pSpot79.Text = "79";
             this.pSpot79.UseVisualStyleBackColor = true;
+            this.pSpot79.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot80
             // 
@@ -1118,8 +1276,10 @@
             this.pSpot80.Name = "pSpot80";
             this.pSpot80.Size = new System.Drawing.Size(60, 60);
             this.pSpot80.TabIndex = 79;
+            this.pSpot80.Tag = "80";
             this.pSpot80.Text = "80";
             this.pSpot80.UseVisualStyleBackColor = true;
+            this.pSpot80.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot81
             // 
@@ -1128,8 +1288,10 @@
             this.pSpot81.Name = "pSpot81";
             this.pSpot81.Size = new System.Drawing.Size(60, 60);
             this.pSpot81.TabIndex = 80;
+            this.pSpot81.Tag = "81";
             this.pSpot81.Text = "81";
             this.pSpot81.UseVisualStyleBackColor = true;
+            this.pSpot81.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot82
             // 
@@ -1138,8 +1300,10 @@
             this.pSpot82.Name = "pSpot82";
             this.pSpot82.Size = new System.Drawing.Size(60, 60);
             this.pSpot82.TabIndex = 81;
+            this.pSpot82.Tag = "82";
             this.pSpot82.Text = "82";
             this.pSpot82.UseVisualStyleBackColor = true;
+            this.pSpot82.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot83
             // 
@@ -1148,8 +1312,10 @@
             this.pSpot83.Name = "pSpot83";
             this.pSpot83.Size = new System.Drawing.Size(60, 60);
             this.pSpot83.TabIndex = 82;
+            this.pSpot83.Tag = "83";
             this.pSpot83.Text = "83";
             this.pSpot83.UseVisualStyleBackColor = true;
+            this.pSpot83.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot84
             // 
@@ -1158,8 +1324,10 @@
             this.pSpot84.Name = "pSpot84";
             this.pSpot84.Size = new System.Drawing.Size(60, 60);
             this.pSpot84.TabIndex = 83;
+            this.pSpot84.Tag = "84";
             this.pSpot84.Text = "84";
             this.pSpot84.UseVisualStyleBackColor = true;
+            this.pSpot84.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot85
             // 
@@ -1168,8 +1336,10 @@
             this.pSpot85.Name = "pSpot85";
             this.pSpot85.Size = new System.Drawing.Size(60, 60);
             this.pSpot85.TabIndex = 84;
+            this.pSpot85.Tag = "85";
             this.pSpot85.Text = "85";
             this.pSpot85.UseVisualStyleBackColor = true;
+            this.pSpot85.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot86
             // 
@@ -1178,8 +1348,10 @@
             this.pSpot86.Name = "pSpot86";
             this.pSpot86.Size = new System.Drawing.Size(60, 60);
             this.pSpot86.TabIndex = 85;
+            this.pSpot86.Tag = "86";
             this.pSpot86.Text = "86";
             this.pSpot86.UseVisualStyleBackColor = true;
+            this.pSpot86.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot87
             // 
@@ -1188,8 +1360,10 @@
             this.pSpot87.Name = "pSpot87";
             this.pSpot87.Size = new System.Drawing.Size(60, 60);
             this.pSpot87.TabIndex = 86;
+            this.pSpot87.Tag = "87";
             this.pSpot87.Text = "87";
             this.pSpot87.UseVisualStyleBackColor = true;
+            this.pSpot87.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot88
             // 
@@ -1198,8 +1372,10 @@
             this.pSpot88.Name = "pSpot88";
             this.pSpot88.Size = new System.Drawing.Size(60, 60);
             this.pSpot88.TabIndex = 87;
+            this.pSpot88.Tag = "88";
             this.pSpot88.Text = "88";
             this.pSpot88.UseVisualStyleBackColor = true;
+            this.pSpot88.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot89
             // 
@@ -1208,8 +1384,10 @@
             this.pSpot89.Name = "pSpot89";
             this.pSpot89.Size = new System.Drawing.Size(60, 60);
             this.pSpot89.TabIndex = 88;
+            this.pSpot89.Tag = "89";
             this.pSpot89.Text = "89";
             this.pSpot89.UseVisualStyleBackColor = true;
+            this.pSpot89.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot90
             // 
@@ -1218,8 +1396,10 @@
             this.pSpot90.Name = "pSpot90";
             this.pSpot90.Size = new System.Drawing.Size(60, 60);
             this.pSpot90.TabIndex = 89;
+            this.pSpot90.Tag = "90";
             this.pSpot90.Text = "90";
             this.pSpot90.UseVisualStyleBackColor = true;
+            this.pSpot90.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot91
             // 
@@ -1228,8 +1408,10 @@
             this.pSpot91.Name = "pSpot91";
             this.pSpot91.Size = new System.Drawing.Size(60, 60);
             this.pSpot91.TabIndex = 90;
+            this.pSpot91.Tag = "91";
             this.pSpot91.Text = "91";
             this.pSpot91.UseVisualStyleBackColor = true;
+            this.pSpot91.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot92
             // 
@@ -1238,8 +1420,10 @@
             this.pSpot92.Name = "pSpot92";
             this.pSpot92.Size = new System.Drawing.Size(60, 60);
             this.pSpot92.TabIndex = 91;
+            this.pSpot92.Tag = "92";
             this.pSpot92.Text = "92";
             this.pSpot92.UseVisualStyleBackColor = true;
+            this.pSpot92.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot93
             // 
@@ -1248,8 +1432,10 @@
             this.pSpot93.Name = "pSpot93";
             this.pSpot93.Size = new System.Drawing.Size(60, 60);
             this.pSpot93.TabIndex = 92;
+            this.pSpot93.Tag = "93";
             this.pSpot93.Text = "93";
             this.pSpot93.UseVisualStyleBackColor = true;
+            this.pSpot93.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot94
             // 
@@ -1258,8 +1444,10 @@
             this.pSpot94.Name = "pSpot94";
             this.pSpot94.Size = new System.Drawing.Size(60, 60);
             this.pSpot94.TabIndex = 93;
+            this.pSpot94.Tag = "94";
             this.pSpot94.Text = "94";
             this.pSpot94.UseVisualStyleBackColor = true;
+            this.pSpot94.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot95
             // 
@@ -1268,8 +1456,10 @@
             this.pSpot95.Name = "pSpot95";
             this.pSpot95.Size = new System.Drawing.Size(60, 60);
             this.pSpot95.TabIndex = 94;
+            this.pSpot95.Tag = "95";
             this.pSpot95.Text = "95";
             this.pSpot95.UseVisualStyleBackColor = true;
+            this.pSpot95.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot96
             // 
@@ -1278,8 +1468,10 @@
             this.pSpot96.Name = "pSpot96";
             this.pSpot96.Size = new System.Drawing.Size(60, 60);
             this.pSpot96.TabIndex = 95;
+            this.pSpot96.Tag = "96";
             this.pSpot96.Text = "96";
             this.pSpot96.UseVisualStyleBackColor = true;
+            this.pSpot96.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot97
             // 
@@ -1288,8 +1480,10 @@
             this.pSpot97.Name = "pSpot97";
             this.pSpot97.Size = new System.Drawing.Size(60, 60);
             this.pSpot97.TabIndex = 96;
+            this.pSpot97.Tag = "97";
             this.pSpot97.Text = "97";
             this.pSpot97.UseVisualStyleBackColor = true;
+            this.pSpot97.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot98
             // 
@@ -1298,8 +1492,10 @@
             this.pSpot98.Name = "pSpot98";
             this.pSpot98.Size = new System.Drawing.Size(60, 60);
             this.pSpot98.TabIndex = 97;
+            this.pSpot98.Tag = "98";
             this.pSpot98.Text = "98";
             this.pSpot98.UseVisualStyleBackColor = true;
+            this.pSpot98.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot99
             // 
@@ -1308,8 +1504,10 @@
             this.pSpot99.Name = "pSpot99";
             this.pSpot99.Size = new System.Drawing.Size(60, 60);
             this.pSpot99.TabIndex = 98;
+            this.pSpot99.Tag = "99";
             this.pSpot99.Text = "99";
             this.pSpot99.UseVisualStyleBackColor = true;
+            this.pSpot99.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // pSpot100
             // 
@@ -1319,8 +1517,10 @@
             this.pSpot100.Name = "pSpot100";
             this.pSpot100.Size = new System.Drawing.Size(60, 60);
             this.pSpot100.TabIndex = 99;
+            this.pSpot100.Tag = "100";
             this.pSpot100.Text = "100";
             this.pSpot100.UseVisualStyleBackColor = true;
+            this.pSpot100.Click += new System.EventHandler(this.pSpot1_Click);
             // 
             // regPlateTextBox
             // 

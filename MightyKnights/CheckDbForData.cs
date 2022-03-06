@@ -53,5 +53,35 @@ namespace Core
             }
 
         }
+
+        public string CheckParkingSpotStatus(int selectedSpot)
+        {
+            using (var db = new MightyKnightsContext())
+            {
+                var spotCheck = (from p in db.ParkingLots
+                                 join v in db.Vehicles on p.VehicleId equals v.VehicleId
+                                 where p.ParkingSpot == selectedSpot
+                                 select new
+                                 {
+                                     ParkingSpot = p.ParkingSpot,
+                                     LicancePlate = v.LicancePlate,
+                                     VehicleType = v.VehicleType,
+                                     CheckInDate = p.CheckInDate
+                                 }).ToList();
+
+
+                if (spotCheck.Count > 0)
+                {
+                    string results = string.Join(Environment.NewLine, spotCheck);
+                    return results;
+
+                }
+                else
+                {
+                    return "Parking spot is empty!";
+                }
+            }
+        }
     }
 }
+
