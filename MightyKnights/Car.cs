@@ -1,21 +1,17 @@
-﻿
-
-
-
-using DataAccess.Data;
+﻿using DataAccess.Data;
 using DataAccess.Models;
 
 namespace Core;
 
 public class Car : Vehicle
 {
-    public void AddCar(string licencePlate)
+    public void AddCar(string licensePlate)
     {
         using (var context = new MightyKnightsContext())
         {
             var car = new Car()
             {
-                LicancePlate = licencePlate,
+                LicensePlate = licensePlate,
                 VehicleType = "Car",
                 UnitSize = 4
             };
@@ -24,22 +20,22 @@ public class Car : Vehicle
         }
     }
 
-    public void ParkCar(int parkingSpot, string licancePlate)
-    {
-        using (var context = new MightyKnightsContext())
-        {
-            var vehicleId = (from v in context.Vehicles
-                             where v.LicancePlate == licancePlate
-                             select v.VehicleId).FirstOrDefault();
+    //public void ParkCar(int parkingSpot, string licensePlate)
+    //{
+    //    using (var context = new MightyKnightsContext())
+    //    {
+    //        var vehicleId = (from v in context.Vehicles
+    //                         where v.LicensePlate == licensePlate
+    //                         select v.VehicleId).FirstOrDefault();
 
-            ParkingLot parkingCar = new ();
+    //        ParkingLot parkingCar = new ();
 
-            parkingCar.ParkingSpot = parkingSpot;
-            parkingCar.VehicleId = vehicleId;
-            parkingCar.CheckInDate = DateTime.Now;
+    //        parkingCar.ParkingSpot = parkingSpot;
+    //        parkingCar.VehicleId = vehicleId;
+    //        parkingCar.CheckInDate = DateTime.Now;
 
-            context.ParkingLots.Add(parkingCar);
-            context.SaveChanges();
-        }
-    }
+    //        context.ParkingLots.Add(parkingCar);
+    //        context.SaveChanges();
+    //    }
+    //}
 }

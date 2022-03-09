@@ -11,7 +11,7 @@ namespace DataAccess.Models
         }
 
         public int VehicleId { get; set; }
-        public string? LicancePlate { get; set; }
+        public string? LicensePlate { get; set; }
         public string? VehicleType { get; set; }
         public int? UnitSize { get; set; }
 

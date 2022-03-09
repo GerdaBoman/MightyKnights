@@ -70,7 +70,7 @@ namespace DataAccess.Data
             {
                 entity.Property(e => e.VehicleId).HasColumnName("VehicleID");
 
-                entity.Property(e => e.LicancePlate).HasMaxLength(50);
+                entity.Property(e => e.LicensePlate).HasMaxLength(50);
 
                 entity.Property(e => e.VehicleType).HasMaxLength(10);
 

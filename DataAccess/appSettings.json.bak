@@ -1,0 +1,18 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnectionString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=MightyKnights"
+  },
+  "Vehicle": 
+  {
+    "Car": {
+      "LicensePlate": "",
+      "UnitSize": 4,
+      "Price": 25
+    },
+    "Mc": {
+      "LicensePlate": "",
+      "UnitSize": 2,
+      "Price": 10
+    }
+  }
+}

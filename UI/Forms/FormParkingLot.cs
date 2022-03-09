@@ -12,7 +12,7 @@ namespace UI
         ListViewRefresh refresh = new();
         CheckDbForData check = new();
         ParkingSpotColor color = new();
-
+        ParkingControls parkingControls = new();
 
         public FormParkingLot()
         {
@@ -80,7 +80,8 @@ namespace UI
                         {
                             Car car = new Car();
                             car.AddCar(regPlateTextBox.Text.ToString());
-                            car.ParkCar(parkingSpot, regPlateTextBox.Text.ToString());
+                            parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
+                            //car.ParkCar(parkingSpot, regPlateTextBox.Text.ToString());
 
 
                             color.SpotsStatus(parkingSpot, takenSpot);
@@ -120,7 +121,8 @@ namespace UI
                         {
                             Mc mc = new Mc();
                             mc.AddMc(regPlateTextBox.Text.ToString());
-                            mc.ParkMc(parkingSpot, regPlateTextBox.Text.ToString());
+                            parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
+                            //mc.ParkMc(parkingSpot, regPlateTextBox.Text.ToString());
 
                             color.SpotsStatus(parkingSpot, takenSpot);
 

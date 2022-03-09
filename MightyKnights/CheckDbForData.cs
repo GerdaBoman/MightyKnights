@@ -1,9 +1,4 @@
 ﻿using DataAccess.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core
 {
@@ -26,7 +21,7 @@ namespace Core
             using (var db = new MightyKnightsContext())
             {
                 var checkIfPresent = (from v in db.Vehicles
-                                      where v.LicancePlate == licancePlate
+                                      where v.LicensePlate == licancePlate
                                       select v).ToList();
                 if (checkIfPresent.Any())
                 {
@@ -64,7 +59,7 @@ namespace Core
                                  select new
                                  {
                                      ParkingSpot = p.ParkingSpot,
-                                     LicancePlate = v.LicancePlate,
+                                     LicancePlate = v.LicensePlate,
                                      VehicleType = v.VehicleType,
                                      CheckInDate = p.CheckInDate
                                  }).ToList();

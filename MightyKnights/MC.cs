@@ -5,13 +5,13 @@ namespace Core;
 
 public class Mc : Vehicle
 {
-    public void AddMc(string licencePlate)
+    public void AddMc(string licensePlate)
     {
         using (var context = new MightyKnightsContext())
         {
             var mc = new Mc()
             {
-                LicancePlate = licencePlate,
+                LicensePlate = licensePlate,
                 VehicleType = "MC",
                 UnitSize = 2
             };
@@ -20,22 +20,22 @@ public class Mc : Vehicle
         }
     }
 
-    public void ParkMc(int parkingSpot, string licancePlate)
-    {
-        using (var context = new MightyKnightsContext())
-        {
-            var vehicleId = (from v in context.Vehicles
-                             where v.LicancePlate == licancePlate
-                             select v.VehicleId).FirstOrDefault();
+    //public void ParkMc(int parkingSpot, string licensePlate)
+    //{
+    //    using (var context = new MightyKnightsContext())
+    //    {
+    //        var vehicleId = (from v in context.Vehicles
+    //                         where v.LicensePlate == licensePlate
+    //                         select v.VehicleId).FirstOrDefault();
 
-            ParkingLot parkingMc = new ParkingLot();
+    //        ParkingLot parkingMc = new ParkingLot();
 
-            parkingMc.ParkingSpot = parkingSpot;
-            parkingMc.VehicleId = vehicleId;
-            parkingMc.CheckInDate = DateTime.Now;
+    //        parkingMc.ParkingSpot = parkingSpot;
+    //        parkingMc.VehicleId = vehicleId;
+    //        parkingMc.CheckInDate = DateTime.Now;
 
-            context.ParkingLots.Add(parkingMc);
-            context.SaveChanges();
-        }
-    }
+    //        context.ParkingLots.Add(parkingMc);
+    //        context.SaveChanges();
+    //    }
+    //}
 }

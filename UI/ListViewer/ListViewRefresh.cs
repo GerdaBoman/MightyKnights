@@ -20,7 +20,7 @@ namespace UI.ListViewer
                                       select new
                                       {
                                           ParkingSpot = p.ParkingSpotId,
-                                          LicancePlate = v.LicancePlate,
+                                          LicancePlate = v.LicensePlate,
                                           CheckInDate = p.CheckInDate
                                       }).ToList();
 
