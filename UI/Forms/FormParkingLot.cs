@@ -134,11 +134,8 @@ namespace UI
                             refresh.RefreshListViewer(listView1);
                             break;
                         }
-
-
                     }
                     #endregion
-
             }
         }
 
@@ -152,8 +149,6 @@ namespace UI
            MessageBox.Show(check.CheckParkingSpotStatus(selectedSpot));
 
         }
-
-        
     }
 }
     
