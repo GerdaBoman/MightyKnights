@@ -20,3 +20,13 @@ namespace DataAccess.Models
         public virtual ICollection<ParkingLot> ParkingSpots { get; set; }
     }
 }
+
+
+
+
+/*
+
+    konstruktor i Car,Mc 
+    this.carsize = Config.CarSize;
+
+*/
