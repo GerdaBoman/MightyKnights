@@ -16,8 +16,8 @@ namespace UI.ParkingSpotCosmetic
             {
                 var checkIfFull = (from p in db.ParkingLots
                                    join v in db.Vehicles on p.VehicleId equals v.VehicleId
-                                   where p.ParkingSpot == parkingSpot
-                                   select v.UnitSize).ToList();
+                                   where p.SpotNumber == parkingSpot
+                                   select v.Size).ToList();
                 int total = checkIfFull.Sum(x => Convert.ToInt32(x));
 
                 if (total == 4)
@@ -27,6 +27,10 @@ namespace UI.ParkingSpotCosmetic
                 else if (total == 2)
                 {
                     buttonStatus.BackColor = Color.Orange;
+                }
+                else
+                {
+                    buttonStatus.BackColor = Color.FromArgb(89, 165, 216);
                 }
 
             }

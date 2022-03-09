@@ -18,7 +18,7 @@ namespace DataAccess.Data
         {
         }
 
-        public virtual DbSet<HistoryLog> HistoryLogs { get; set; } = null!;
+        public virtual DbSet<History> Histories { get; set; } = null!;
         public virtual DbSet<ParkingLot> ParkingLots { get; set; } = null!;
         public virtual DbSet<Vehicle> Vehicles { get; set; } = null!;
 
@@ -34,62 +34,47 @@ namespace DataAccess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<HistoryLog>(entity =>
+            modelBuilder.Entity<History>(entity =>
             {
-                entity.HasKey(e => e.VehicleId)
-                    .HasName("PK__HistoryL__476B54B22CEA2862");
+                entity.ToTable("History");
 
-                entity.ToTable("HistoryLog");
+                entity.Property(e => e.HistoryId).HasColumnName("HistoryID");
 
-                entity.Property(e => e.VehicleId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("VehicleID");
+                entity.Property(e => e.Cost).HasColumnType("money");
 
-                entity.Property(e => e.PaidAmount).HasColumnType("money");
+                entity.Property(e => e.ParkingLotId).HasColumnName("ParkingLotID");
 
-                entity.Property(e => e.Price).HasColumnType("money");
+                entity.Property(e => e.RegNumber).HasMaxLength(10);
 
-                entity.HasOne(d => d.Vehicle)
-                    .WithOne(p => p.HistoryLog)
-                    .HasForeignKey<HistoryLog>(d => d.VehicleId)
+                entity.HasOne(d => d.ParkingLot)
+                    .WithMany(p => p.Histories)
+                    .HasForeignKey(d => d.ParkingLotId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_HistoryLog_Vehicles");
+                    .HasConstraintName("FK_History_ParkingLot");
             });
 
             modelBuilder.Entity<ParkingLot>(entity =>
             {
-                entity.HasKey(e => e.ParkingSpotId)
-                    .HasName("PK__ParkingL__FE67E7DC28B13562");
-
                 entity.ToTable("ParkingLot");
 
+                entity.Property(e => e.ParkingLotId).HasColumnName("ParkingLotID");
+
                 entity.Property(e => e.VehicleId).HasColumnName("VehicleID");
+
+                entity.HasOne(d => d.Vehicle)
+                    .WithMany(p => p.ParkingLots)
+                    .HasForeignKey(d => d.VehicleId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_ParkingLot_Vehicles");
             });
 
             modelBuilder.Entity<Vehicle>(entity =>
             {
                 entity.Property(e => e.VehicleId).HasColumnName("VehicleID");
 
-                entity.Property(e => e.LicensePlate).HasMaxLength(50);
+                entity.Property(e => e.RegNumber).HasMaxLength(10);
 
-                entity.Property(e => e.VehicleType).HasMaxLength(10);
-
-                entity.HasMany(d => d.ParkingSpots)
-                    .WithMany(p => p.Vehicles)
-                    .UsingEntity<Dictionary<string, object>>(
-                        "Parkedvehicle",
-                        l => l.HasOne<ParkingLot>().WithMany().HasForeignKey("ParkingSpotId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_Parkedvehicles_ParkingLot"),
-                        r => r.HasOne<Vehicle>().WithMany().HasForeignKey("VehicleId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_Parkedvehicles_Vehicles"),
-                        j =>
-                        {
-                            j.HasKey("VehicleId", "ParkingSpotId").HasName("PK__Parkedve__476B54B2109F3F07");
-
-                            j.ToTable("Parkedvehicles");
-
-                            j.IndexerProperty<int>("VehicleId").HasColumnName("VehicleID");
-
-                            j.IndexerProperty<int>("ParkingSpotId").HasColumnName("ParkingSpotID");
-                        });
+                entity.Property(e => e.VehicleType).HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

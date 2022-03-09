@@ -21,7 +21,7 @@ namespace Core
             using (var db = new MightyKnightsContext())
             {
                 var checkIfPresent = (from v in db.Vehicles
-                                      where v.LicensePlate == licancePlate
+                                      where v.RegNumber == licancePlate
                                       select v).ToList();
                 if (checkIfPresent.Any())
                 {
@@ -37,8 +37,8 @@ namespace Core
             {
                 var checkIfFull = (from p in db.ParkingLots
                                    join v in db.Vehicles on p.VehicleId equals v.VehicleId
-                                   where p.ParkingSpot == parkingSpot
-                                   select v.UnitSize).ToList();
+                                   where p.SpotNumber == parkingSpot
+                                   select v.Size).ToList();
 
                 if (checkIfFull.Sum() == 4)
                 {
@@ -55,13 +55,13 @@ namespace Core
             {
                 var spotCheck = (from p in db.ParkingLots
                                  join v in db.Vehicles on p.VehicleId equals v.VehicleId
-                                 where p.ParkingSpot == selectedSpot
+                                 where p.SpotNumber == selectedSpot
                                  select new
                                  {
-                                     ParkingSpot = p.ParkingSpot,
-                                     LicancePlate = v.LicensePlate,
+                                     ParkingSpot = p.SpotNumber,
+                                     LicancePlate = v.RegNumber,
                                      VehicleType = v.VehicleType,
-                                     CheckInDate = p.CheckInDate
+                                     CheckInDate = p.Arrival
                                  }).ToList();
 
 

@@ -11,9 +11,9 @@ public class Car : Vehicle
         {
             var car = new Car()
             {
-                LicensePlate = licensePlate,
+                RegNumber = licensePlate,
                 VehicleType = "Car",
-                UnitSize = 4
+                Size = 4
             };
             context.Vehicles.Add(car);
             context.SaveChanges();

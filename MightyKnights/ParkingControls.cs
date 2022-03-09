@@ -10,19 +10,19 @@ namespace Core
 {
     public class ParkingControls
     {
-        public void ParkVehicle(int parkingSpot, string licensePlate)
+        public void ParkVehicle(int parkingSpot, string regNumber)
         {
             using (var context = new MightyKnightsContext())
             {
                 var vehicleId = (from v in context.Vehicles
-                                 where v.LicensePlate == licensePlate
+                                 where v.RegNumber == regNumber
                                  select v.VehicleId).FirstOrDefault();
 
                 ParkingLot parking = new();
 
-                parking.ParkingSpot = parkingSpot;
+                parking.SpotNumber = parkingSpot;
                 parking.VehicleId = vehicleId;
-                parking.CheckInDate = DateTime.Now;
+                parking.Arrival = DateTime.Now;
 
                 context.ParkingLots.Add(parking);
                 context.SaveChanges();

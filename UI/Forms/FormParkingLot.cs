@@ -22,7 +22,7 @@ namespace UI
             using (MightyKnightsContext context = new MightyKnightsContext())
             {
                 var fullSpots = (from p in context.ParkingLots
-                                 select p.ParkingSpot).ToList();
+                                 select p.SpotNumber).ToList();
                 foreach (var spot in fullSpots)
                 {
                     string chosenSpot = "pSpot" + spot;
