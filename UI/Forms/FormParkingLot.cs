@@ -13,6 +13,9 @@ namespace UI
         CheckDbForData check = new();
         ParkingSpotColor color = new();
         ParkingControls parkingControls = new();
+        ParkingFeeCalculations calculations = new();
+        Departure departure = new();
+
 
         public FormParkingLot()
         {
@@ -22,7 +25,7 @@ namespace UI
             using (MightyKnightsContext context = new MightyKnightsContext())
             {
                 var fullSpots = (from p in context.ParkingLots
-                                 select p.ParkingSpot).ToList();
+                                 select p.SpotNumber).ToList();
                 foreach (var spot in fullSpots)
                 {
                     string chosenSpot = "pSpot" + spot;
@@ -134,8 +137,11 @@ namespace UI
                             refresh.RefreshListViewer(listView1);
                             break;
                         }
+
+
                     }
                     #endregion
+
             }
         }
 
@@ -147,6 +153,30 @@ namespace UI
             int selectedSpot = Int32.Parse(buttonText);
 
            MessageBox.Show(check.CheckParkingSpotStatus(selectedSpot));
+
+        }
+
+        private void CheckOutButton_Click(object sender, EventArgs e)
+        {
+            string regNumber = checkOutTextBox.Text.ToString();
+
+            double? amount = calculations.TotalAmountToPay(regNumber);
+
+            if(amount.HasValue)
+            {
+                MessageBox.Show($"Amount to pay : {amount} CZK");
+                departure.RemoveVehicle(regNumber);
+
+                listView1.Items.Clear();
+                refresh.RefreshListViewer(listView1);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Vehicle not found!");
+            }
+
 
         }
     }

@@ -11,9 +11,9 @@ public class Mc : Vehicle
         {
             var mc = new Mc()
             {
-                LicensePlate = licensePlate,
+                RegNumber = licensePlate,
                 VehicleType = "MC",
-                UnitSize = 2
+                Size = 2
             };
             context.Vehicles.Add(mc);
             context.SaveChanges();

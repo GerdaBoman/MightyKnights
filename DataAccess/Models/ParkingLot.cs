@@ -7,15 +7,16 @@ namespace DataAccess.Models
     {
         public ParkingLot()
         {
-            Vehicles = new HashSet<Vehicle>();
+            Histories = new HashSet<History>();
         }
 
-        public int ParkingSpotId { get; set; }
+        public int ParkingLotId { get; set; }
+        public int SpotNumber { get; set; }
         public int VehicleId { get; set; }
-        public int ParkingSpot { get; set; }
-        public DateTime CheckInDate { get; set; }
-        public DateTime? CheckOutDate { get; set; }
+        public DateTime Arrival { get; set; }
+        public DateTime? Departure { get; set; }
 
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public virtual Vehicle Vehicle { get; set; } = null!;
+        public virtual ICollection<History> Histories { get; set; }
     }
 }

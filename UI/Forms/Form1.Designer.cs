@@ -40,9 +40,9 @@
             this.currentChildButton = new FontAwesome.Sharp.IconButton();
             this.currentChildFormLabel = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panelShadow = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ClockStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panelShadow = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).BeginInit();
@@ -63,7 +63,7 @@
             this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(200, 811);
+            this.MenuPanel.Size = new System.Drawing.Size(200, 824);
             this.MenuPanel.TabIndex = 0;
             // 
             // SettingsButton
@@ -78,7 +78,7 @@
             this.SettingsButton.IconColor = System.Drawing.Color.Gainsboro;
             this.SettingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SettingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SettingsButton.Location = new System.Drawing.Point(0, 671);
+            this.SettingsButton.Location = new System.Drawing.Point(0, 684);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.SettingsButton.Size = new System.Drawing.Size(200, 70);
@@ -100,7 +100,7 @@
             this.ExitButton.IconColor = System.Drawing.Color.Gainsboro;
             this.ExitButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ExitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ExitButton.Location = new System.Drawing.Point(0, 741);
+            this.ExitButton.Location = new System.Drawing.Point(0, 754);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ExitButton.Size = new System.Drawing.Size(200, 70);
@@ -197,7 +197,7 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDashboard.Location = new System.Drawing.Point(200, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1184, 70);
+            this.panelDashboard.Size = new System.Drawing.Size(1371, 70);
             this.panelDashboard.TabIndex = 1;
             // 
             // currentChildButton
@@ -232,25 +232,16 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(200, 70);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1184, 741);
+            this.panelDesktop.Size = new System.Drawing.Size(1371, 754);
             this.panelDesktop.TabIndex = 2;
-            // 
-            // panelShadow
-            // 
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(111)))), ((int)(((byte)(164)))));
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(0, 0);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1184, 10);
-            this.panelShadow.TabIndex = 0;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ClockStatusStrip});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 711);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 724);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1184, 30);
+            this.statusStrip1.Size = new System.Drawing.Size(1371, 30);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStripBar";
             // 
@@ -264,7 +255,16 @@
             this.ClockStatusStrip.Size = new System.Drawing.Size(82, 25);
             this.ClockStatusStrip.Text = "00:00:00";
             // 
-            // timer1
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(111)))), ((int)(((byte)(164)))));
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.Location = new System.Drawing.Point(0, 0);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(1371, 10);
+            this.panelShadow.TabIndex = 0;
+            // 
+            // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -272,7 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 811);
+            this.ClientSize = new System.Drawing.Size(1571, 824);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.MenuPanel);

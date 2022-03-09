@@ -7,26 +7,14 @@ namespace DataAccess.Models
     {
         public Vehicle()
         {
-            ParkingSpots = new HashSet<ParkingLot>();
+            ParkingLots = new HashSet<ParkingLot>();
         }
 
         public int VehicleId { get; set; }
-        public string? LicensePlate { get; set; }
-        public string? VehicleType { get; set; }
-        public int? UnitSize { get; set; }
+        public string RegNumber { get; set; } = null!;
+        public string VehicleType { get; set; } = null!;
+        public int Size { get; set; }
 
-        public virtual HistoryLog HistoryLog { get; set; } = null!;
-
-        public virtual ICollection<ParkingLot> ParkingSpots { get; set; }
+        public virtual ICollection<ParkingLot> ParkingLots { get; set; }
     }
 }
-
-
-
-
-/*
-
-    konstruktor i Car,Mc 
-    this.carsize = Config.CarSize;
-
-*/

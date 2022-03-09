@@ -19,9 +19,9 @@ namespace UI.ListViewer
                                       join v in db.Vehicles on p.VehicleId equals v.VehicleId
                                       select new
                                       {
-                                          ParkingSpot = p.ParkingSpotId,
-                                          LicancePlate = v.LicensePlate,
-                                          CheckInDate = p.CheckInDate
+                                          ParkingSpot = p.SpotNumber,
+                                          LicancePlate = v.RegNumber,
+                                          CheckInDate = p.Arrival
                                       }).ToList();
 
                 foreach (var parkedVehicle in parkingLotList)
