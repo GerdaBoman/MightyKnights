@@ -1,0 +1,10 @@
+{
+  {
+    "CarSize": 4,
+    "McSize": 2,
+    "CarPriceHour": 20,
+    "McPriceHour": 10,
+    "ParkingLot": 100,
+    "ParkingSpotSize": 4
+  }
+}
