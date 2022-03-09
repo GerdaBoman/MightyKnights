@@ -13,6 +13,9 @@ namespace UI
         CheckDbForData check = new();
         ParkingSpotColor color = new();
         ParkingControls parkingControls = new();
+        ParkingFeeCalculations calculations = new();
+        Departure departure = new();
+
 
         public FormParkingLot()
         {
@@ -153,7 +156,29 @@ namespace UI
 
         }
 
-        
+        private void CheckOutButton_Click(object sender, EventArgs e)
+        {
+            string regNumber = checkOutTextBox.Text.ToString();
+
+            double? amount = calculations.TotalAmountToPay(regNumber);
+
+            if(amount.HasValue)
+            {
+                MessageBox.Show($"Amount to pay : {amount} CZK");
+                departure.RemoveVehicle(regNumber);
+
+                listView1.Items.Clear();
+                refresh.RefreshListViewer(listView1);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Vehicle not found!");
+            }
+
+
+        }
     }
 }
     

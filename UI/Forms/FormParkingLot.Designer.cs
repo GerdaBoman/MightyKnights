@@ -147,7 +147,7 @@
             this.checkoutInstructions = new System.Windows.Forms.Label();
             this.checkoutSpotBox = new System.Windows.Forms.TextBox();
             this.regNumberLabel2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkOutTextBox = new System.Windows.Forms.TextBox();
             this.infoLabel = new System.Windows.Forms.Label();
             this.CheckOutButton = new System.Windows.Forms.Button();
             this.ParkedVehiclesLabel = new System.Windows.Forms.Label();
@@ -1616,13 +1616,13 @@
             this.regNumberLabel2.TabIndex = 23;
             this.regNumberLabel2.Text = "Registration Number:";
             // 
-            // textBox1
+            // checkOutTextBox
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(986, 609);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 23);
-            this.textBox1.TabIndex = 24;
+            this.checkOutTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkOutTextBox.Location = new System.Drawing.Point(986, 609);
+            this.checkOutTextBox.Name = "checkOutTextBox";
+            this.checkOutTextBox.Size = new System.Drawing.Size(134, 23);
+            this.checkOutTextBox.TabIndex = 24;
             // 
             // infoLabel
             // 
@@ -1643,6 +1643,7 @@
             this.CheckOutButton.TabIndex = 26;
             this.CheckOutButton.Text = "Check Out";
             this.CheckOutButton.UseVisualStyleBackColor = true;
+            this.CheckOutButton.Click += new System.EventHandler(this.CheckOutButton_Click);
             // 
             // ParkedVehiclesLabel
             // 
@@ -1663,7 +1664,7 @@
             this.Controls.Add(this.ParkedVehiclesLabel);
             this.Controls.Add(this.CheckOutButton);
             this.Controls.Add(this.infoLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.checkOutTextBox);
             this.Controls.Add(this.regNumberLabel2);
             this.Controls.Add(this.checkoutSpotBox);
             this.Controls.Add(this.checkoutInstructions);
@@ -1808,7 +1809,7 @@
         private Label checkoutInstructions;
         private TextBox checkoutSpotBox;
         private Label regNumberLabel2;
-        private TextBox textBox1;
+        private TextBox checkOutTextBox;
         private Label infoLabel;
         private Button CheckOutButton;
         private Label ParkedVehiclesLabel;
