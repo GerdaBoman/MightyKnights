@@ -162,23 +162,51 @@ namespace UI
 
             double? amount = calculations.TotalAmountToPay(regNumber);
 
-            if(amount.HasValue)
+            string toDecimal = amount.ToString();
+
+            int parkingSpot = int.Parse(checkoutSpotBox.Text);
+            string checkOutSpot = "pSpot" + checkoutSpotBox.Text;
+            Button checkSpot = Controls.Find(checkOutSpot, true).FirstOrDefault() as Button;
+
+            if (amount > 0)
             {
-                MessageBox.Show($"Amount to pay : {amount} CZK");
+                decimal roundedAmount = Math.Round(decimal.Parse(toDecimal), 2);
+
+                MessageBox.Show($"Amount to pay : {roundedAmount} CZK");
                 departure.RemoveVehicle(regNumber);
+
+                color.SpotsStatus(parkingSpot, checkSpot);
 
                 listView1.Items.Clear();
                 refresh.RefreshListViewer(listView1);
+                checkOutTextBox.Clear();
+                checkoutSpotBox.Clear();
 
+            }
+            if(amount < 0 )
+            {
+                MessageBox.Show("Vehicle has free parking!");
+                departure.RemoveVehicle(regNumber);
 
+                color.SpotsStatus(parkingSpot, checkSpot);
+
+                listView1.Items.Clear();
+                refresh.RefreshListViewer(listView1);
+                checkOutTextBox.Clear();
+                checkoutSpotBox.Clear();
             }
             else
             {
                 MessageBox.Show("Vehicle not found!");
+
+                checkOutTextBox.Clear();
+                checkoutSpotBox.Clear();
             }
 
 
         }
+
+
     }
 }
     

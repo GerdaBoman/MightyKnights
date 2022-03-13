@@ -26,7 +26,6 @@ namespace Core
                     db.Vehicles.Remove(vehicleToRemoveVehicle);
                     
 
-
                     db.SaveChanges();
                 }
             }

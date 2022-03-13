@@ -30,7 +30,7 @@ namespace UI.ParkingSpotCosmetic
                 }
                 else
                 {
-                    buttonStatus.BackColor = Color.FromArgb(89, 165, 216);
+                    buttonStatus.BackColor = Color.Empty;
                 }
 
             }

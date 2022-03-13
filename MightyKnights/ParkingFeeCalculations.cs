@@ -42,9 +42,9 @@ namespace Core
 
                 if (vehicle == "Car")
                 {
-                    return totalAmount = time.TotalHours * 20;
+                    return totalAmount = time.TotalHours * 25;
                 }
-                else if (vehicle == "Mc")
+                else if (vehicle == "MC")
                 {
                     return totalAmount = time.TotalHours * 10;
                 }
