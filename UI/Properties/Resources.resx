@@ -121,4 +121,10 @@
   <data name="knight-logo-clip-art-knight-c744684370c393f827995e46e5a11427" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\knight-logo-clip-art-knight-c744684370c393f827995e46e5a11427.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ferrari_PNG10669" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ferrari_PNG10669.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scooter_PNG11340" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scooter_PNG11340.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

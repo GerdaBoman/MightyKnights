@@ -63,9 +63,29 @@ namespace UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ferrari_PNG10669 {
+            get {
+                object obj = ResourceManager.GetObject("ferrari_PNG10669", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap knight_logo_clip_art_knight_c744684370c393f827995e46e5a11427 {
             get {
                 object obj = ResourceManager.GetObject("knight-logo-clip-art-knight-c744684370c393f827995e46e5a11427", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scooter_PNG11340 {
+            get {
+                object obj = ResourceManager.GetObject("scooter_PNG11340", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

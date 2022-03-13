@@ -183,7 +183,7 @@ namespace UI
                 checkoutSpotBox.Clear();
 
             }
-            if(amount < 0 )
+            else if(amount < 0 )
             {
                 MessageBox.Show("Vehicle has free parking!");
                 departure.RemoveVehicle(regNumber);
@@ -206,7 +206,7 @@ namespace UI
 
         }
 
-
+       
     }
 }
     
