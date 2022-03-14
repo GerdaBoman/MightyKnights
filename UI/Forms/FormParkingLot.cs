@@ -54,9 +54,6 @@ namespace UI
 
                 }
             }
-
-
-
         }
 
         private void CheckInButton_Click(object sender, EventArgs e)
@@ -154,17 +151,6 @@ namespace UI
                     #endregion
 
             }
-        }
-
-       // Parking Spot Status
-        private void pSpot1_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            string buttonText = button.Text.ToString();
-            int selectedSpot = Int32.Parse(buttonText);
-
-           MessageBox.Show(check.CheckParkingSpotStatus(selectedSpot));
-
         }
 
         private void CheckOutButton_Click(object sender, EventArgs e)
