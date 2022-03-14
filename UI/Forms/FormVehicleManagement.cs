@@ -1,5 +1,6 @@
 ﻿using Core;
 using Core.UpdateData;
+using DataAccess.Data;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace UI
 {
     public partial class FormVehicleManagement : Form
     {
+        private AutoCompleteStringCollection suggestionLlist = new AutoCompleteStringCollection();
         ListViewRefresh update = new();
         CheckDbForData check = new CheckDbForData();
         UpdateRegNumber updateRegNumber = new();
@@ -23,17 +25,34 @@ namespace UI
         UpdateCheckInDate updateCheckInDate = new UpdateCheckInDate();
         UpdateParkingSpot updateParkingSpot = new UpdateParkingSpot();
         Departure departure = new Departure();  
-
         string caption = "Error";
+
 
         public FormVehicleManagement()
         {
+            
             InitializeComponent();
+      
+
+            using(var db = new MightyKnightsContext())
+            {
+                suggestionLlist.AddRange(db.Vehicles.Select(r => r.RegNumber).ToArray());
+                RegNummerTextBox.AutoCompleteCustomSource = suggestionLlist;
+                RegNummerTextBox.AutoCompleteMode = AutoCompleteMode.Suggest;
+                RegNummerTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                RegNummerTextBox.KeyDown += RegNummerTextBox_KeyDown;
+            }
+
+
+
+
+
         }
 
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+
             string regNumber = RegNummerTextBox.Text.ToString();
 
             if (string.IsNullOrEmpty(regNumber))
@@ -67,8 +86,6 @@ namespace UI
         {
             update.RefreshManegmentViewer(parkingLotViewer);
         }
-
-        
 
         private void UpdateLicencePlate_Click(object sender, EventArgs e)
         {
@@ -197,6 +214,14 @@ namespace UI
             }
            
             
+        }
+
+        private void RegNummerTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Name = (sender as TextBox).Text;
+            }
         }
     }
 }

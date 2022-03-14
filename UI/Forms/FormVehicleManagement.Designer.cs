@@ -86,6 +86,7 @@
             this.RegNummerTextBox.Name = "RegNummerTextBox";
             this.RegNummerTextBox.Size = new System.Drawing.Size(170, 23);
             this.RegNummerTextBox.TabIndex = 1;
+            this.RegNummerTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegNummerTextBox_KeyDown);
             // 
             // searchButton
             // 
