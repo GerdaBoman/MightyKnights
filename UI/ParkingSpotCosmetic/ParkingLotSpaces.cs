@@ -17,7 +17,7 @@ namespace UI.ParkingSpotCosmetic
                 Button b = new Button();
                 b.Text= i.ToString();
                 b.Name= "pSpot"+ i.ToString();
-                b.Size= new Size( 45,60);
+                b.Size= new Size( 50,60);
                 b.BackColor = Color.FromArgb(89, 165, 216);
                 b.Click += new EventHandler(pSpot1_Click);
                 

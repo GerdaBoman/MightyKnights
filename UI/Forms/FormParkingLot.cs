@@ -32,10 +32,10 @@ namespace UI
 
             if (check == true)
             {
-                refresh.RefreshListViewer(listView1);
+                refresh.RefreshParkingLotViewer(listView1);
             }
 
-            //CHANGE CAPACITY OF PARKING LOT
+            //TODO: CONNECT TO JSON TO CHANGE CAPACITY OF PARKING LOT
             int capacity = 101;
             
             parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
@@ -102,7 +102,7 @@ namespace UI
                             parkingSpotBox.Clear();
 
                             listView1.Items.Clear();
-                            refresh.RefreshListViewer(listView1);
+                            refresh.RefreshParkingLotViewer(listView1);
                             break;
                         }
 
@@ -142,7 +142,7 @@ namespace UI
                             parkingSpotBox.Clear();
 
                             listView1.Items.Clear();
-                            refresh.RefreshListViewer(listView1);
+                            refresh.RefreshParkingLotViewer(listView1);
                             break;
                         }
 
@@ -175,7 +175,7 @@ namespace UI
                 color.SpotsStatus(parkingSpot, checkSpot);
 
                 listView1.Items.Clear();
-                refresh.RefreshListViewer(listView1);
+                refresh.RefreshParkingLotViewer(listView1);
                 checkOutTextBox.Clear();
                 checkoutSpotBox.Clear();
 
@@ -188,7 +188,7 @@ namespace UI
                 color.SpotsStatus(parkingSpot, checkSpot);
 
                 listView1.Items.Clear();
-                refresh.RefreshListViewer(listView1);
+                refresh.RefreshParkingLotViewer(listView1);
                 checkOutTextBox.Clear();
                 checkoutSpotBox.Clear();
             }
