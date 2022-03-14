@@ -130,5 +130,7 @@ namespace UI
         {
             ClockStatusStrip.Text = DateTime.Now.ToString("T");
         }
+
+       
     }
 }

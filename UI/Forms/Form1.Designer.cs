@@ -234,6 +234,7 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1371, 754);
             this.panelDesktop.TabIndex = 2;
+        
             // 
             // statusStrip1
             // 

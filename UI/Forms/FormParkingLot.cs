@@ -15,6 +15,7 @@ namespace UI
         ParkingControls parkingControls = new();
         ParkingFeeCalculations calculations = new();
         Departure departure = new();
+        ParkingLotSpaces parkingLotSpaces = new();
 
 
         public FormParkingLot()
@@ -22,20 +23,7 @@ namespace UI
             InitializeComponent();
 
        
-            using (MightyKnightsContext context = new MightyKnightsContext())
-            {
-                var fullSpots = (from p in context.ParkingLots
-                                 select p.SpotNumber).ToList();
-                foreach (var spot in fullSpots)
-                {
-                    string chosenSpot = "pSpot" + spot;
-
-                    Button myButton = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
-
-                    color.SpotsStatus(spot, myButton);
-
-                }
-            }
+            
         }
 
         private void FormParkingLot_Load(object sender, EventArgs e)
@@ -46,6 +34,30 @@ namespace UI
             {
                 refresh.RefreshListViewer(listView1);
             }
+
+            //CHANGE CAPACITY OF PARKING LOT
+            int capacity = 101;
+            
+
+            parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
+
+            //using (MightyKnightsContext context = new MightyKnightsContext())
+            //{
+            //    var fullSpots = (from p in context.ParkingLots
+            //                     select p.SpotNumber).ToList();
+            //    foreach (var spot in fullSpots)
+            //    {
+            //        string chosenSpot = "pSpot" + spot;
+
+            //        Button myButton = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
+
+            //        color.SpotsStatus(spot, myButton);
+
+            //    }
+            //}
+
+
+
         }
 
         private void CheckInButton_Click(object sender, EventArgs e)

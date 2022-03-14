@@ -1,6 +1,8 @@
 ﻿using Core.HomeCalculations;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Dynamic;
 
 namespace UI
 {
@@ -11,6 +13,16 @@ namespace UI
         public FormHome()
         {
             InitializeComponent();
+
+
+            var config = new ConfigurationBuilder()
+             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+             .AddJsonFile("appSettings.json")
+             .Build()
+              .Get<Config>();
+
+
+
 
             //priceList = File.ReadAllLines(@"C:\Users\jonas\source\repos\MightyKnights\DataAccess\Prague_Parking_PriceList.txt")
             //    .ToList();
@@ -23,9 +35,8 @@ namespace UI
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            //dynamic jsonFile = JsonConvert.DeserializeObject<Config>("C: \\Users\\gerda\\source\\repos\\MightyKnights\\DataAccess\appSettings.json");
 
-            //TotalCarparkSize.Text = jsonFile["ParkinhLotSize"];
+           
 
             int totalCars = car.CountCars();
 
