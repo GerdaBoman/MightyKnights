@@ -1,4 +1,5 @@
 ﻿using Core.HomeCalculations;
+using DataAccess.Data.Datafiles;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -9,7 +10,8 @@ namespace UI
     public partial class FormHome : Form
     {
         CountAllCars car = new CountAllCars();
-        CountAllMC mc= new CountAllMC();    
+        CountAllMC mc= new CountAllMC();
+        InsertTestData data = new();
         public FormHome()
         {
             InitializeComponent();
@@ -47,6 +49,11 @@ namespace UI
             NumberOfMC.Text= totalMc.ToString();
         }
 
-        
+        private void TestDataButton_Click(object sender, EventArgs e)
+        {
+            data.TestData();
+            MessageBox.Show("Import Completed!");
+
+        }
     }
 }
