@@ -18,8 +18,9 @@ public class Config
     public static int McPriceHour { get; set; }
     [JsonProperty("ParkingSpotSize")]
     public static int ParkingSpotSize { get; set; }
+
     [JsonProperty("ParkingLotSize")]
-    public static int ParkingLotSize { get; set; }
+    public int ParkingLotSize { get; set; }
 
 
       public static Config ReadSettingsFromJson(string filePath = "../../../Datafiles/Config.json")

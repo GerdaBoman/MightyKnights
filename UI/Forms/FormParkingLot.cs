@@ -1,6 +1,9 @@
 ﻿
 using Core;
 using DataAccess.Data;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.Data;
 using UI.ListViewer;
 using UI.ParkingSpotCosmetic;
@@ -36,7 +39,20 @@ namespace UI
             }
 
             //TODO: CONNECT TO JSON TO CHANGE CAPACITY OF PARKING LOT
-            int capacity = 101;
+
+            var appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
+            var json = File.ReadAllText(appSettingsPath);
+
+            var jsonString = JObject.Parse(json);
+            var parkingLotSize = jsonString["ParkingLotSize"].ToString();
+
+            Config value = new Config
+            {
+                ParkingLotSize = (int)jsonString["ParkingLotSize"]["ParkingLotSize"]
+            };
+
+
+            int capacity = value.ParkingLotSize;
             
             parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
 
