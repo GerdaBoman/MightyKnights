@@ -38,23 +38,22 @@ namespace UI
             //CHANGE CAPACITY OF PARKING LOT
             int capacity = 101;
             
-
             parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
 
-            //using (MightyKnightsContext context = new MightyKnightsContext())
-            //{
-            //    var fullSpots = (from p in context.ParkingLots
-            //                     select p.SpotNumber).ToList();
-            //    foreach (var spot in fullSpots)
-            //    {
-            //        string chosenSpot = "pSpot" + spot;
+            using (MightyKnightsContext context = new MightyKnightsContext())
+            {
+                var fullSpots = (from p in context.ParkingLots
+                                 select p.SpotNumber).ToList();
+                foreach (var spot in fullSpots)
+                {
+                    string chosenSpot = "pSpot" + spot;
 
-            //        Button myButton = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
+                    Button myButton = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
 
-            //        color.SpotsStatus(spot, myButton);
+                    color.SpotsStatus(spot, myButton);
 
-            //    }
-            //}
+                }
+            }
 
 
 

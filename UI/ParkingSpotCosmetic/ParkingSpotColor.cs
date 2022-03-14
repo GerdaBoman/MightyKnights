@@ -17,8 +17,16 @@ namespace UI.ParkingSpotCosmetic
                 var checkIfFull = (from p in db.ParkingLots
                                    join v in db.Vehicles on p.VehicleId equals v.VehicleId
                                    where p.SpotNumber == parkingSpot
-                                   select v.Size).ToList();
-                int total = checkIfFull.Sum(x => Convert.ToInt32(x));
+                                   select v.Size).ToArray();
+
+                int total = 0; 
+
+                for(int i = 0; i < checkIfFull.Length; i++)
+                {
+                    int value = checkIfFull[i];
+                    total += value;
+                    
+                }
 
                 if (total == 4)
                 {
