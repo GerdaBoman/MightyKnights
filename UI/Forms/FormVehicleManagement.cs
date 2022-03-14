@@ -22,6 +22,7 @@ namespace UI
         UpdateVehicleType updateVehicleType = new UpdateVehicleType();
         UpdateCheckInDate updateCheckInDate = new UpdateCheckInDate();
         UpdateParkingSpot updateParkingSpot = new UpdateParkingSpot();
+        Departure departure = new Departure();  
 
         string caption = "Error";
 
@@ -175,6 +176,27 @@ namespace UI
             editParkingSpot.Clear();
             newParkingSpot.Clear();
 
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            string regNumber = editRegNumber.Text.ToString();
+           
+
+            DialogResult result = MessageBox.Show($"Are you sure you want to remove {regNumber} vehicle?", "!!!!", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                departure.RemoveVehicle(regNumber);
+                parkingLotViewer.Items.Clear();
+                update.RefreshManegmentViewer(parkingLotViewer);
+            }
+            else
+            {
+                MessageBox.Show("Removal canceled!");
+            }
+           
+            
         }
     }
 }
