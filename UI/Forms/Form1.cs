@@ -2,6 +2,7 @@
 
 using DataAccess.Data;
 using FontAwesome.Sharp;
+using UI.Forms;
 
 namespace UI
 {
@@ -9,8 +10,9 @@ namespace UI
     {
         private IconButton currentButton;
         private Panel leftBorderButton;
-        private System.Windows.Forms.Form currentChildForm;
+        private Form currentChildForm;
         Config config = new Config();
+        
 
         public Form1()
         {
@@ -18,6 +20,8 @@ namespace UI
             MightyKnightsContext db = new();
             db.Database.EnsureCreated();
             config.ReadFromJson();
+
+          
 
             leftBorderButton = new Panel();
             leftBorderButton.Size = new Size(7, 60);
@@ -64,6 +68,13 @@ namespace UI
             HighlightButton(sender, Color.FromArgb(56, 111, 164));
             Application.Exit();
         }
+        private void HistoryButton_Click(object sender, EventArgs e)
+        {
+            HighlightButton(sender, Color.FromArgb(56, 111, 164));
+            OpenChildForm(new FormHistory());
+
+        }
+
         #endregion
 
         private void OpenChildForm(System.Windows.Forms.Form childForm)
@@ -133,6 +144,6 @@ namespace UI
             ClockStatusStrip.Text = DateTime.Now.ToString("T");
         }
 
-       
+        
     }
 }

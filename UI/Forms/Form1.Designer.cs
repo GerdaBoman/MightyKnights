@@ -44,6 +44,7 @@
             this.ClockStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.HistoryButton = new FontAwesome.Sharp.IconButton();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).BeginInit();
             this.panelDashboard.SuspendLayout();
@@ -54,6 +55,7 @@
             // MenuPanel
             // 
             this.MenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(60)))), ((int)(((byte)(85)))));
+            this.MenuPanel.Controls.Add(this.HistoryButton);
             this.MenuPanel.Controls.Add(this.SettingsButton);
             this.MenuPanel.Controls.Add(this.ExitButton);
             this.MenuPanel.Controls.Add(this.VehicleManagementButton);
@@ -234,7 +236,6 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1371, 754);
             this.panelDesktop.TabIndex = 2;
-        
             // 
             // statusStrip1
             // 
@@ -268,6 +269,28 @@
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // HistoryButton
+            // 
+            this.HistoryButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HistoryButton.FlatAppearance.BorderSize = 0;
+            this.HistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HistoryButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HistoryButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.HistoryButton.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.HistoryButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.HistoryButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.HistoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HistoryButton.Location = new System.Drawing.Point(0, 320);
+            this.HistoryButton.Name = "HistoryButton";
+            this.HistoryButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.HistoryButton.Size = new System.Drawing.Size(200, 70);
+            this.HistoryButton.TabIndex = 6;
+            this.HistoryButton.Text = "History";
+            this.HistoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HistoryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.HistoryButton.UseVisualStyleBackColor = true;
+            this.HistoryButton.Click += new System.EventHandler(this.HistoryButton_Click);
             // 
             // Form1
             // 
@@ -308,5 +331,6 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel ClockStatusStrip;
         private System.Windows.Forms.Timer timer;
+        private FontAwesome.Sharp.IconButton HistoryButton;
     }
 }

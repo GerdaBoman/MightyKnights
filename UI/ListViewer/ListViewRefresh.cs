@@ -96,5 +96,25 @@ namespace UI.ListViewer
 
             }
         }
+        public void RefreshHistoryViewer(ListView listViewer)
+        {
+            using( var db = new MightyKnightsContext())
+            {
+                var logg = (from h in db.Histories
+                               select h).ToList();
+
+
+                foreach (var history in logg)
+                {
+                    ListViewItem item = new ListViewItem(history.LicencePlate.ToString());
+                    item.SubItems.Add(history.ParkingSpot.ToString());
+                    item.SubItems.Add(history.ArrivalDate.ToString());
+                    item.SubItems.Add(history.DepartureDate.ToString());
+                    item.SubItems.Add(history.TotalCost.ToString());
+
+                    listViewer.Items.Add(item);
+                }
+            }
+        }
     }
 }

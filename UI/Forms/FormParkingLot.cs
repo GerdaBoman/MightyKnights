@@ -54,8 +54,11 @@ namespace UI
 
 
             //int capacity = value.ParkingLotSize;
-            int capacity = config.ParkingLotSize;
-            
+
+            //int capacity = config.ParkingLotSize;
+
+            int capacity = 100;
+
             parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
 
             using (MightyKnightsContext context = new MightyKnightsContext())

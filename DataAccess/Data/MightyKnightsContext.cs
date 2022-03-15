@@ -36,26 +36,23 @@ namespace DataAccess.Data
         {
             modelBuilder.Entity<History>(entity =>
             {
-                entity.ToTable("History");
+                entity.HasKey(e => e.HistoryId)
+                    .HasName("PK__Hisotry__4D7B4ADD65C1BA00");
+
+                entity.ToTable("Hisotry");
 
                 entity.Property(e => e.HistoryId).HasColumnName("HistoryID");
 
-                entity.Property(e => e.Cost).HasColumnType("money");
+                entity.Property(e => e.LicencePlate).HasMaxLength(50);
 
-                entity.Property(e => e.ParkingLotId).HasColumnName("ParkingLotID");
-
-                entity.Property(e => e.RegNumber).HasMaxLength(10);
-
-                entity.HasOne(d => d.ParkingLot)
-                    .WithMany(p => p.Histories)
-                    .HasForeignKey(d => d.ParkingLotId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_History_ParkingLot");
+                entity.Property(e => e.TotalCost).HasColumnType("money");
             });
 
             modelBuilder.Entity<ParkingLot>(entity =>
             {
                 entity.ToTable("ParkingLot");
+
+                entity.HasIndex(e => e.VehicleId, "IX_ParkingLot_VehicleID");
 
                 entity.Property(e => e.ParkingLotId).HasColumnName("ParkingLotID");
 

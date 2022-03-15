@@ -4,7 +4,7 @@ namespace UI
 {
     public partial class FormSettings : Form
     {
-        Config config = new();
+        
 
         public FormSettings()
         {
@@ -13,9 +13,12 @@ namespace UI
 
         private void FormSettings_Load(object sender, EventArgs e)
         {
-            cPrice_txt.Text = config.CarPriceHour.ToString();
-            mcPrice_txt.Text = config.McPriceHour.ToString();
-            gSize_txt.Text = config.ParkingLotSize.ToString();
+            Config config = new Config();
+          
+                cPrice_txt.Text = config.CarPriceHour.ToString();
+                mcPrice_txt.Text = config.McPriceHour.ToString();
+                gSize_txt.Text = config.ParkingLotSize.ToString();
+
         }
 
         private void cPrice_edit_btn_Click(object sender, EventArgs e)

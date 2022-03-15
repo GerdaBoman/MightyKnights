@@ -9,8 +9,11 @@ namespace Core
 {
     public class Departure
     {
+        AddHistory history = new AddHistory();
         public void RemoveVehicle(string licencePlate)
         {
+            history.AddToLogg(licencePlate);
+
             using (var db = new MightyKnightsContext())
             {
                 var vehicleToRemoveParking = (from v in db.Vehicles

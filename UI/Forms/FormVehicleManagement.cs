@@ -33,7 +33,6 @@ namespace UI
             
             InitializeComponent();
       
-
             using(var db = new MightyKnightsContext())
             {
                 suggestionLlist.AddRange(db.Vehicles.Select(r => r.RegNumber).ToArray());
@@ -42,11 +41,6 @@ namespace UI
                 RegNummerTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
                 RegNummerTextBox.KeyDown += RegNummerTextBox_KeyDown;
             }
-
-
-
-
-
         }
 
 

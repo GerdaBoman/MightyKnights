@@ -6,7 +6,7 @@ using System;
 /// <summary>
 /// Summary description for Config
 /// </summary>
-public class Config
+public class Config 
 {
     public int CarSize { get; set; }
     public int McSize { get; set; }
