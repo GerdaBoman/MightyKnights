@@ -1,13 +1,4 @@
 ﻿using Core.HistoryMethods;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using UI.ListViewer;
 
 namespace UI.Forms
@@ -16,7 +7,7 @@ namespace UI.Forms
     {
         ListViewRefresh refresh = new();
         RemoveHistory remove = new();
-        DataBetweenDates data = new DataBetweenDates(); 
+        DataBetweenDates data = new DataBetweenDates();
         public FormHistory()
         {
             InitializeComponent();
@@ -35,8 +26,8 @@ namespace UI.Forms
 
         private void DeteleButton_Click(object sender, EventArgs e)
         {
-            DialogResult result =  MessageBox.Show("Are you sure you want to delete the whole history log?","Warning:",MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
+            DialogResult result = MessageBox.Show("Are you sure you want to delete the whole history log?", "Warning:", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 remove.HistoryRemoval();
                 historyViewer.Items.Clear();
@@ -51,18 +42,26 @@ namespace UI.Forms
 
         private void selectButton_Click(object sender, EventArgs e)
         {
-            DateTime fromDate = FromDatePicker.Value;
-            DateTime toDate = ToDatePicker.Value;
+            string startDate = FromDatePicker.Value.ToShortDateString();
+            string fromTime = startTime.Value.ToLongTimeString();
+            string endDate = ToDatePicker.Value.ToShortDateString();
+            string toTime = endTime.Value.ToLongTimeString();
+
+
+
+            DateTime fromDate = Convert.ToDateTime(startDate+" " +fromTime);
+            DateTime toDate = Convert.ToDateTime(endDate+" " +toTime);
+
 
             if (toDate < fromDate)
             {
-                MessageBox.Show("To date has to be later than from date!");
+                MessageBox.Show("Start date has to be later than End date!");
             }
             else
             {
                 int amountVehicles = data.AmoutVehicles(fromDate, toDate);
                 decimal? moneyEarned = data.TotalEarned(fromDate, toDate);
-                if(amountVehicles <= 0)
+                if (amountVehicles <= 0)
                 {
                     MessageBox.Show("No history found");
                 }
@@ -71,7 +70,7 @@ namespace UI.Forms
                     NumberOfVehicles.Text = amountVehicles.ToString();
                     AmountEarned.Text = moneyEarned.ToString() + " CZK";
                 }
-               
+
             }
 
         }

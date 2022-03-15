@@ -1,6 +1,4 @@
-﻿using DataAccess;
-
-namespace UI
+﻿namespace UI
 {
     public partial class FormSettings : Form
     {
@@ -27,6 +25,7 @@ namespace UI
             string mcPrice = mcPrice_txt.Text;
             string gSize = gSize_txt.Text;
             form1.config.UpdateJson(carPrice, mcPrice, gSize);
+            MessageBox.Show("New configuration set!");
         }
         private void EditValue()
         {

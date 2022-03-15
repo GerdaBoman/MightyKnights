@@ -1,9 +1,4 @@
 ﻿using DataAccess.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UI.ParkingSpotCosmetic
 {
@@ -19,13 +14,13 @@ namespace UI.ParkingSpotCosmetic
                                    where p.SpotNumber == parkingSpot
                                    select v.Size).ToArray();
 
-                int total = 0; 
+                int total = 0;
 
-                for(int i = 0; i < checkIfFull.Length; i++)
+                for (int i = 0; i < checkIfFull.Length; i++)
                 {
                     int value = checkIfFull[i];
                     total += value;
-                    
+
                 }
 
                 if (total == 4)
@@ -38,7 +33,7 @@ namespace UI.ParkingSpotCosmetic
                 }
                 else
                 {
-                    buttonStatus.BackColor = Color.FromArgb(89,165,216);
+                    buttonStatus.BackColor = Color.FromArgb(89, 165, 216);
                 }
 
             }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using DataAccess.Models;
+﻿using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 
 namespace DataAccess.Data

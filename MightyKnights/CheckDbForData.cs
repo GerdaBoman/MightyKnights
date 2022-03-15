@@ -80,7 +80,7 @@ namespace Core
 
         public string GetVehicleType(string regNumber)
         {
-            using(var db = new MightyKnightsContext())
+            using (var db = new MightyKnightsContext())
             {
                 var vehicleType = (from v in db.Vehicles
                                    where v.RegNumber == regNumber
@@ -93,10 +93,10 @@ namespace Core
                     return "";
             }
         }
-        
+
         public int GetParkingSpot(string regNumber)
         {
-            using(var db = new MightyKnightsContext())
+            using (var db = new MightyKnightsContext())
             {
                 var parkingSpot = (from v in db.Vehicles
                                    join p in db.ParkingLots on v.VehicleId equals p.VehicleId
@@ -110,10 +110,10 @@ namespace Core
                     return 0;
             }
         }
-        
+
         public DateTime? GetArrivalTime(string regNumber)
         {
-            using(var db = new MightyKnightsContext())
+            using (var db = new MightyKnightsContext())
             {
                 var arrivalTime = (from v in db.Vehicles
                                    join p in db.ParkingLots on v.VehicleId equals p.VehicleId

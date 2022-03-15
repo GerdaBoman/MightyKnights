@@ -138,7 +138,7 @@
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Question;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
@@ -152,7 +152,7 @@
             // 
             // iconPictureBox2
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.LightGray;
+            this.iconPictureBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
             this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -181,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1534, 1036);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iconPictureBox2);

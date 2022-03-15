@@ -1,9 +1,4 @@
 ﻿using DataAccess.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.HistoryMethods
 {
@@ -34,9 +29,9 @@ namespace Core.HistoryMethods
                                    where h.ArrivalDate >= fromDate &&
                                    h.DepartureDate <= toDate
                                    select h.TotalCost).Sum().ToString();
-                
 
-                decimal totalEarned = Math.Round(Convert.ToDecimal(moneyEarned),2);
+
+                decimal totalEarned = Math.Round(Convert.ToDecimal(moneyEarned), 2);
 
                 return totalEarned;
 

@@ -1,16 +1,7 @@
 ﻿using Core;
 using Core.UpdateData;
 using DataAccess.Data;
-using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using UI.ListViewer;
 
 namespace UI
@@ -24,16 +15,16 @@ namespace UI
         UpdateVehicleType updateVehicleType = new UpdateVehicleType();
         UpdateCheckInDate updateCheckInDate = new UpdateCheckInDate();
         UpdateParkingSpot updateParkingSpot = new UpdateParkingSpot();
-        Departure departure = new Departure();  
+        Departure departure = new Departure();
         string caption = "Error";
 
 
         public FormVehicleManagement()
         {
-            
+
             InitializeComponent();
-      
-            using(var db = new MightyKnightsContext())
+
+            using (var db = new MightyKnightsContext())
             {
                 suggestionLlist.AddRange(db.Vehicles.Select(r => r.RegNumber).ToArray());
                 RegNummerTextBox.AutoCompleteCustomSource = suggestionLlist;
@@ -96,9 +87,9 @@ namespace UI
 
             }
             else
-                MessageBox.Show("Vehicle not found",caption);
-            
-                
+                MessageBox.Show("Vehicle not found", caption);
+
+
 
         }
 
@@ -107,7 +98,7 @@ namespace UI
             int parkingSpot = int.Parse(editParkingSpot.Text.ToString());
             string regNumber = editRegNumber.Text.ToString();
             string newVehicleType = NewVehicleType.GetItemText(NewVehicleType.SelectedItem.ToString());
-            
+
             if (newVehicleType == "Car")
             {
                 bool control = check.CheckIfSpotFull(parkingSpot);
@@ -120,9 +111,9 @@ namespace UI
                     updateVehicleType.EditVehicleType(regNumber, newVehicleType);
                     MessageBox.Show("Vehicle Type updated!");
                 }
-                    
+
             }
-            else if(newVehicleType == "MC")
+            else if (newVehicleType == "MC")
             {
                 updateVehicleType.EditVehicleType(regNumber, newVehicleType);
                 MessageBox.Show("Vehicle Type updated!");
@@ -134,14 +125,14 @@ namespace UI
 
             parkingLotViewer.Items.Clear();
             update.RefreshManegmentViewer(parkingLotViewer);
-          
+
 
         }
 
         private void UpdateCheckInDate_Click(object sender, EventArgs e)
         {
             string date = dateTimePicker.Value.ToShortDateString();
-            string time =timePicker.Value.ToLongTimeString();
+            string time = timePicker.Value.ToLongTimeString();
             string join = date + " " + time;
             DateTime newDate = DateTime.Parse(join);
             string regNumber = editRegNumber.Text.ToString();
@@ -156,8 +147,8 @@ namespace UI
         private void MoveVehicleButton_Click(object sender, EventArgs e)
         {
             string regNumber = editRegNumber.Text.ToString();
-            
-            int newSpot= int.Parse(newParkingSpot.Text.ToString());
+
+            int newSpot = int.Parse(newParkingSpot.Text.ToString());
 
             bool control = check.CheckIfSpotFull(newSpot);
             if (control == true)
@@ -192,7 +183,7 @@ namespace UI
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             string regNumber = editRegNumber.Text.ToString();
-           
+
 
             DialogResult result = MessageBox.Show($"Are you sure you want to remove {regNumber} vehicle?", "!!!!", MessageBoxButtons.YesNo);
 
@@ -206,8 +197,8 @@ namespace UI
             {
                 MessageBox.Show("Removal canceled!");
             }
-           
-            
+
+
         }
 
         private void RegNummerTextBox_KeyDown(object sender, KeyEventArgs e)

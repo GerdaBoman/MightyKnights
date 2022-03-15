@@ -1,14 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
-using System;
 using System.Dynamic;
 
 /// <summary>
 /// Summary description for Config
 /// </summary>
-public class Config 
+public class Config
 {
     public int CarSize { get; set; }
     public int McSize { get; set; }
@@ -16,7 +14,7 @@ public class Config
     public int McPriceHour { get; set; }
     public int ParkingSpotSize { get; set; }
     public int ParkingLotSize { get; set; }
-    public int BusSize { get; set; }    
+    public int BusSize { get; set; }
     public int BikeSize { get; set; }
 
     string appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
@@ -53,12 +51,12 @@ public class Config
         File.WriteAllText(appSettingsPath, newJson);
     }
 
-    
+
     //public static Config ReadSettingsFromJson(string filePath = "../../../Datafiles/Config.json")
     //    {
     //       string settingsJson = File.ReadAllText(filePath);
     //       Config config = JsonConvert.DeserializeObject<Config>(settingsJson);
-        
+
     //    return config;
     //    }
 

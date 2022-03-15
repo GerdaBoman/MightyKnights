@@ -21,7 +21,7 @@ namespace UI
             MightyKnightsContext db = new();
             db.Database.EnsureCreated();
 
-          
+
 
             leftBorderButton = new Panel();
             leftBorderButton.Size = new Size(7, 60);
@@ -144,6 +144,6 @@ namespace UI
             ClockStatusStrip.Text = DateTime.Now.ToString("T");
         }
 
-        
+
     }
 }

@@ -1,16 +1,13 @@
 ﻿using Core.HomeCalculations;
 using DataAccess.Data.Datafiles;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System.Dynamic;
 
 namespace UI
 {
     public partial class FormHome : Form
     {
         CountAllCars car = new CountAllCars();
-        CountAllMC mc= new CountAllMC();
+        CountAllMC mc = new CountAllMC();
         InsertTestData data = new();
         public FormHome()
         {
@@ -38,15 +35,15 @@ namespace UI
         private void FormHome_Load(object sender, EventArgs e)
         {
 
-           
+
 
             int totalCars = car.CountCars();
 
-            NumberOfCars.Text= totalCars.ToString();    
+            NumberOfCars.Text = totalCars.ToString();
 
             int totalMc = mc.CountMc();
 
-            NumberOfMC.Text= totalMc.ToString();
+            NumberOfMC.Text = totalMc.ToString();
         }
 
         private void TestDataButton_Click(object sender, EventArgs e)

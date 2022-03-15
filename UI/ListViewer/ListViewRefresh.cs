@@ -1,10 +1,4 @@
 ﻿using DataAccess.Data;
-using DataAccess.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UI.ListViewer
 {
@@ -36,22 +30,22 @@ namespace UI.ListViewer
 
             }
         }
-        
+
         public void RefreshSearchViewer(ListView listViewer, string regNumber)
         {
 
             using (var db = new MightyKnightsContext())
             {
                 var searchResult = (from p in db.ParkingLots
-                                      join v in db.Vehicles on p.VehicleId equals v.VehicleId
-                                      where v.RegNumber == regNumber
-                                      select new
-                                      {
-                                          LicancePlate = v.RegNumber,
-                                          VehicleType = v.VehicleType,
-                                          ParkingSpot = p.SpotNumber,
-                                          CheckInDate = p.Arrival
-                                      }).ToList();
+                                    join v in db.Vehicles on p.VehicleId equals v.VehicleId
+                                    where v.RegNumber == regNumber
+                                    select new
+                                    {
+                                        LicancePlate = v.RegNumber,
+                                        VehicleType = v.VehicleType,
+                                        ParkingSpot = p.SpotNumber,
+                                        CheckInDate = p.Arrival
+                                    }).ToList();
 
 
                 foreach (var parkedVehicle in searchResult)
@@ -73,15 +67,15 @@ namespace UI.ListViewer
             using (var db = new MightyKnightsContext())
             {
                 var allVehicles = (from p in db.ParkingLots
-                                      join v in db.Vehicles on p.VehicleId equals v.VehicleId
-                                      
-                                      select new
-                                      {
-                                          LicancePlate = v.RegNumber,
-                                          VehicleType = v.VehicleType,
-                                          ParkingSpot = p.SpotNumber,
-                                          CheckInDate = p.Arrival
-                                      }).ToList();
+                                   join v in db.Vehicles on p.VehicleId equals v.VehicleId
+
+                                   select new
+                                   {
+                                       LicancePlate = v.RegNumber,
+                                       VehicleType = v.VehicleType,
+                                       ParkingSpot = p.SpotNumber,
+                                       CheckInDate = p.Arrival
+                                   }).ToList();
 
                 foreach (var parkedVehicles in allVehicles)
                 {
@@ -98,10 +92,10 @@ namespace UI.ListViewer
         }
         public void RefreshHistoryViewer(ListView listViewer)
         {
-            using( var db = new MightyKnightsContext())
+            using (var db = new MightyKnightsContext())
             {
                 var logg = (from h in db.Histories
-                               select h).ToList();
+                            select h).ToList();
 
 
                 foreach (var history in logg)

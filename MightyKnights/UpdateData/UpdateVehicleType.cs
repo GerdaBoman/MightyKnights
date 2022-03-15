@@ -1,9 +1,4 @@
 ﻿using DataAccess.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.UpdateData
 {
@@ -21,11 +16,11 @@ namespace Core.UpdateData
                 {
                     edit.VehicleType = newVehicleType;
 
-                    if(newVehicleType == "Car")
+                    if (newVehicleType == "Car")
                     {
                         edit.Size = 4;
                     }
-                    else if( newVehicleType == "MC")
+                    else if (newVehicleType == "MC")
                     {
                         edit.Size = 2;
                     }

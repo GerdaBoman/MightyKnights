@@ -4,13 +4,13 @@ using DataAccess.Models;
 namespace Core;
 
 public class Mc : Vehicle
-{   
+{
     Config setting = new Config();
-        //public  MC()
-        //{
-        //    setting = Config.ReadSettingsFromFile();
-        //    base.Size = setting.McSize;
-        //}
+    //public  MC()
+    //{
+    //    setting = Config.ReadSettingsFromFile();
+    //    base.Size = setting.McSize;
+    //}
 
     public void AddMc(string licensePlate)
     {

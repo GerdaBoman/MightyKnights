@@ -1,10 +1,5 @@
 ﻿using Core.HistoryMethods;
 using DataAccess.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core
 {
@@ -28,7 +23,7 @@ namespace Core
                 {
                     db.ParkingLots.Remove(vehicleToRemoveParking);
                     db.Vehicles.Remove(vehicleToRemoveVehicle);
-                    
+
 
                     db.SaveChanges();
                 }
