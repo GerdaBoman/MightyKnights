@@ -15,7 +15,7 @@ Kundens nya krav på systemet
 - Fordonstyper (Bil och MC, men det kan komma fler)
 - Antal fordon per P-plats för respektive fordonstyp
 
----Prisstruktur---
+•Prisstruktur
 o Bil: 20 CZK per påbörjad timme
 o MC: 10 CZK per påbörjad timme
 o De första tio minuterna är gratis.
