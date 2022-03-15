@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.cPrice_edit_btn = new System.Windows.Forms.Button();
-            this.mcPrice_Edit_btn = new System.Windows.Forms.Button();
-            this.gSize_Edit_btn = new System.Windows.Forms.Button();
+            this.edit_btn = new System.Windows.Forms.Button();
             this.carPrice_lbl = new System.Windows.Forms.Label();
             this.mcPrice_lbl = new System.Windows.Forms.Label();
             this.garageSize_lbl = new System.Windows.Forms.Label();
             this.cPrice_txt = new System.Windows.Forms.TextBox();
             this.mcPrice_txt = new System.Windows.Forms.TextBox();
             this.gSize_txt = new System.Windows.Forms.TextBox();
+            this.Savebtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,36 +50,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Settings Form";
             // 
-            // cPrice_edit_btn
+            // edit_btn
             // 
-            this.cPrice_edit_btn.Location = new System.Drawing.Point(262, 209);
-            this.cPrice_edit_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cPrice_edit_btn.Name = "cPrice_edit_btn";
-            this.cPrice_edit_btn.Size = new System.Drawing.Size(82, 22);
-            this.cPrice_edit_btn.TabIndex = 2;
-            this.cPrice_edit_btn.Text = "Edit";
-            this.cPrice_edit_btn.UseVisualStyleBackColor = true;
-            this.cPrice_edit_btn.Click += new System.EventHandler(this.cPrice_edit_btn_Click);
-            // 
-            // mcPrice_Edit_btn
-            // 
-            this.mcPrice_Edit_btn.Location = new System.Drawing.Point(262, 274);
-            this.mcPrice_Edit_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mcPrice_Edit_btn.Name = "mcPrice_Edit_btn";
-            this.mcPrice_Edit_btn.Size = new System.Drawing.Size(82, 22);
-            this.mcPrice_Edit_btn.TabIndex = 3;
-            this.mcPrice_Edit_btn.Text = "Edit";
-            this.mcPrice_Edit_btn.UseVisualStyleBackColor = true;
-            // 
-            // gSize_Edit_btn
-            // 
-            this.gSize_Edit_btn.Location = new System.Drawing.Point(262, 340);
-            this.gSize_Edit_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gSize_Edit_btn.Name = "gSize_Edit_btn";
-            this.gSize_Edit_btn.Size = new System.Drawing.Size(82, 22);
-            this.gSize_Edit_btn.TabIndex = 4;
-            this.gSize_Edit_btn.Text = "Edit";
-            this.gSize_Edit_btn.UseVisualStyleBackColor = true;
+            this.edit_btn.Location = new System.Drawing.Point(13, 219);
+            this.edit_btn.Name = "edit_btn";
+            this.edit_btn.Size = new System.Drawing.Size(94, 29);
+            this.edit_btn.TabIndex = 2;
+            this.edit_btn.Text = "Edit";
+            this.edit_btn.UseVisualStyleBackColor = true;
+            this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
             // 
             // carPrice_lbl
             // 
@@ -114,47 +92,59 @@
             // 
             // cPrice_txt
             // 
-            this.cPrice_txt.Location = new System.Drawing.Point(136, 211);
-            this.cPrice_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cPrice_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cPrice_txt.Location = new System.Drawing.Point(155, 281);
             this.cPrice_txt.Name = "cPrice_txt";
             this.cPrice_txt.ReadOnly = true;
-            this.cPrice_txt.Size = new System.Drawing.Size(110, 23);
+            this.cPrice_txt.Size = new System.Drawing.Size(72, 20);
             this.cPrice_txt.TabIndex = 8;
-            this.cPrice_txt.ReadOnlyChanged += new System.EventHandler(this.cPrice_edit_btn_Click);
+            this.cPrice_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cPrice_txt.ReadOnlyChanged += new System.EventHandler(this.edit_btn_Click);
             // 
             // mcPrice_txt
             // 
-            this.mcPrice_txt.Location = new System.Drawing.Point(136, 274);
-            this.mcPrice_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mcPrice_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mcPrice_txt.Location = new System.Drawing.Point(155, 365);
             this.mcPrice_txt.Name = "mcPrice_txt";
             this.mcPrice_txt.ReadOnly = true;
-            this.mcPrice_txt.Size = new System.Drawing.Size(110, 23);
+            this.mcPrice_txt.Size = new System.Drawing.Size(72, 20);
             this.mcPrice_txt.TabIndex = 9;
+            this.mcPrice_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gSize_txt
             // 
-            this.gSize_txt.Location = new System.Drawing.Point(136, 341);
-            this.gSize_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gSize_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gSize_txt.Location = new System.Drawing.Point(155, 455);
             this.gSize_txt.Name = "gSize_txt";
             this.gSize_txt.ReadOnly = true;
-            this.gSize_txt.Size = new System.Drawing.Size(110, 23);
+            this.gSize_txt.Size = new System.Drawing.Size(72, 20);
             this.gSize_txt.TabIndex = 10;
+            this.gSize_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Savebtn
+            // 
+            this.Savebtn.Location = new System.Drawing.Point(155, 219);
+            this.Savebtn.Name = "Savebtn";
+            this.Savebtn.Size = new System.Drawing.Size(49, 29);
+            this.Savebtn.TabIndex = 11;
+            this.Savebtn.Text = "Save";
+            this.Savebtn.UseVisualStyleBackColor = true;
+            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1342, 777);
+            this.ClientSize = new System.Drawing.Size(1534, 1036);
+            this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.gSize_txt);
             this.Controls.Add(this.mcPrice_txt);
             this.Controls.Add(this.cPrice_txt);
             this.Controls.Add(this.garageSize_lbl);
             this.Controls.Add(this.mcPrice_lbl);
             this.Controls.Add(this.carPrice_lbl);
-            this.Controls.Add(this.gSize_Edit_btn);
-            this.Controls.Add(this.mcPrice_Edit_btn);
-            this.Controls.Add(this.cPrice_edit_btn);
+            this.Controls.Add(this.edit_btn);
             this.Controls.Add(this.label1);
             this.Name = "FormSettings";
             this.Text = "Settings";
@@ -167,14 +157,13 @@
         #endregion
 
         private Label label1;
-        private Button cPrice_edit_btn;
-        private Button mcPrice_Edit_btn;
-        private Button gSize_Edit_btn;
+        private Button edit_btn;
         private Label carPrice_lbl;
         private Label mcPrice_lbl;
         private Label garageSize_lbl;
         private TextBox cPrice_txt;
         private TextBox mcPrice_txt;
         private TextBox gSize_txt;
+        private Button Savebtn;
     }
 }

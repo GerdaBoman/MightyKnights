@@ -10,16 +10,16 @@ namespace UI
     {
         private IconButton currentButton;
         private Panel leftBorderButton;
-        private Form currentChildForm;
-        Config config = new Config();
-        
+        private System.Windows.Forms.Form currentChildForm;
+        public Config config = new Config();
 
         public Form1()
         {
+            config.ReadFromJson();
+
             InitializeComponent();
             MightyKnightsContext db = new();
             db.Database.EnsureCreated();
-            config.ReadFromJson();
 
           
 

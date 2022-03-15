@@ -26,7 +26,9 @@ public class Car : Vehicle
             context.SaveChanges();
         }
     }
+   
 
+    
     //public void ParkCar(int parkingSpot, string licensePlate)
     //{
     //    using (var context = new MightyKnightsContext())

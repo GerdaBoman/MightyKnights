@@ -19,15 +19,11 @@ namespace UI
         ParkingFeeCalculations calculations = new();
         Departure departure = new();
         ParkingLotSpaces parkingLotSpaces = new();
-        Config config = new Config();
-
+        Form1 form1 = new Form1();
 
         public FormParkingLot()
         {
             InitializeComponent();
-
-       
-            
         }
 
         private void FormParkingLot_Load(object sender, EventArgs e)
@@ -54,11 +50,8 @@ namespace UI
 
 
             //int capacity = value.ParkingLotSize;
-
-            //int capacity = config.ParkingLotSize;
-
-            int capacity = 100;
-
+            int capacity = form1.config.ParkingLotSize;
+            
             parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
 
             using (MightyKnightsContext context = new MightyKnightsContext())
