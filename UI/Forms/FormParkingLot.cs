@@ -35,7 +35,7 @@ namespace UI
                 refresh.RefreshParkingLotViewer(listView1);
             }
 
-            //TODO: CONNECT TO JSON TO CHANGE CAPACITY OF PARKING LOT
+            //CONNECT TO JSON TO CHANGE CAPACITY OF PARKING LOT
 
             //var appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
             //var json = File.ReadAllText(appSettingsPath);
