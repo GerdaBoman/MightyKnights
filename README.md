@@ -17,9 +17,9 @@ Kundens nya krav på systemet
 
 •Prisstruktur
 
-o Bil: 20 CZK per påbörjad timme
-o MC: 10 CZK per påbörjad timme
-o De första tio minuterna är gratis.
+• Bil: 20 CZK per påbörjad timme
+• MC: 10 CZK per påbörjad timme
+• De första tio minuterna är gratis.
 
 
 • Applikationen är i Winforms.  
