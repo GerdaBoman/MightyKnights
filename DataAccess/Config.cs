@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Dynamic;
 
 /// <summary>
 /// Summary description for Config
@@ -15,10 +17,10 @@ public class Config
     public int ParkingSpotSize { get; set; }
     public int ParkingLotSize { get; set; }
 
+    string appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
+
     public void ReadFromJson()
     {
-        var appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
-
         var config = new ConfigurationBuilder()
             .AddJsonFile(appSettingsPath).Build();
 
@@ -29,18 +31,24 @@ public class Config
         McPriceHour = values.McPriceHour;
         ParkingSpotSize = values.ParkingSpotSize;
         ParkingLotSize = values.ParkingLotSize;
+    }
+    public void UpdateJson(string carPrice, string mcPrice, string parkingSize)
+    {
+        var json = File.ReadAllText(appSettingsPath);
 
-        //var json = File.ReadAllText(appSettingsPath);
+        var jsonSettings = new JsonSerializerSettings();
+        jsonSettings.Converters.Add(new ExpandoObjectConverter());
+        jsonSettings.Converters.Add(new StringEnumConverter());
 
-        //var jsonString = JObject.Parse(json);
-        ////var values = jsonString["Values"].ToString();
+        dynamic config = JsonConvert.DeserializeObject<ExpandoObject>(json, jsonSettings);
 
-        //Config value = new Config
-        //{
-        //    CarPriceHour = (int)jsonString["Values"]["CarPriceHour"],
-        //    McPriceHour = (int)jsonString["Values"]["McPriceHour"],
-        //    ParkingLotSize = (int)jsonString["Values"]["ParkingLotSize"]
-        //};
+        config.DebugEnabled = true;
+        config.Config.CarPriceHour = carPrice;
+        config.Config.McPriceHour = mcPrice;
+        config.Config.ParkingLotSize = parkingSize;
+
+        var newJson = JsonConvert.SerializeObject(config, Formatting.Indented, jsonSettings);
+        File.WriteAllText(appSettingsPath, newJson);
     }
     //public static Config ReadSettingsFromJson(string filePath = "../../../Datafiles/Config.json")
     //    {
