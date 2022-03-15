@@ -188,11 +188,11 @@
             // licencePlateLabel
             // 
             this.licencePlateLabel.AutoSize = true;
-            this.licencePlateLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.licencePlateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.licencePlateLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.licencePlateLabel.ForeColor = System.Drawing.Color.Black;
             this.licencePlateLabel.Location = new System.Drawing.Point(101, 362);
             this.licencePlateLabel.Name = "licencePlateLabel";
-            this.licencePlateLabel.Size = new System.Drawing.Size(129, 15);
+            this.licencePlateLabel.Size = new System.Drawing.Size(122, 15);
             this.licencePlateLabel.TabIndex = 7;
             this.licencePlateLabel.Text = "Current Licence Plate:";
             // 
@@ -225,15 +225,19 @@
             // 
             // editRegNumber
             // 
+            this.editRegNumber.Enabled = false;
             this.editRegNumber.Location = new System.Drawing.Point(241, 360);
             this.editRegNumber.Name = "editRegNumber";
+            this.editRegNumber.ReadOnly = true;
             this.editRegNumber.Size = new System.Drawing.Size(107, 23);
             this.editRegNumber.TabIndex = 11;
             // 
             // editVehicleType
             // 
+            this.editVehicleType.Enabled = false;
             this.editVehicleType.Location = new System.Drawing.Point(241, 399);
             this.editVehicleType.Name = "editVehicleType";
+            this.editVehicleType.ReadOnly = true;
             this.editVehicleType.Size = new System.Drawing.Size(107, 23);
             this.editVehicleType.TabIndex = 12;
             // 
@@ -286,8 +290,10 @@
             // 
             // editParkingSpot
             // 
+            this.editParkingSpot.Enabled = false;
             this.editParkingSpot.Location = new System.Drawing.Point(411, 589);
             this.editParkingSpot.Name = "editParkingSpot";
+            this.editParkingSpot.ReadOnly = true;
             this.editParkingSpot.Size = new System.Drawing.Size(73, 23);
             this.editParkingSpot.TabIndex = 13;
             // 
@@ -396,13 +402,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Firebrick;
-            this.label3.Location = new System.Drawing.Point(231, 18);
+            this.label3.Location = new System.Drawing.Point(440, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(914, 50);
+            this.label3.Size = new System.Drawing.Size(558, 75);
             this.label3.TabIndex = 33;
-            this.label3.Text = "Enter vehicles licence plate number into \"Current Licence Plate\" to be able to up" +
-    "date vehicle informaition!\r\n Search the licence plate number to have all informa" +
-    "tion entered automaticly!";
+            this.label3.Text = "Search the licence plate number to be able to edit vehicle entry!\r\nVehicles infor" +
+    "mation will be filled out automaticly.\r\n\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RemoveButton
