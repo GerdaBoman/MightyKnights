@@ -180,7 +180,7 @@
             this.NumberOfVehicles.Name = "NumberOfVehicles";
             this.NumberOfVehicles.Size = new System.Drawing.Size(94, 21);
             this.NumberOfVehicles.TabIndex = 9;
-            this.NumberOfVehicles.Text = "____________";
+            this.NumberOfVehicles.Text = "";
             // 
             // AmountEarned
             // 
@@ -190,7 +190,7 @@
             this.AmountEarned.Name = "AmountEarned";
             this.AmountEarned.Size = new System.Drawing.Size(94, 21);
             this.AmountEarned.TabIndex = 10;
-            this.AmountEarned.Text = "____________";
+            this.AmountEarned.Text = "";
             // 
             // sqlCommand1
             // 
@@ -226,6 +226,7 @@
             this.startTime.Name = "startTime";
             this.startTime.Size = new System.Drawing.Size(66, 23);
             this.startTime.TabIndex = 13;
+            this.startTime.ShowUpDown = true;
             // 
             // endTime
             // 
@@ -234,6 +235,7 @@
             this.endTime.Name = "endTime";
             this.endTime.Size = new System.Drawing.Size(69, 23);
             this.endTime.TabIndex = 14;
+            this.endTime.ShowUpDown = true;
             // 
             // FormHistory
             // 

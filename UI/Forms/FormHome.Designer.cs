@@ -45,6 +45,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TestDataButton = new FontAwesome.Sharp.IconButton();
             this.infoLabel = new System.Windows.Forms.Label();
+            this.PartialEmptySpots = new System.Windows.Forms.Label();
+            this.partialTakenSpots = new System.Windows.Forms.Label();
+            this.TotalFullSpaces = new System.Windows.Forms.Label();
+            this.fullSpaces = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +58,7 @@
             this.price_Lbl.AutoSize = true;
             this.price_Lbl.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.price_Lbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.price_Lbl.Location = new System.Drawing.Point(1090, 419);
+            this.price_Lbl.Location = new System.Drawing.Point(717, 350);
             this.price_Lbl.Name = "price_Lbl";
             this.price_Lbl.Size = new System.Drawing.Size(177, 28);
             this.price_Lbl.TabIndex = 1;
@@ -63,27 +67,28 @@
             // 
             // price_ListVw
             // 
+            this.price_ListVw.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.price_ListVw.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.pricePerHour});
             this.price_ListVw.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.price_ListVw.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.price_ListVw.Location = new System.Drawing.Point(1135, 449);
+            this.price_ListVw.Location = new System.Drawing.Point(717, 380);
             this.price_ListVw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.price_ListVw.Name = "price_ListVw";
-            this.price_ListVw.Size = new System.Drawing.Size(155, 64);
+            this.price_ListVw.Size = new System.Drawing.Size(356, 64);
             this.price_ListVw.TabIndex = 2;
             this.price_ListVw.UseCompatibleStateImageBehavior = false;
             this.price_ListVw.View = System.Windows.Forms.View.Details;
             // 
             // pricePerHour
             // 
-            this.pricePerHour.Text = "Price Per Hour";
-            this.pricePerHour.Width = 100;
+            this.pricePerHour.Text = "Price Per Hour ";
+            this.pricePerHour.Width = 300;
             // 
             // discount_Lbl
             // 
             this.discount_Lbl.AutoSize = true;
-            this.discount_Lbl.Location = new System.Drawing.Point(1135, 515);
+            this.discount_Lbl.Location = new System.Drawing.Point(717, 446);
             this.discount_Lbl.Name = "discount_Lbl";
             this.discount_Lbl.Size = new System.Drawing.Size(104, 15);
             this.discount_Lbl.TabIndex = 3;
@@ -91,20 +96,22 @@
             // 
             // totalSpotsLabel
             // 
+            this.totalSpotsLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.totalSpotsLabel.AutoSize = true;
-            this.totalSpotsLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.totalSpotsLabel.Location = new System.Drawing.Point(122, 201);
+            this.totalSpotsLabel.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.totalSpotsLabel.Location = new System.Drawing.Point(76, 189);
             this.totalSpotsLabel.Name = "totalSpotsLabel";
-            this.totalSpotsLabel.Size = new System.Drawing.Size(273, 37);
+            this.totalSpotsLabel.Size = new System.Drawing.Size(288, 37);
             this.totalSpotsLabel.TabIndex = 4;
-            this.totalSpotsLabel.Text = "Total Parking Spots:";
+            this.totalSpotsLabel.Text = "Total Parking Spaces:";
             // 
             // TotalCarparkSize
             // 
+            this.TotalCarparkSize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalCarparkSize.AutoSize = true;
             this.TotalCarparkSize.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TotalCarparkSize.ForeColor = System.Drawing.Color.Black;
-            this.TotalCarparkSize.Location = new System.Drawing.Point(421, 201);
+            this.TotalCarparkSize.Location = new System.Drawing.Point(388, 189);
             this.TotalCarparkSize.Name = "TotalCarparkSize";
             this.TotalCarparkSize.Size = new System.Drawing.Size(208, 37);
             this.TotalCarparkSize.TabIndex = 5;
@@ -112,20 +119,22 @@
             // 
             // FreeParkingSpotLabel
             // 
+            this.FreeParkingSpotLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FreeParkingSpotLabel.AutoSize = true;
             this.FreeParkingSpotLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FreeParkingSpotLabel.Location = new System.Drawing.Point(132, 271);
+            this.FreeParkingSpotLabel.Location = new System.Drawing.Point(76, 259);
             this.FreeParkingSpotLabel.Name = "FreeParkingSpotLabel";
-            this.FreeParkingSpotLabel.Size = new System.Drawing.Size(263, 37);
+            this.FreeParkingSpotLabel.Size = new System.Drawing.Size(305, 37);
             this.FreeParkingSpotLabel.TabIndex = 6;
-            this.FreeParkingSpotLabel.Text = "Free Parking Spots:";
+            this.FreeParkingSpotLabel.Text = "Empty Parking Spaces:";
             // 
             // NumberOfFreeSpots
             // 
+            this.NumberOfFreeSpots.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NumberOfFreeSpots.AutoSize = true;
             this.NumberOfFreeSpots.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NumberOfFreeSpots.ForeColor = System.Drawing.Color.Green;
-            this.NumberOfFreeSpots.Location = new System.Drawing.Point(421, 271);
+            this.NumberOfFreeSpots.Location = new System.Drawing.Point(388, 259);
             this.NumberOfFreeSpots.Name = "NumberOfFreeSpots";
             this.NumberOfFreeSpots.Size = new System.Drawing.Size(208, 37);
             this.NumberOfFreeSpots.TabIndex = 7;
@@ -133,9 +142,10 @@
             // 
             // TotalCarsParkedLabel
             // 
+            this.TotalCarsParkedLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalCarsParkedLabel.AutoSize = true;
             this.TotalCarsParkedLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TotalCarsParkedLabel.Location = new System.Drawing.Point(761, 201);
+            this.TotalCarsParkedLabel.Location = new System.Drawing.Point(717, 189);
             this.TotalCarsParkedLabel.Name = "TotalCarsParkedLabel";
             this.TotalCarsParkedLabel.Size = new System.Drawing.Size(247, 37);
             this.TotalCarsParkedLabel.TabIndex = 8;
@@ -143,10 +153,11 @@
             // 
             // NumberOfCars
             // 
+            this.NumberOfCars.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NumberOfCars.AutoSize = true;
             this.NumberOfCars.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NumberOfCars.ForeColor = System.Drawing.Color.Black;
-            this.NumberOfCars.Location = new System.Drawing.Point(1033, 201);
+            this.NumberOfCars.Location = new System.Drawing.Point(989, 189);
             this.NumberOfCars.Name = "NumberOfCars";
             this.NumberOfCars.Size = new System.Drawing.Size(193, 37);
             this.NumberOfCars.TabIndex = 9;
@@ -154,9 +165,10 @@
             // 
             // TotalMcPArked
             // 
+            this.TotalMcPArked.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalMcPArked.AutoSize = true;
             this.TotalMcPArked.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TotalMcPArked.Location = new System.Drawing.Point(773, 271);
+            this.TotalMcPArked.Location = new System.Drawing.Point(717, 259);
             this.TotalMcPArked.Name = "TotalMcPArked";
             this.TotalMcPArked.Size = new System.Drawing.Size(235, 37);
             this.TotalMcPArked.TabIndex = 10;
@@ -164,10 +176,11 @@
             // 
             // NumberOfMC
             // 
+            this.NumberOfMC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NumberOfMC.AutoSize = true;
             this.NumberOfMC.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NumberOfMC.ForeColor = System.Drawing.Color.Black;
-            this.NumberOfMC.Location = new System.Drawing.Point(1033, 271);
+            this.NumberOfMC.Location = new System.Drawing.Point(989, 259);
             this.NumberOfMC.Name = "NumberOfMC";
             this.NumberOfMC.Size = new System.Drawing.Size(183, 37);
             this.NumberOfMC.TabIndex = 11;
@@ -175,9 +188,10 @@
             // 
             // TitleLabel
             // 
+            this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TitleLabel.Location = new System.Drawing.Point(484, 68);
+            this.TitleLabel.Location = new System.Drawing.Point(428, 68);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(448, 63);
             this.TitleLabel.TabIndex = 12;
@@ -186,9 +200,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UI.Properties.Resources.ferrari_PNG10669;
-            this.pictureBox1.Location = new System.Drawing.Point(186, 377);
+            this.pictureBox1.Location = new System.Drawing.Point(1101, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(364, 235);
+            this.pictureBox1.Size = new System.Drawing.Size(174, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -196,9 +210,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::UI.Properties.Resources.scooter_PNG11340;
-            this.pictureBox2.Location = new System.Drawing.Point(712, 377);
+            this.pictureBox2.Location = new System.Drawing.Point(76, 516);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(276, 235);
+            this.pictureBox2.Size = new System.Drawing.Size(169, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
@@ -210,7 +224,7 @@
             this.TestDataButton.IconChar = FontAwesome.Sharp.IconChar.Database;
             this.TestDataButton.IconColor = System.Drawing.Color.Black;
             this.TestDataButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.TestDataButton.Location = new System.Drawing.Point(1135, 601);
+            this.TestDataButton.Location = new System.Drawing.Point(956, 545);
             this.TestDataButton.Name = "TestDataButton";
             this.TestDataButton.Size = new System.Drawing.Size(133, 77);
             this.TestDataButton.TabIndex = 15;
@@ -224,11 +238,57 @@
             // 
             this.infoLabel.AutoSize = true;
             this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.infoLabel.Location = new System.Drawing.Point(1090, 567);
+            this.infoLabel.Location = new System.Drawing.Point(911, 511);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(213, 21);
             this.infoLabel.TabIndex = 16;
             this.infoLabel.Text = "To use test data press here:";
+            // 
+            // PartialEmptySpots
+            // 
+            this.PartialEmptySpots.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PartialEmptySpots.AutoSize = true;
+            this.PartialEmptySpots.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PartialEmptySpots.Location = new System.Drawing.Point(76, 326);
+            this.PartialEmptySpots.Name = "PartialEmptySpots";
+            this.PartialEmptySpots.Size = new System.Drawing.Size(292, 37);
+            this.PartialEmptySpots.TabIndex = 17;
+            this.PartialEmptySpots.Text = "Partial Empty Spaces:";
+            // 
+            // partialTakenSpots
+            // 
+            this.partialTakenSpots.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.partialTakenSpots.AutoSize = true;
+            this.partialTakenSpots.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.partialTakenSpots.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.partialTakenSpots.Location = new System.Drawing.Point(388, 326);
+            this.partialTakenSpots.Name = "partialTakenSpots";
+            this.partialTakenSpots.Size = new System.Drawing.Size(208, 37);
+            this.partialTakenSpots.TabIndex = 18;
+            this.partialTakenSpots.Text = "NumberOfSpots";
+            // 
+            // TotalFullSpaces
+            // 
+            this.TotalFullSpaces.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TotalFullSpaces.AutoSize = true;
+            this.TotalFullSpaces.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TotalFullSpaces.Location = new System.Drawing.Point(76, 398);
+            this.TotalFullSpaces.Name = "TotalFullSpaces";
+            this.TotalFullSpaces.Size = new System.Drawing.Size(236, 37);
+            this.TotalFullSpaces.TabIndex = 19;
+            this.TotalFullSpaces.Text = "Total Full Spaces:";
+            // 
+            // fullSpaces
+            // 
+            this.fullSpaces.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fullSpaces.AutoSize = true;
+            this.fullSpaces.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fullSpaces.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fullSpaces.Location = new System.Drawing.Point(388, 398);
+            this.fullSpaces.Name = "fullSpaces";
+            this.fullSpaces.Size = new System.Drawing.Size(208, 37);
+            this.fullSpaces.TabIndex = 20;
+            this.fullSpaces.Text = "NumberOfSpots";
             // 
             // FormHome
             // 
@@ -236,6 +296,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1355, 715);
+            this.Controls.Add(this.fullSpaces);
+            this.Controls.Add(this.TotalFullSpaces);
+            this.Controls.Add(this.partialTakenSpots);
+            this.Controls.Add(this.PartialEmptySpots);
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.TestDataButton);
             this.Controls.Add(this.pictureBox2);
@@ -266,7 +330,7 @@
         private Label price_Lbl;
         private ListView price_ListVw;
         private Label discount_Lbl;
-        private ColumnHeader pricePerHour;
+        private ColumnHeader pricePerHourCar;
         private Label totalSpotsLabel;
         private Label TotalCarparkSize;
         private Label FreeParkingSpotLabel;
@@ -280,5 +344,11 @@
         private PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton TestDataButton;
         private Label infoLabel;
+        private Label PartialEmptySpots;
+        private Label partialTakenSpots;
+        private Label TotalFullSpaces;
+        private Label fullSpaces;
+        private ColumnHeader PricePerHourMC;
+        private ColumnHeader pricePerHour;
     }
 }

@@ -52,12 +52,4 @@ public class Config
     }
 
 
-    //public static Config ReadSettingsFromJson(string filePath = "../../../Datafiles/Config.json")
-    //    {
-    //       string settingsJson = File.ReadAllText(filePath);
-    //       Config config = JsonConvert.DeserializeObject<Config>(settingsJson);
-
-    //    return config;
-    //    }
-
 }
