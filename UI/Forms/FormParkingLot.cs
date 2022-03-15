@@ -68,115 +68,125 @@ namespace UI
 
         private void CheckInButton_Click(object sender, EventArgs e)
         {
-            string vehicleType = vehicleCombo.GetItemText(vehicleCombo.SelectedItem.ToString());
+            string vehicleType = vehicleCombo.Text;
             bool? spotStatus;
 
             string regNumber = regPlateTextBox.Text.Trim().ToLower();
 
-            int parkingSpot = int.Parse(parkingSpotBox.Text);
+            bool parkingSpotCheck = int.TryParse(parkingSpotBox.Text,out int parkingSpot);
             string chosenSpot = "pSpot" + parkingSpotBox.Text;
             Button takenSpot = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
             bool checkLicancePlate = check.CheckIfVehicleExist(regPlateTextBox.Text.ToString());
 
             int parkingLotSize = form1.config.ParkingLotSize;
 
+
             if (string.IsNullOrEmpty(regNumber))
             {
-                MessageBox.Show("Please enter vehicles licence plate number to check in!",errorCap,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Please enter vehicles licence plate number to check in!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (parkingLotSize > 0 && parkingSpot < parkingLotSize)
+                if (string.IsNullOrEmpty(vehicleType))
                 {
-                    switch (vehicleType)
-                    {
-                        case "Car":
-
-                            #region Adding Car
-
-                            if (checkLicancePlate == true)
-                            {
-                                MessageBox.Show("This vechile is already in parking lot", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                regPlateTextBox.Clear();
-                                break;
-                            }
-                            else
-                            {
-                                spotStatus = check.CheckIfSpotFull(parkingSpot);
-                                if (spotStatus == true)
-                                {
-                                    MessageBox.Show("Chosen parking spot is already full!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                    parkingSpotBox.Clear();
-                                    break;
-                                }
-                                else
-                                {
-                                    Car car = new Car();
-                                    car.AddCar(regPlateTextBox.Text.ToString());
-                                    parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
-
-                                    color.SpotsStatus(parkingSpot, takenSpot);
-
-                                    regPlateTextBox.Clear();
-                                    vehicleCombo.ResetText();
-                                    parkingSpotBox.Clear();
-
-                                    listView1.Items.Clear();
-                                    refresh.RefreshParkingLotViewer(listView1);
-                                    break;
-                                }
-
-                            }
-                        #endregion
-
-
-                        case "Motercycle":
-
-                            #region Adding Motercycle
-                            if (checkLicancePlate == true)
-                            {
-                                MessageBox.Show("This vechile is already in parking lot");
-                                regPlateTextBox.Clear();
-                                break;
-                            }
-                            else
-                            {
-                                spotStatus = check.CheckIfSpotFull(parkingSpot);
-                                if (spotStatus == true)
-                                {
-                                    MessageBox.Show("Chosen parking spot is already full!");
-                                    parkingSpotBox.Clear();
-                                    break;
-                                }
-                                else
-                                {
-                                    Mc mc = new Mc();
-                                    mc.AddMc(regPlateTextBox.Text.ToString());
-                                    parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
-                                    //mc.ParkMc(parkingSpot, regPlateTextBox.Text.ToString());
-
-                                    color.SpotsStatus(parkingSpot, takenSpot);
-
-                                    regPlateTextBox.Clear();
-                                    vehicleCombo.ResetText();
-                                    parkingSpotBox.Clear();
-
-                                    listView1.Items.Clear();
-                                    refresh.RefreshParkingLotViewer(listView1);
-                                    break;
-                                }
-
-
-                            }
-                            #endregion
-                    }
+                    MessageBox.Show("Vehicle Type is not chosen.Please specify vehicle type to check in!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    MessageBox.Show("There is no parking space with that number. Please enter a valid parking spot.", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    parkingSpotBox.Clear();
+
+                    if (parkingLotSize > 0 && parkingSpot < parkingLotSize && parkingSpotCheck != false && parkingSpot != 0)
+                    {
+                        switch (vehicleType)
+                        {
+                            case "Car":
+
+                                #region Adding Car
+
+                                if (checkLicancePlate == true)
+                                {
+                                    MessageBox.Show("This vechile is already in parking lot", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    regPlateTextBox.Clear();
+                                    break;
+                                }
+                                else
+                                {
+                                    spotStatus = check.CheckIfSpotFull(parkingSpot);
+                                    if (spotStatus == true)
+                                    {
+                                        MessageBox.Show("Chosen parking spot is already full!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        parkingSpotBox.Clear();
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Car car = new Car();
+                                        car.AddCar(regPlateTextBox.Text.ToString());
+                                        parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
+
+                                        color.SpotsStatus(parkingSpot, takenSpot);
+
+                                        regPlateTextBox.Clear();
+                                        vehicleCombo.ResetText();
+                                        parkingSpotBox.Clear();
+
+                                        listView1.Items.Clear();
+                                        refresh.RefreshParkingLotViewer(listView1);
+                                        break;
+                                    }
+
+                                }
+                            #endregion
+
+
+                            case "Motercycle":
+
+                                #region Adding Motercycle
+                                if (checkLicancePlate == true)
+                                {
+                                    MessageBox.Show("This vechile is already in parking lot");
+                                    regPlateTextBox.Clear();
+                                    break;
+                                }
+                                else
+                                {
+                                    spotStatus = check.CheckIfSpotFull(parkingSpot);
+                                    if (spotStatus == true)
+                                    {
+                                        MessageBox.Show("Chosen parking spot is already full!");
+                                        parkingSpotBox.Clear();
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Mc mc = new Mc();
+                                        mc.AddMc(regPlateTextBox.Text.ToString());
+                                        parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
+                                        //mc.ParkMc(parkingSpot, regPlateTextBox.Text.ToString());
+
+                                        color.SpotsStatus(parkingSpot, takenSpot);
+
+                                        regPlateTextBox.Clear();
+                                        vehicleCombo.ResetText();
+                                        parkingSpotBox.Clear();
+
+                                        listView1.Items.Clear();
+                                        refresh.RefreshParkingLotViewer(listView1);
+                                        break;
+                                    }
+
+
+                                }
+                                #endregion
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("There is no parking space with that number. Please enter a valid parking spot.", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        parkingSpotBox.Clear();
+                    }
                 }
             }
+            
         }
 
         private void CheckOutButton_Click(object sender, EventArgs e)

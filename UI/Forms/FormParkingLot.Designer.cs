@@ -158,6 +158,7 @@
             this.vehicleCombo.Name = "vehicleCombo";
             this.vehicleCombo.Size = new System.Drawing.Size(134, 23);
             this.vehicleCombo.TabIndex = 15;
+            this.vehicleCombo.DropDownStyle = ComboBoxStyle.DropDownList;
             // 
             // vehicleTypeLabel
             // 

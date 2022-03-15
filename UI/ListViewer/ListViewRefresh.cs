@@ -11,6 +11,7 @@ namespace UI.ListViewer
             {
                 var parkingLotList = (from p in db.ParkingLots
                                       join v in db.Vehicles on p.VehicleId equals v.VehicleId
+                                      orderby p.SpotNumber ascending
                                       select new
                                       {
                                           ParkingSpot = p.SpotNumber,
@@ -68,7 +69,7 @@ namespace UI.ListViewer
             {
                 var allVehicles = (from p in db.ParkingLots
                                    join v in db.Vehicles on p.VehicleId equals v.VehicleId
-
+                                   orderby p.SpotNumber ascending
                                    select new
                                    {
                                        LicancePlate = v.RegNumber,
@@ -95,6 +96,7 @@ namespace UI.ListViewer
             using (var db = new MightyKnightsContext())
             {
                 var logg = (from h in db.Histories
+                            orderby h.LicencePlate ascending
                             select h).ToList();
 
 
