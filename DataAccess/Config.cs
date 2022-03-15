@@ -16,6 +16,8 @@ public class Config
     public int McPriceHour { get; set; }
     public int ParkingSpotSize { get; set; }
     public int ParkingLotSize { get; set; }
+    public int BusSize { get; set; }    
+    public int BikeSize { get; set; }
 
     string appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
 
@@ -50,6 +52,8 @@ public class Config
         var newJson = JsonConvert.SerializeObject(config, Formatting.Indented, jsonSettings);
         File.WriteAllText(appSettingsPath, newJson);
     }
+
+    
     //public static Config ReadSettingsFromJson(string filePath = "../../../Datafiles/Config.json")
     //    {
     //       string settingsJson = File.ReadAllText(filePath);
