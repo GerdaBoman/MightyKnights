@@ -19,6 +19,7 @@ namespace UI
         ParkingFeeCalculations calculations = new();
         Departure departure = new();
         ParkingLotSpaces parkingLotSpaces = new();
+        Config config = new Config();
 
 
         public FormParkingLot()
@@ -40,18 +41,20 @@ namespace UI
 
             //CONNECT TO JSON TO CHANGE CAPACITY OF PARKING LOT
 
-            var appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
-            var json = File.ReadAllText(appSettingsPath);
+            //var appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
+            //var json = File.ReadAllText(appSettingsPath);
 
-            var jsonString = JObject.Parse(json);
-            var parkingLotSize = jsonString["ParkingLotSize"].ToString();
+            //var jsonString = JObject.Parse(json);
+            //var parkingLotSize = jsonString["ParkingLotSize"].ToString();
 
-            Config value = new Config
-            {
-                ParkingLotSize = (int)jsonString["ParkingLotSize"]["ParkingLotSize"]
-            };
+            //Config value = new Config();
+            //{
+            //    ParkingLotSize = (int)jsonString["ParkingLotSize"]["ParkingLotSize"]
+            //};
 
-            int capacity = value.ParkingLotSize;
+
+            //int capacity = value.ParkingLotSize;
+            int capacity = config.ParkingLotSize;
             
             parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
 
