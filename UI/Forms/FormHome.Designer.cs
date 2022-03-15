@@ -43,6 +43,8 @@
             this.TitleLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.TestDataButton = new FontAwesome.Sharp.IconButton();
+            this.infoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +54,7 @@
             this.price_Lbl.AutoSize = true;
             this.price_Lbl.BackColor = System.Drawing.Color.LightGray;
             this.price_Lbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.price_Lbl.Location = new System.Drawing.Point(1077, 506);
+            this.price_Lbl.Location = new System.Drawing.Point(1090, 391);
             this.price_Lbl.Name = "price_Lbl";
             this.price_Lbl.Size = new System.Drawing.Size(177, 28);
             this.price_Lbl.TabIndex = 1;
@@ -65,7 +67,7 @@
             this.pricePerHour});
             this.price_ListVw.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.price_ListVw.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.price_ListVw.Location = new System.Drawing.Point(1122, 536);
+            this.price_ListVw.Location = new System.Drawing.Point(1135, 421);
             this.price_ListVw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.price_ListVw.Name = "price_ListVw";
             this.price_ListVw.Size = new System.Drawing.Size(155, 64);
@@ -81,7 +83,7 @@
             // discount_Lbl
             // 
             this.discount_Lbl.AutoSize = true;
-            this.discount_Lbl.Location = new System.Drawing.Point(1122, 602);
+            this.discount_Lbl.Location = new System.Drawing.Point(1135, 487);
             this.discount_Lbl.Name = "discount_Lbl";
             this.discount_Lbl.Size = new System.Drawing.Size(104, 15);
             this.discount_Lbl.TabIndex = 3;
@@ -201,12 +203,41 @@
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
+            // TestDataButton
+            // 
+            this.TestDataButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.TestDataButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TestDataButton.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.TestDataButton.IconColor = System.Drawing.Color.Black;
+            this.TestDataButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.TestDataButton.Location = new System.Drawing.Point(1134, 601);
+            this.TestDataButton.Name = "TestDataButton";
+            this.TestDataButton.Size = new System.Drawing.Size(133, 63);
+            this.TestDataButton.TabIndex = 15;
+            this.TestDataButton.Text = "Test Data ";
+            this.TestDataButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TestDataButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.TestDataButton.UseVisualStyleBackColor = false;
+            this.TestDataButton.Click += new System.EventHandler(this.TestDataButton_Click);
+            // 
+            // infoLabel
+            // 
+            this.infoLabel.AutoSize = true;
+            this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.infoLabel.Location = new System.Drawing.Point(1090, 567);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(213, 21);
+            this.infoLabel.TabIndex = 16;
+            this.infoLabel.Text = "To use test data press here:";
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1355, 715);
+            this.Controls.Add(this.infoLabel);
+            this.Controls.Add(this.TestDataButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TitleLabel);
@@ -247,5 +278,7 @@
         private Label TitleLabel;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconButton TestDataButton;
+        private Label infoLabel;
     }
 }

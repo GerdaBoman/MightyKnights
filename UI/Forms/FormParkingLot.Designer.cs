@@ -61,7 +61,7 @@
             this.ParkingSpots,
             this.licancePlate,
             this.checkInDate});
-            this.listView1.Location = new System.Drawing.Point(916, 333);
+            this.listView1.Location = new System.Drawing.Point(850, 328);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(359, 167);
             this.listView1.TabIndex = 18;
@@ -86,7 +86,7 @@
             // CheckInButton
             // 
             this.CheckInButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CheckInButton.Location = new System.Drawing.Point(1038, 253);
+            this.CheckInButton.Location = new System.Drawing.Point(972, 248);
             this.CheckInButton.Name = "CheckInButton";
             this.CheckInButton.Size = new System.Drawing.Size(75, 23);
             this.CheckInButton.TabIndex = 13;
@@ -98,7 +98,7 @@
             // 
             this.ParkLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ParkLabel.AutoSize = true;
-            this.ParkLabel.Location = new System.Drawing.Point(916, 187);
+            this.ParkLabel.Location = new System.Drawing.Point(850, 182);
             this.ParkLabel.Name = "ParkLabel";
             this.ParkLabel.Size = new System.Drawing.Size(176, 30);
             this.ParkLabel.TabIndex = 12;
@@ -107,7 +107,7 @@
             // parkingSpotBox
             // 
             this.parkingSpotBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.parkingSpotBox.Location = new System.Drawing.Point(1119, 187);
+            this.parkingSpotBox.Location = new System.Drawing.Point(1053, 182);
             this.parkingSpotBox.Name = "parkingSpotBox";
             this.parkingSpotBox.Size = new System.Drawing.Size(134, 23);
             this.parkingSpotBox.TabIndex = 11;
@@ -118,17 +118,16 @@
             this.parkingSpotHolder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.parkingSpotHolder.BackColor = System.Drawing.Color.WhiteSmoke;
             this.parkingSpotHolder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.parkingSpotHolder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.parkingSpotHolder.Location = new System.Drawing.Point(0, 0);
+            this.parkingSpotHolder.Location = new System.Drawing.Point(25, 51);
             this.parkingSpotHolder.MaximumSize = new System.Drawing.Size(800, 820);
             this.parkingSpotHolder.Name = "parkingSpotHolder";
-            this.parkingSpotHolder.Size = new System.Drawing.Size(800, 4);
+            this.parkingSpotHolder.Size = new System.Drawing.Size(4, 4);
             this.parkingSpotHolder.TabIndex = 10;
             // 
             // regPlateTextBox
             // 
             this.regPlateTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.regPlateTextBox.Location = new System.Drawing.Point(1119, 81);
+            this.regPlateTextBox.Location = new System.Drawing.Point(1053, 76);
             this.regPlateTextBox.Name = "regPlateTextBox";
             this.regPlateTextBox.Size = new System.Drawing.Size(134, 23);
             this.regPlateTextBox.TabIndex = 17;
@@ -137,7 +136,7 @@
             // 
             this.registrationPlate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.registrationPlate.AutoSize = true;
-            this.registrationPlate.Location = new System.Drawing.Point(916, 84);
+            this.registrationPlate.Location = new System.Drawing.Point(850, 79);
             this.registrationPlate.Name = "registrationPlate";
             this.registrationPlate.Size = new System.Drawing.Size(120, 15);
             this.registrationPlate.TabIndex = 16;
@@ -154,7 +153,7 @@
             this.vehicleCombo.Items.AddRange(new object[] {
             "Car",
             "Motercycle"});
-            this.vehicleCombo.Location = new System.Drawing.Point(1119, 136);
+            this.vehicleCombo.Location = new System.Drawing.Point(1053, 131);
             this.vehicleCombo.Name = "vehicleCombo";
             this.vehicleCombo.Size = new System.Drawing.Size(134, 23);
             this.vehicleCombo.TabIndex = 15;
@@ -163,7 +162,7 @@
             // 
             this.vehicleTypeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vehicleTypeLabel.AutoSize = true;
-            this.vehicleTypeLabel.Location = new System.Drawing.Point(916, 139);
+            this.vehicleTypeLabel.Location = new System.Drawing.Point(850, 134);
             this.vehicleTypeLabel.Name = "vehicleTypeLabel";
             this.vehicleTypeLabel.Size = new System.Drawing.Size(74, 15);
             this.vehicleTypeLabel.TabIndex = 14;
@@ -174,7 +173,7 @@
             this.checkInLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkInLabel.AutoSize = true;
             this.checkInLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkInLabel.Location = new System.Drawing.Point(916, 36);
+            this.checkInLabel.Location = new System.Drawing.Point(850, 31);
             this.checkInLabel.Name = "checkInLabel";
             this.checkInLabel.Size = new System.Drawing.Size(93, 25);
             this.checkInLabel.TabIndex = 19;
@@ -185,7 +184,7 @@
             this.checkOutLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkOutLabel.AutoSize = true;
             this.checkOutLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkOutLabel.Location = new System.Drawing.Point(919, 550);
+            this.checkOutLabel.Location = new System.Drawing.Point(853, 545);
             this.checkOutLabel.Name = "checkOutLabel";
             this.checkOutLabel.Size = new System.Drawing.Size(108, 25);
             this.checkOutLabel.TabIndex = 20;
@@ -195,7 +194,7 @@
             // 
             this.checkoutInstructions.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkoutInstructions.AutoSize = true;
-            this.checkoutInstructions.Location = new System.Drawing.Point(919, 602);
+            this.checkoutInstructions.Location = new System.Drawing.Point(853, 597);
             this.checkoutInstructions.Name = "checkoutInstructions";
             this.checkoutInstructions.Size = new System.Drawing.Size(119, 15);
             this.checkoutInstructions.TabIndex = 21;
@@ -204,7 +203,7 @@
             // checkoutSpotBox
             // 
             this.checkoutSpotBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkoutSpotBox.Location = new System.Drawing.Point(1119, 594);
+            this.checkoutSpotBox.Location = new System.Drawing.Point(1053, 589);
             this.checkoutSpotBox.Name = "checkoutSpotBox";
             this.checkoutSpotBox.Size = new System.Drawing.Size(134, 23);
             this.checkoutSpotBox.TabIndex = 22;
@@ -213,7 +212,7 @@
             // 
             this.regNumberLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.regNumberLabel2.AutoSize = true;
-            this.regNumberLabel2.Location = new System.Drawing.Point(919, 658);
+            this.regNumberLabel2.Location = new System.Drawing.Point(853, 653);
             this.regNumberLabel2.Name = "regNumberLabel2";
             this.regNumberLabel2.Size = new System.Drawing.Size(120, 15);
             this.regNumberLabel2.TabIndex = 23;
@@ -222,7 +221,7 @@
             // checkOutTextBox
             // 
             this.checkOutTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkOutTextBox.Location = new System.Drawing.Point(1119, 655);
+            this.checkOutTextBox.Location = new System.Drawing.Point(1053, 650);
             this.checkOutTextBox.Name = "checkOutTextBox";
             this.checkOutTextBox.Size = new System.Drawing.Size(134, 23);
             this.checkOutTextBox.TabIndex = 24;
@@ -231,7 +230,7 @@
             // 
             this.infoLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.infoLabel.AutoSize = true;
-            this.infoLabel.Location = new System.Drawing.Point(1053, 631);
+            this.infoLabel.Location = new System.Drawing.Point(987, 626);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(27, 15);
             this.infoLabel.TabIndex = 25;
@@ -240,7 +239,7 @@
             // CheckOutButton
             // 
             this.CheckOutButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CheckOutButton.Location = new System.Drawing.Point(1038, 697);
+            this.CheckOutButton.Location = new System.Drawing.Point(972, 692);
             this.CheckOutButton.Name = "CheckOutButton";
             this.CheckOutButton.Size = new System.Drawing.Size(75, 23);
             this.CheckOutButton.TabIndex = 26;
@@ -253,7 +252,7 @@
             this.ParkedVehiclesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ParkedVehiclesLabel.AutoSize = true;
             this.ParkedVehiclesLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ParkedVehiclesLabel.Location = new System.Drawing.Point(919, 315);
+            this.ParkedVehiclesLabel.Location = new System.Drawing.Point(853, 310);
             this.ParkedVehiclesLabel.Name = "ParkedVehiclesLabel";
             this.ParkedVehiclesLabel.Size = new System.Drawing.Size(97, 15);
             this.ParkedVehiclesLabel.TabIndex = 27;

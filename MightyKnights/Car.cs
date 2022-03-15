@@ -6,11 +6,11 @@ namespace Core;
 public class Car : Vehicle
 {
     Config setting = new Config();
-        public Car()
-        {
-            setting = Config.ReadSettingsFromFile();
-            base.Size = setting.CarSize;
-        }
+        //public Car()
+        //{
+        //    setting = Config.ReadSettingsFromFile();
+        //    base.Size = setting.CarSize;
+        //}
 
     public void AddCar(string licensePlate)
     {

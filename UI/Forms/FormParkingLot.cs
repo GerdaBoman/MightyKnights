@@ -1,6 +1,9 @@
 ﻿
 using Core;
 using DataAccess.Data;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.Data;
 using UI.ListViewer;
 using UI.ParkingSpotCosmetic;
@@ -32,11 +35,24 @@ namespace UI
 
             if (check == true)
             {
-                refresh.RefreshListViewer(listView1);
+                refresh.RefreshParkingLotViewer(listView1);
             }
 
-            //CHANGE CAPACITY OF PARKING LOT
-            int capacity = 101;
+            //TODO: CONNECT TO JSON TO CHANGE CAPACITY OF PARKING LOT
+
+            var appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
+            var json = File.ReadAllText(appSettingsPath);
+
+            var jsonString = JObject.Parse(json);
+            var parkingLotSize = jsonString["ParkingLotSize"].ToString();
+
+            Config value = new Config
+            {
+                ParkingLotSize = (int)jsonString["ParkingLotSize"]["ParkingLotSize"]
+            };
+
+
+            int capacity = value.ParkingLotSize;
             
             parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
 
@@ -102,7 +118,7 @@ namespace UI
                             parkingSpotBox.Clear();
 
                             listView1.Items.Clear();
-                            refresh.RefreshListViewer(listView1);
+                            refresh.RefreshParkingLotViewer(listView1);
                             break;
                         }
 
@@ -142,7 +158,7 @@ namespace UI
                             parkingSpotBox.Clear();
 
                             listView1.Items.Clear();
-                            refresh.RefreshListViewer(listView1);
+                            refresh.RefreshParkingLotViewer(listView1);
                             break;
                         }
 
@@ -175,7 +191,7 @@ namespace UI
                 color.SpotsStatus(parkingSpot, checkSpot);
 
                 listView1.Items.Clear();
-                refresh.RefreshListViewer(listView1);
+                refresh.RefreshParkingLotViewer(listView1);
                 checkOutTextBox.Clear();
                 checkoutSpotBox.Clear();
 
@@ -188,7 +204,7 @@ namespace UI
                 color.SpotsStatus(parkingSpot, checkSpot);
 
                 listView1.Items.Clear();
-                refresh.RefreshListViewer(listView1);
+                refresh.RefreshParkingLotViewer(listView1);
                 checkOutTextBox.Clear();
                 checkoutSpotBox.Clear();
             }

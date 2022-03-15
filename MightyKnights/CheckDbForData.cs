@@ -59,7 +59,7 @@ namespace Core
                                  select new
                                  {
                                      ParkingSpot = p.SpotNumber,
-                                     LicancePlate = v.RegNumber,
+                                     LicencePlate = v.RegNumber,
                                      VehicleType = v.VehicleType,
                                      CheckInDate = p.Arrival
                                  }).ToList();
@@ -75,6 +75,57 @@ namespace Core
                 {
                     return "Parking spot is empty!";
                 }
+            }
+        }
+
+        public string GetVehicleType(string regNumber)
+        {
+            using(var db = new MightyKnightsContext())
+            {
+                var vehicleType = (from v in db.Vehicles
+                                   where v.RegNumber == regNumber
+                                   select v.VehicleType).FirstOrDefault();
+                if (vehicleType != null)
+                {
+                    return vehicleType;
+                }
+                else
+                    return "";
+            }
+        }
+        
+        public int GetParkingSpot(string regNumber)
+        {
+            using(var db = new MightyKnightsContext())
+            {
+                var parkingSpot = (from v in db.Vehicles
+                                   join p in db.ParkingLots on v.VehicleId equals p.VehicleId
+                                   where v.RegNumber == regNumber
+                                   select p.SpotNumber).FirstOrDefault();
+                if (parkingSpot != null)
+                {
+                    return parkingSpot;
+                }
+                else
+                    return 0;
+            }
+        }
+        
+        public DateTime? GetArrivalTime(string regNumber)
+        {
+            using(var db = new MightyKnightsContext())
+            {
+                var arrivalTime = (from v in db.Vehicles
+                                   join p in db.ParkingLots on v.VehicleId equals p.VehicleId
+                                   where v.RegNumber == regNumber
+                                   select p.Arrival).FirstOrDefault();
+
+                if (arrivalTime != null)
+                {
+                    return arrivalTime;
+                }
+                else
+                    return null;
             }
         }
     }
