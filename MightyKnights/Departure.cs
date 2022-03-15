@@ -1,4 +1,5 @@
-﻿using DataAccess.Data;
+﻿using Core.HistoryMethods;
+using DataAccess.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;

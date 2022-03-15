@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core
+namespace Core.HistoryMethods
 {
     public class RemoveHistory
     {
@@ -16,7 +16,7 @@ namespace Core
                 var history = (from h in db.Histories
                                select h).ToList();
 
-                foreach(var historyItem in history)
+                foreach (var historyItem in history)
                 {
                     db.Histories.Remove(historyItem);
                 }

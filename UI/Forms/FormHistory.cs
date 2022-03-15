@@ -1,4 +1,4 @@
-﻿using Core;
+﻿using Core.HistoryMethods;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +16,7 @@ namespace UI.Forms
     {
         ListViewRefresh refresh = new();
         RemoveHistory remove = new();
+        DataBetweenDates data = new DataBetweenDates(); 
         public FormHistory()
         {
             InitializeComponent();
@@ -46,6 +47,33 @@ namespace UI.Forms
             {
                 MessageBox.Show("Canceled!");
             }
+        }
+
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+            DateTime fromDate = FromDatePicker.Value;
+            DateTime toDate = ToDatePicker.Value;
+
+            if (toDate < fromDate)
+            {
+                MessageBox.Show("To date has to be later than from date!");
+            }
+            else
+            {
+                int amountVehicles = data.AmoutVehicles(fromDate, toDate);
+                decimal? moneyEarned = data.TotalEarned(fromDate, toDate);
+                if(amountVehicles <= 0)
+                {
+                    MessageBox.Show("No history found");
+                }
+                else
+                {
+                    NumberOfVehicles.Text = amountVehicles.ToString();
+                    AmountEarned.Text = moneyEarned.ToString() + " CZK";
+                }
+               
+            }
+
         }
     }
 }
