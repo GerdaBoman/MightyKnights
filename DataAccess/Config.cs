@@ -14,6 +14,8 @@ public class Config
     public int McPriceHour { get; set; }
     public int ParkingSpotSize { get; set; }
     public int ParkingLotSize { get; set; }
+    public int BusSize { get; set; }    
+    public int BikeSize { get; set; }
 
     public void ReadFromJson()
     {
@@ -42,6 +44,8 @@ public class Config
         //    ParkingLotSize = (int)jsonString["Values"]["ParkingLotSize"]
         //};
     }
+
+    
     //public static Config ReadSettingsFromJson(string filePath = "../../../Datafiles/Config.json")
     //    {
     //       string settingsJson = File.ReadAllText(filePath);
