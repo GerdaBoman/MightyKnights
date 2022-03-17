@@ -52,7 +52,11 @@ namespace Core.HomeCalculations
                                     .Where(x=> x.Count() > 1)
                                     .Select(y => y.Key).Count();
 
-                int partialSpaces = mCSpaces.Count() - fullMcSpaces;
+                //int partialSpaces = mCSpaces.Count() - fullMcSpaces;
+
+                int partialSpaces = mCSpaces.GroupBy(x => x.ParkingSpot)
+                                    .Where(x => x.Count() == 1)
+                                    .Select(mCSpaces => mCSpaces.Key).Count();
 
 
                 return partialSpaces;
