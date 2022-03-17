@@ -145,6 +145,13 @@ namespace UI
             ClockStatusStrip.Text = DateTime.Now.ToString("T");
         }
 
+        private void LogoPicture_Click(object sender, EventArgs e)
+        {
+            currentChildForm.Close();
+            DisableHighlightButton();
+            OpenChildForm(new FormHome());
+            currentChildButton.IconChar = IconChar.Home;
 
+        }
     }
 }

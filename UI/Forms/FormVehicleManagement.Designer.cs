@@ -42,7 +42,6 @@
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.ParkedVehiclesLabel = new System.Windows.Forms.Label();
             this.licencePlateLabel = new System.Windows.Forms.Label();
             this.VehicleTypeLabel = new System.Windows.Forms.Label();
             this.ParkingSpotLabel = new System.Windows.Forms.Label();
@@ -75,7 +74,7 @@
             // 
             this.searchLabel.AutoSize = true;
             this.searchLabel.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.searchLabel.Location = new System.Drawing.Point(101, 67);
+            this.searchLabel.Location = new System.Drawing.Point(101, 68);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(86, 28);
             this.searchLabel.TabIndex = 0;
@@ -132,7 +131,7 @@
             // CheckInDate
             // 
             this.CheckInDate.Text = "Check in Date";
-            this.CheckInDate.Width = 200;
+            this.CheckInDate.Width = 300;
             // 
             // label1
             // 
@@ -150,9 +149,10 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.parkingLotViewer.Location = new System.Drawing.Point(791, 155);
+            this.parkingLotViewer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.parkingLotViewer.Location = new System.Drawing.Point(836, 0);
             this.parkingLotViewer.Name = "parkingLotViewer";
-            this.parkingLotViewer.Size = new System.Drawing.Size(506, 599);
+            this.parkingLotViewer.Size = new System.Drawing.Size(506, 777);
             this.parkingLotViewer.TabIndex = 5;
             this.parkingLotViewer.UseCompatibleStateImageBehavior = false;
             this.parkingLotViewer.View = System.Windows.Forms.View.Details;
@@ -176,16 +176,6 @@
             // 
             this.columnHeader4.Text = "Check in Date";
             this.columnHeader4.Width = 200;
-            // 
-            // ParkedVehiclesLabel
-            // 
-            this.ParkedVehiclesLabel.AutoSize = true;
-            this.ParkedVehiclesLabel.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.ParkedVehiclesLabel.Location = new System.Drawing.Point(791, 116);
-            this.ParkedVehiclesLabel.Name = "ParkedVehiclesLabel";
-            this.ParkedVehiclesLabel.Size = new System.Drawing.Size(197, 28);
-            this.ParkedVehiclesLabel.TabIndex = 6;
-            this.ParkedVehiclesLabel.Text = "All Parked Vehicles:";
             // 
             // licencePlateLabel
             // 
@@ -262,9 +252,10 @@
             // 
             // UpdateLicencePlate
             // 
+            this.UpdateLicencePlate.AutoSize = true;
             this.UpdateLicencePlate.Location = new System.Drawing.Point(598, 359);
             this.UpdateLicencePlate.Name = "UpdateLicencePlate";
-            this.UpdateLicencePlate.Size = new System.Drawing.Size(135, 23);
+            this.UpdateLicencePlate.Size = new System.Drawing.Size(135, 25);
             this.UpdateLicencePlate.TabIndex = 19;
             this.UpdateLicencePlate.Text = "Update Licence Plate";
             this.UpdateLicencePlate.UseVisualStyleBackColor = true;
@@ -272,9 +263,10 @@
             // 
             // UpdateVehicleType
             // 
+            this.UpdateVehicleType.AutoSize = true;
             this.UpdateVehicleType.Location = new System.Drawing.Point(598, 399);
             this.UpdateVehicleType.Name = "UpdateVehicleType";
-            this.UpdateVehicleType.Size = new System.Drawing.Size(135, 23);
+            this.UpdateVehicleType.Size = new System.Drawing.Size(135, 25);
             this.UpdateVehicleType.TabIndex = 20;
             this.UpdateVehicleType.Text = "Update Vehicle Type";
             this.UpdateVehicleType.UseVisualStyleBackColor = true;
@@ -282,9 +274,10 @@
             // 
             // UpdateCheckInDate
             // 
+            this.UpdateCheckInDate.AutoSize = true;
             this.UpdateCheckInDate.Location = new System.Drawing.Point(598, 440);
             this.UpdateCheckInDate.Name = "UpdateCheckInDate";
-            this.UpdateCheckInDate.Size = new System.Drawing.Size(135, 23);
+            this.UpdateCheckInDate.Size = new System.Drawing.Size(135, 25);
             this.UpdateCheckInDate.TabIndex = 21;
             this.UpdateCheckInDate.Text = "Update Check In Date";
             this.UpdateCheckInDate.UseVisualStyleBackColor = true;
@@ -311,9 +304,10 @@
             // 
             // MoveVehicleButton
             // 
+            this.MoveVehicleButton.AutoSize = true;
             this.MoveVehicleButton.Location = new System.Drawing.Point(520, 615);
             this.MoveVehicleButton.Name = "MoveVehicleButton";
-            this.MoveVehicleButton.Size = new System.Drawing.Size(135, 23);
+            this.MoveVehicleButton.Size = new System.Drawing.Size(135, 25);
             this.MoveVehicleButton.TabIndex = 23;
             this.MoveVehicleButton.Text = "Move Vehicle";
             this.MoveVehicleButton.UseVisualStyleBackColor = true;
@@ -346,6 +340,7 @@
             // 
             // NewVehicleType
             // 
+            this.NewVehicleType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NewVehicleType.FormattingEnabled = true;
             this.NewVehicleType.Items.AddRange(new object[] {
             "Car",
@@ -404,7 +399,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Firebrick;
-            this.label3.Location = new System.Drawing.Point(411, 9);
+            this.label3.Location = new System.Drawing.Point(203, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(558, 75);
             this.label3.TabIndex = 33;
@@ -414,9 +409,10 @@
             // 
             // RemoveButton
             // 
+            this.RemoveButton.AutoSize = true;
             this.RemoveButton.Location = new System.Drawing.Point(598, 502);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(135, 23);
+            this.RemoveButton.Size = new System.Drawing.Size(135, 25);
             this.RemoveButton.TabIndex = 34;
             this.RemoveButton.Text = "Remove Vehicle";
             this.RemoveButton.UseVisualStyleBackColor = true;
@@ -463,7 +459,6 @@
             this.Controls.Add(this.ParkingSpotLabel);
             this.Controls.Add(this.VehicleTypeLabel);
             this.Controls.Add(this.licencePlateLabel);
-            this.Controls.Add(this.ParkedVehiclesLabel);
             this.Controls.Add(this.parkingLotViewer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchResultsView);
@@ -494,7 +489,6 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
-        private Label ParkedVehiclesLabel;
         private Label licencePlateLabel;
         private Label VehicleTypeLabel;
         private Label ParkingSpotLabel;

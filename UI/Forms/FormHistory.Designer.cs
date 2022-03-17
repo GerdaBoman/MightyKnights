@@ -59,9 +59,10 @@
             this.arrivalDate,
             this.departureDate,
             this.totalCost});
-            this.historyViewer.Location = new System.Drawing.Point(63, 44);
+            this.historyViewer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.historyViewer.Location = new System.Drawing.Point(0, 0);
             this.historyViewer.Name = "historyViewer";
-            this.historyViewer.Size = new System.Drawing.Size(638, 605);
+            this.historyViewer.Size = new System.Drawing.Size(638, 781);
             this.historyViewer.TabIndex = 0;
             this.historyViewer.UseCompatibleStateImageBehavior = false;
             this.historyViewer.View = System.Windows.Forms.View.Details;
@@ -93,6 +94,7 @@
             // 
             // refreshButton
             // 
+            this.refreshButton.AutoSize = true;
             this.refreshButton.Location = new System.Drawing.Point(721, 585);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(89, 67);
@@ -103,6 +105,7 @@
             // 
             // DeteleButton
             // 
+            this.DeteleButton.AutoSize = true;
             this.DeteleButton.BackColor = System.Drawing.Color.Tomato;
             this.DeteleButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DeteleButton.ForeColor = System.Drawing.Color.Black;
@@ -178,9 +181,8 @@
             this.NumberOfVehicles.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.NumberOfVehicles.Location = new System.Drawing.Point(1030, 332);
             this.NumberOfVehicles.Name = "NumberOfVehicles";
-            this.NumberOfVehicles.Size = new System.Drawing.Size(94, 21);
+            this.NumberOfVehicles.Size = new System.Drawing.Size(0, 21);
             this.NumberOfVehicles.TabIndex = 9;
-            this.NumberOfVehicles.Text = "";
             // 
             // AmountEarned
             // 
@@ -188,9 +190,8 @@
             this.AmountEarned.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.AmountEarned.Location = new System.Drawing.Point(1030, 420);
             this.AmountEarned.Name = "AmountEarned";
-            this.AmountEarned.Size = new System.Drawing.Size(94, 21);
+            this.AmountEarned.Size = new System.Drawing.Size(0, 21);
             this.AmountEarned.TabIndex = 10;
-            this.AmountEarned.Text = "";
             // 
             // sqlCommand1
             // 
@@ -224,18 +225,18 @@
             this.startTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.startTime.Location = new System.Drawing.Point(846, 197);
             this.startTime.Name = "startTime";
+            this.startTime.ShowUpDown = true;
             this.startTime.Size = new System.Drawing.Size(66, 23);
             this.startTime.TabIndex = 13;
-            this.startTime.ShowUpDown = true;
             // 
             // endTime
             // 
             this.endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.endTime.Location = new System.Drawing.Point(1142, 197);
             this.endTime.Name = "endTime";
+            this.endTime.ShowUpDown = true;
             this.endTime.Size = new System.Drawing.Size(69, 23);
             this.endTime.TabIndex = 14;
-            this.endTime.ShowUpDown = true;
             // 
             // FormHistory
             // 

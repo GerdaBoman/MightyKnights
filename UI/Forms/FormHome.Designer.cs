@@ -67,7 +67,6 @@
             // 
             // price_ListVw
             // 
-            this.price_ListVw.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.price_ListVw.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.pricePerHour});
             this.price_ListVw.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -96,7 +95,6 @@
             // 
             // totalSpotsLabel
             // 
-            this.totalSpotsLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.totalSpotsLabel.AutoSize = true;
             this.totalSpotsLabel.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.totalSpotsLabel.Location = new System.Drawing.Point(76, 189);
@@ -107,7 +105,6 @@
             // 
             // TotalCarparkSize
             // 
-            this.TotalCarparkSize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalCarparkSize.AutoSize = true;
             this.TotalCarparkSize.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TotalCarparkSize.ForeColor = System.Drawing.Color.Black;
@@ -119,7 +116,6 @@
             // 
             // FreeParkingSpotLabel
             // 
-            this.FreeParkingSpotLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FreeParkingSpotLabel.AutoSize = true;
             this.FreeParkingSpotLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FreeParkingSpotLabel.Location = new System.Drawing.Point(76, 259);
@@ -130,7 +126,6 @@
             // 
             // NumberOfFreeSpots
             // 
-            this.NumberOfFreeSpots.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NumberOfFreeSpots.AutoSize = true;
             this.NumberOfFreeSpots.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NumberOfFreeSpots.ForeColor = System.Drawing.Color.Green;
@@ -142,7 +137,6 @@
             // 
             // TotalCarsParkedLabel
             // 
-            this.TotalCarsParkedLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalCarsParkedLabel.AutoSize = true;
             this.TotalCarsParkedLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TotalCarsParkedLabel.Location = new System.Drawing.Point(717, 189);
@@ -153,7 +147,6 @@
             // 
             // NumberOfCars
             // 
-            this.NumberOfCars.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NumberOfCars.AutoSize = true;
             this.NumberOfCars.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NumberOfCars.ForeColor = System.Drawing.Color.Black;
@@ -165,7 +158,6 @@
             // 
             // TotalMcPArked
             // 
-            this.TotalMcPArked.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalMcPArked.AutoSize = true;
             this.TotalMcPArked.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TotalMcPArked.Location = new System.Drawing.Point(717, 259);
@@ -176,7 +168,6 @@
             // 
             // NumberOfMC
             // 
-            this.NumberOfMC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NumberOfMC.AutoSize = true;
             this.NumberOfMC.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NumberOfMC.ForeColor = System.Drawing.Color.Black;
@@ -188,7 +179,6 @@
             // 
             // TitleLabel
             // 
-            this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TitleLabel.Location = new System.Drawing.Point(428, 68);
@@ -219,6 +209,7 @@
             // 
             // TestDataButton
             // 
+            this.TestDataButton.AutoSize = true;
             this.TestDataButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.TestDataButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TestDataButton.IconChar = FontAwesome.Sharp.IconChar.Database;
@@ -226,7 +217,7 @@
             this.TestDataButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.TestDataButton.Location = new System.Drawing.Point(956, 545);
             this.TestDataButton.Name = "TestDataButton";
-            this.TestDataButton.Size = new System.Drawing.Size(133, 77);
+            this.TestDataButton.Size = new System.Drawing.Size(120, 69);
             this.TestDataButton.TabIndex = 15;
             this.TestDataButton.Text = "Test Data ";
             this.TestDataButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,7 +237,6 @@
             // 
             // PartialEmptySpots
             // 
-            this.PartialEmptySpots.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PartialEmptySpots.AutoSize = true;
             this.PartialEmptySpots.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PartialEmptySpots.Location = new System.Drawing.Point(76, 326);
@@ -257,7 +247,6 @@
             // 
             // partialTakenSpots
             // 
-            this.partialTakenSpots.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.partialTakenSpots.AutoSize = true;
             this.partialTakenSpots.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.partialTakenSpots.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -269,7 +258,6 @@
             // 
             // TotalFullSpaces
             // 
-            this.TotalFullSpaces.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalFullSpaces.AutoSize = true;
             this.TotalFullSpaces.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TotalFullSpaces.Location = new System.Drawing.Point(76, 398);
@@ -280,7 +268,6 @@
             // 
             // fullSpaces
             // 
-            this.fullSpaces.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fullSpaces.AutoSize = true;
             this.fullSpaces.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fullSpaces.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -294,6 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1355, 715);
             this.Controls.Add(this.fullSpaces);

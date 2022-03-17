@@ -46,6 +46,7 @@
             // 
             // edit_btn
             // 
+            this.edit_btn.AutoSize = true;
             this.edit_btn.Location = new System.Drawing.Point(488, 409);
             this.edit_btn.Name = "edit_btn";
             this.edit_btn.Size = new System.Drawing.Size(97, 54);
@@ -117,6 +118,7 @@
             // 
             // Savebtn
             // 
+            this.Savebtn.AutoSize = true;
             this.Savebtn.Location = new System.Drawing.Point(633, 409);
             this.Savebtn.Name = "Savebtn";
             this.Savebtn.Size = new System.Drawing.Size(97, 54);

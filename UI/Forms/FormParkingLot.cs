@@ -193,7 +193,7 @@ namespace UI
         {
             string regNumber = checkOutTextBox.Text.ToString();
 
-            int parkingSpot = int.Parse(checkoutSpotBox.Text.ToString());
+            bool parkingSpotCheck = int.TryParse(checkoutSpotBox.Text.ToString(), out int parkingSpot);
 
             double? amount = calculations.TotalAmountToPay(regNumber);
 
@@ -203,7 +203,13 @@ namespace UI
 
             Button checkSpot = Controls.Find(checkOutSpot, true).FirstOrDefault() as Button;
 
-            if (amount > 0)
+
+            if(string.IsNullOrEmpty(regNumber))
+            {
+
+                MessageBox.Show("Please enter a licence plate of the vehicle to check out!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (amount > 0)
             {
                 decimal roundedAmount = Math.Round(decimal.Parse(toDecimal), 2);
 

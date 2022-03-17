@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.HistoryButton = new FontAwesome.Sharp.IconButton();
             this.SettingsButton = new FontAwesome.Sharp.IconButton();
             this.ExitButton = new FontAwesome.Sharp.IconButton();
             this.VehicleManagementButton = new FontAwesome.Sharp.IconButton();
@@ -44,7 +45,6 @@
             this.ClockStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.HistoryButton = new FontAwesome.Sharp.IconButton();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).BeginInit();
             this.panelDashboard.SuspendLayout();
@@ -67,6 +67,28 @@
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(200, 824);
             this.MenuPanel.TabIndex = 0;
+            // 
+            // HistoryButton
+            // 
+            this.HistoryButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HistoryButton.FlatAppearance.BorderSize = 0;
+            this.HistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HistoryButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HistoryButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.HistoryButton.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.HistoryButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.HistoryButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.HistoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HistoryButton.Location = new System.Drawing.Point(0, 320);
+            this.HistoryButton.Name = "HistoryButton";
+            this.HistoryButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.HistoryButton.Size = new System.Drawing.Size(200, 70);
+            this.HistoryButton.TabIndex = 6;
+            this.HistoryButton.Text = "History";
+            this.HistoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HistoryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.HistoryButton.UseVisualStyleBackColor = true;
+            this.HistoryButton.Click += new System.EventHandler(this.HistoryButton_Click);
             // 
             // SettingsButton
             // 
@@ -181,7 +203,6 @@
             // 
             // LogoPicture
             // 
-            count++;
             this.LogoPicture.Dock = System.Windows.Forms.DockStyle.Top;
             this.LogoPicture.Image = global::UI.Properties.Resources.knight_logo_clip_art_knight_c744684370c393f827995e46e5a11427;
             this.LogoPicture.Location = new System.Drawing.Point(0, 0);
@@ -191,6 +212,7 @@
             this.LogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPicture.TabIndex = 0;
             this.LogoPicture.TabStop = false;
+            this.LogoPicture.Click += new System.EventHandler(this.LogoPicture_Click);
             // 
             // panelDashboard
             // 
@@ -229,6 +251,7 @@
             // 
             // panelDesktop
             // 
+            this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(165)))), ((int)(((byte)(216)))));
             this.panelDesktop.Controls.Add(this.statusStrip1);
             this.panelDesktop.Controls.Add(this.panelShadow);
@@ -271,37 +294,17 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // HistoryButton
-            // 
-            this.HistoryButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HistoryButton.FlatAppearance.BorderSize = 0;
-            this.HistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HistoryButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HistoryButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.HistoryButton.IconChar = FontAwesome.Sharp.IconChar.History;
-            this.HistoryButton.IconColor = System.Drawing.Color.Gainsboro;
-            this.HistoryButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.HistoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HistoryButton.Location = new System.Drawing.Point(0, 320);
-            this.HistoryButton.Name = "HistoryButton";
-            this.HistoryButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.HistoryButton.Size = new System.Drawing.Size(200, 70);
-            this.HistoryButton.TabIndex = 6;
-            this.HistoryButton.Text = "History";
-            this.HistoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HistoryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.HistoryButton.UseVisualStyleBackColor = true;
-            this.HistoryButton.Click += new System.EventHandler(this.HistoryButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1571, 824);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.MenuPanel);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mighty Knights";
             this.MenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).EndInit();
@@ -312,6 +315,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
