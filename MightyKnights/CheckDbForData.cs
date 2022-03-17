@@ -1,4 +1,5 @@
 ﻿using DataAccess.Data;
+using System.Text;
 
 namespace Core
 {
@@ -84,7 +85,22 @@ namespace Core
 
                 if (spotCheck.Count > 0)
                 {
-                    string results = string.Join(Environment.NewLine, spotCheck);
+                    List<string> statusList = new List<string>();
+                    string status = null;
+
+                    for (int i = 0; i < spotCheck.Count; i++)
+                    {
+                        status = $"{i + 1}:\nLicence Plate: " + spotCheck[i].LicencePlate + "\nParking Spot: " +
+                            spotCheck[i].ParkingSpot + "\nVehicle Type: " + spotCheck[i].VehicleType + "\nCheck In Date: " +
+                            spotCheck[i].CheckInDate;
+
+                        statusList.Add(status);
+
+                        
+                    }
+                   
+                    string results = string.Join(Environment.NewLine, statusList);
+
                     return results;
 
                 }

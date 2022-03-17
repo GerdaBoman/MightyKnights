@@ -28,7 +28,7 @@ namespace UI.ParkingSpotCosmetic
             int selectedSpot = Int32.Parse(buttonText);
             string caption = "Parked Vehicle: ";
 
-            MessageBox.Show(check.GetParkingSpotStatus(selectedSpot), caption);
+            MessageBox.Show(check.GetParkingSpotStatus(selectedSpot), caption,MessageBoxButtons.OK,MessageBoxIcon.Information);
 
         }
     }

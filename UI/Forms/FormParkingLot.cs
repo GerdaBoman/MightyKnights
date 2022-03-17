@@ -196,7 +196,7 @@ namespace UI
         {
             string regNumber = checkOutTextBox.Text.ToString();
 
-           int parkingSpot = int.Parse(checkoutSpotBox.Text.ToString());
+            int parkingSpot = int.Parse(checkoutSpotBox.Text.ToString());
 
             double? amount = calculations.TotalAmountToPay(regNumber);
 
