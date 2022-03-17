@@ -48,8 +48,25 @@ namespace Core
             }
 
         }
+        public bool CheckIfSpotPartialFull(int parkingSpot)
+        {
+            using (var db = new MightyKnightsContext())
+            {
+                var checkIfFull = (from p in db.ParkingLots
+                                   join v in db.Vehicles on p.VehicleId equals v.VehicleId
+                                   where p.SpotNumber == parkingSpot
+                                   select v.Size).ToList();
 
-        public string CheckParkingSpotStatus(int selectedSpot)
+                if (checkIfFull.Sum() == 2)
+                {
+                    return true;
+                }
+                return false;
+            }
+
+        }
+
+        public string GetParkingSpotStatus(int selectedSpot)
         {
             using (var db = new MightyKnightsContext())
             {

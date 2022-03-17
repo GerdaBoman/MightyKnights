@@ -70,6 +70,7 @@ namespace UI
         {
             string vehicleType = vehicleCombo.Text;
             bool? spotStatus;
+            bool? spotPartialStatus;
 
             string regNumber = regPlateTextBox.Text.Trim().ToUpper(); 
 
@@ -110,8 +111,10 @@ namespace UI
                                 }
                                 else
                                 {
+
+                                    spotPartialStatus = check.CheckIfSpotPartialFull(parkingSpot);
                                     spotStatus = check.CheckIfSpotFull(parkingSpot);
-                                    if (spotStatus == true)
+                                    if (spotStatus == true || spotPartialStatus ==true)
                                     {
                                         MessageBox.Show("Chosen parking spot is already full!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                         parkingSpotBox.Clear();
@@ -193,7 +196,7 @@ namespace UI
         {
             string regNumber = checkOutTextBox.Text.ToString();
 
-            bool parkingSpotCheck = int.TryParse(checkoutSpotBox.Text.ToString(), out int parkingSpot);
+           int parkingSpot = int.Parse(checkoutSpotBox.Text.ToString());
 
             double? amount = calculations.TotalAmountToPay(regNumber);
 
