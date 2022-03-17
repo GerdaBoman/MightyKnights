@@ -95,7 +95,7 @@ namespace UI
                 else
                 {
 
-                    if (parkingLotSize > 0 && parkingSpot < parkingLotSize && parkingSpotCheck != false && parkingSpot != 0)
+                    if (parkingLotSize > 0 && parkingSpot < parkingLotSize+1 && parkingSpotCheck != false && parkingSpot != 0)
                     {
                         switch (vehicleType)
                         {
