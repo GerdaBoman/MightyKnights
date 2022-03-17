@@ -116,7 +116,7 @@ namespace UI
                                     spotStatus = check.CheckIfSpotFull(parkingSpot);
                                     if (spotStatus == true || spotPartialStatus ==true)
                                     {
-                                        MessageBox.Show("Chosen parking spot is already full!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        MessageBox.Show("Chosen parking spot is does not have enough space for this type of vehicle!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                         parkingSpotBox.Clear();
                                         break;
                                     }
