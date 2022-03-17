@@ -8,6 +8,7 @@ namespace UI
 {
     public partial class Form1 : Form
     {
+        private static int count;
         private IconButton currentButton;
         private Panel leftBorderButton;
         private System.Windows.Forms.Form currentChildForm;
@@ -77,7 +78,7 @@ namespace UI
 
         #endregion
 
-        private void OpenChildForm(System.Windows.Forms.Form childForm)
+        private void OpenChildForm(Form childForm)
         {
             if (currentChildForm != null)
             {

@@ -14,7 +14,7 @@ namespace Core.UpdateData
 
                 foreach (var edit in vehicle)
                 {
-                    edit.RegNumber = newRegNumber;
+                    edit.RegNumber = newRegNumber.ToUpper(); 
 
                 }
                 db.SaveChanges();

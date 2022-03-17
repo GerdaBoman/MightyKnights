@@ -181,6 +181,7 @@
             // 
             // LogoPicture
             // 
+            count++;
             this.LogoPicture.Dock = System.Windows.Forms.DockStyle.Top;
             this.LogoPicture.Image = global::UI.Properties.Resources.knight_logo_clip_art_knight_c744684370c393f827995e46e5a11427;
             this.LogoPicture.Location = new System.Drawing.Point(0, 0);

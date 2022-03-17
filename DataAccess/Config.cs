@@ -8,6 +8,7 @@ using System.Dynamic;
 /// </summary>
 public class Config
 {
+    //make static :)
     public int CarSize { get; set; }
     public int McSize { get; set; }
     public int CarPriceHour { get; set; }

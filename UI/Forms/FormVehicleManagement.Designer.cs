@@ -68,13 +68,14 @@
             this.DateTimeInstrutions = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.RemoveButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
             this.searchLabel.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.searchLabel.Location = new System.Drawing.Point(113, 66);
+            this.searchLabel.Location = new System.Drawing.Point(101, 67);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(86, 28);
             this.searchLabel.TabIndex = 0;
@@ -82,6 +83,7 @@
             // 
             // RegNummerTextBox
             // 
+            this.RegNummerTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.RegNummerTextBox.Location = new System.Drawing.Point(271, 120);
             this.RegNummerTextBox.Name = "RegNummerTextBox";
             this.RegNummerTextBox.Size = new System.Drawing.Size(170, 23);
@@ -245,11 +247,11 @@
             // 
             this.EditLabel.AutoSize = true;
             this.EditLabel.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.EditLabel.Location = new System.Drawing.Point(113, 313);
+            this.EditLabel.Location = new System.Drawing.Point(101, 314);
             this.EditLabel.Name = "EditLabel";
-            this.EditLabel.Size = new System.Drawing.Size(54, 28);
+            this.EditLabel.Size = new System.Drawing.Size(85, 28);
             this.EditLabel.TabIndex = 15;
-            this.EditLabel.Text = "Edit:";
+            this.EditLabel.Text = "Update:";
             // 
             // dateTimePicker
             // 
@@ -301,7 +303,7 @@
             // 
             this.moveVehicleLabel.AutoSize = true;
             this.moveVehicleLabel.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.moveVehicleLabel.Location = new System.Drawing.Point(113, 529);
+            this.moveVehicleLabel.Location = new System.Drawing.Point(101, 532);
             this.moveVehicleLabel.Name = "moveVehicleLabel";
             this.moveVehicleLabel.Size = new System.Drawing.Size(144, 28);
             this.moveVehicleLabel.TabIndex = 22;
@@ -402,23 +404,32 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Firebrick;
-            this.label3.Location = new System.Drawing.Point(440, 9);
+            this.label3.Location = new System.Drawing.Point(411, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(558, 75);
             this.label3.TabIndex = 33;
             this.label3.Text = "Search the licence plate number to be able to edit vehicle entry!\r\nVehicles infor" +
-    "mation will be filled out automaticly.\r\n\r\n";
+    "mation will be filled in automaticly.\r\n\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RemoveButton
             // 
-            this.RemoveButton.Location = new System.Drawing.Point(648, 120);
+            this.RemoveButton.Location = new System.Drawing.Point(598, 502);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
+            this.RemoveButton.Size = new System.Drawing.Size(135, 23);
             this.RemoveButton.TabIndex = 34;
-            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.Text = "Remove Vehicle";
             this.RemoveButton.UseVisualStyleBackColor = true;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(392, 506);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(190, 15);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "To remove the vehicle completely :";
             // 
             // FormVehicleManagement
             // 
@@ -426,6 +437,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1342, 777);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DateTimeInstrutions);
@@ -508,5 +520,6 @@
         private Label DateTimeInstrutions;
         private Label label3;
         private Button RemoveButton;
+        private Label label4;
     }
 }

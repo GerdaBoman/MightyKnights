@@ -71,7 +71,7 @@ namespace UI
             string vehicleType = vehicleCombo.Text;
             bool? spotStatus;
 
-            string regNumber = regPlateTextBox.Text.Trim().ToLower();
+            string regNumber = regPlateTextBox.Text.Trim().ToUpper(); 
 
             bool parkingSpotCheck = int.TryParse(parkingSpotBox.Text,out int parkingSpot);
             string chosenSpot = "pSpot" + parkingSpotBox.Text;
@@ -120,7 +120,7 @@ namespace UI
                                     else
                                     {
                                         Car car = new Car();
-                                        car.AddCar(regPlateTextBox.Text.ToString());
+                                        car.AddCar(regPlateTextBox.Text.ToString().ToUpper());
                                         parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
 
                                         color.SpotsStatus(parkingSpot, takenSpot);
@@ -159,9 +159,9 @@ namespace UI
                                     else
                                     {
                                         Mc mc = new Mc();
-                                        mc.AddMc(regPlateTextBox.Text.ToString());
+                                        mc.AddMc(regPlateTextBox.Text.ToString().ToUpper());
                                         parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
-                                        //mc.ParkMc(parkingSpot, regPlateTextBox.Text.ToString());
+                                  
 
                                         color.SpotsStatus(parkingSpot, takenSpot);
 
