@@ -128,6 +128,8 @@ namespace UI
 
                                         color.SpotsStatus(parkingSpot, takenSpot);
 
+                                        MessageBox.Show($"Vehicle with licence number is parked in spot number: {parkingSpot.ToString()}!", "Vehicle parked", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                         regPlateTextBox.Clear();
                                         vehicleCombo.ResetText();
                                         parkingSpotBox.Clear();
@@ -167,6 +169,8 @@ namespace UI
                                   
 
                                         color.SpotsStatus(parkingSpot, takenSpot);
+
+                                        MessageBox.Show($"Vehicle with licence number is parked in spot number: {parkingSpot.ToString()}!", "Vehicle parked", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                         regPlateTextBox.Clear();
                                         vehicleCombo.ResetText();
