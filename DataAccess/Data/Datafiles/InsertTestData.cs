@@ -37,7 +37,7 @@ namespace DataAccess.Data.Datafiles
             db.ParkingLots.Add(new ParkingLot { VehicleId = 1, SpotNumber = 4, Arrival = DateTime.Parse("2022/03/12 15:41:22"), Departure = null });
             db.ParkingLots.Add(new ParkingLot { VehicleId = 2, SpotNumber = 23, Arrival = DateTime.Parse("2022/03/12 17:22:22"), Departure = null });
             db.ParkingLots.Add(new ParkingLot { VehicleId = 3, SpotNumber = 66, Arrival = DateTime.Parse("2022/03/14 18:55:22"), Departure = null });
-            db.ParkingLots.Add(new ParkingLot { VehicleId = 4, SpotNumber = 4, Arrival = DateTime.Parse("2022/03/12 20:32:22"), Departure = null });
+            db.ParkingLots.Add(new ParkingLot { VehicleId = 4, SpotNumber = 88, Arrival = DateTime.Parse("2022/03/12 20:32:22"), Departure = null });
             db.ParkingLots.Add(new ParkingLot { VehicleId = 5, SpotNumber = 11, Arrival = DateTime.Parse("2022/03/10 01:53:22"), Departure = null });
             db.ParkingLots.Add(new ParkingLot { VehicleId = 6, SpotNumber = 76, Arrival = DateTime.Parse("2022/03/20 12:21:22"), Departure = null });
             db.ParkingLots.Add(new ParkingLot { VehicleId = 7, SpotNumber = 32, Arrival = DateTime.Parse("2022/03/11 14:41:22"), Departure = null });
