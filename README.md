@@ -35,10 +35,12 @@ Lösningen på projektet innehåller tre delar.
 Core,DataAccess samt UI.
 
 •För att börja program:
+
 -Gör UI som start up projekt om det behövs
 -Kör programmet
 -Om man vil ha test data i projektet, trycka på "Test Data" knappen på home sida av programmet
 
 •För ändra stolerk av parkerings garage och fordons priserna:
+
 -Ändra värderna i "Settings" sida och trycka på "Save"
 
