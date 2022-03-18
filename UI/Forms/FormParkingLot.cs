@@ -1,5 +1,6 @@
 ﻿
 using Core;
+using Core.Vehicles;
 using DataAccess.Data;
 using System.Data;
 using UI.ListViewer;
@@ -16,8 +17,8 @@ namespace UI
         ParkingFeeCalculations calculations = new();
         Departure departure = new();
         ParkingLotSpaces parkingLotSpaces = new();
-        private AutoCompleteStringCollection suggestionlist = new AutoCompleteStringCollection();
-        Form1 form1 = new Form1();
+        private AutoCompleteStringCollection suggestionlist = new();
+        Form1 form1 = new();
 
         string amountToPayCap = "Amount to Pay";
         string errorCap = "Error";
@@ -26,6 +27,8 @@ namespace UI
         {
             InitializeComponent();
 
+
+            //Scans all license plate numbers to be able to suggest on check out
             using (var db = new MightyKnightsContext())
             {
                 suggestionlist.AddRange(db.Vehicles.Select(r => r.RegNumber).ToArray());
@@ -36,6 +39,7 @@ namespace UI
             }
         }
 
+        //Checks if there is data in the database, if there is loads it up and colors parking spots with appropriate color status
         private void FormParkingLot_Load(object sender, EventArgs e)
         {
             bool check = CheckDbForData.DataExist();
@@ -50,7 +54,7 @@ namespace UI
 
             parkingLotSpaces.ParkingLotSize(capacity, parkingSpotHolder);
 
-            using (MightyKnightsContext context = new MightyKnightsContext())
+            using (MightyKnightsContext context = new())
             {
                 var fullSpots = (from p in context.ParkingLots
                                  select p.SpotNumber).ToList();
@@ -66,15 +70,16 @@ namespace UI
             }
         }
 
+        //Add new vehicle into database
         private void CheckInButton_Click(object sender, EventArgs e)
         {
             string vehicleType = vehicleCombo.Text;
             bool? spotStatus;
             bool? spotPartialStatus;
 
-            string regNumber = regPlateTextBox.Text.Trim().ToUpper(); 
+            string regNumber = regPlateTextBox.Text.Trim().ToUpper();
 
-            bool parkingSpotCheck = int.TryParse(parkingSpotBox.Text,out int parkingSpot);
+            bool parkingSpotCheck = int.TryParse(parkingSpotBox.Text, out int parkingSpot);
             string chosenSpot = "pSpot" + parkingSpotBox.Text;
             Button takenSpot = Controls.Find(chosenSpot, true).FirstOrDefault() as Button;
             bool checkLicancePlate = check.CheckIfVehicleExist(regPlateTextBox.Text.ToString());
@@ -84,7 +89,7 @@ namespace UI
 
             if (string.IsNullOrEmpty(regNumber))
             {
-                MessageBox.Show("Please enter vehicles licence plate number to check in!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter vehicles license plate number to check in!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -95,7 +100,7 @@ namespace UI
                 else
                 {
 
-                    if (parkingLotSize > 0 && parkingSpot < parkingLotSize+1 && parkingSpotCheck != false && parkingSpot != 0)
+                    if (parkingLotSize > 0 && parkingSpot < parkingLotSize + 1 && parkingSpotCheck != false && parkingSpot != 0)
                     {
                         switch (vehicleType)
                         {
@@ -105,7 +110,7 @@ namespace UI
 
                                 if (checkLicancePlate == true)
                                 {
-                                    MessageBox.Show("This vechile is already in parking lot", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("This vehicle is already in parking lot", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     regPlateTextBox.Clear();
                                     break;
                                 }
@@ -114,7 +119,7 @@ namespace UI
 
                                     spotPartialStatus = check.CheckIfSpotPartialFull(parkingSpot);
                                     spotStatus = check.CheckIfSpotFull(parkingSpot);
-                                    if (spotStatus == true || spotPartialStatus ==true)
+                                    if (spotStatus == true || spotPartialStatus == true)
                                     {
                                         MessageBox.Show("Chosen parking spot is does not have enough space for this type of vehicle!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                         parkingSpotBox.Clear();
@@ -122,13 +127,13 @@ namespace UI
                                     }
                                     else
                                     {
-                                        Car car = new Car();
+                                        Car car = new();
                                         car.AddCar(regPlateTextBox.Text.ToString().ToUpper());
                                         parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
 
                                         color.SpotsStatus(parkingSpot, takenSpot);
 
-                                        MessageBox.Show($"Vehicle with licence number {regNumber} is parked in spot number: {parkingSpot.ToString()}!", "Vehicle parked", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        MessageBox.Show($"Vehicle with license number {regNumber} is parked in spot number: {parkingSpot.ToString()}!", "Vehicle parked", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                         regPlateTextBox.Clear();
                                         vehicleCombo.ResetText();
@@ -143,12 +148,12 @@ namespace UI
                             #endregion
 
 
-                            case "Motercycle":
+                            case "Motorcycle":
 
-                                #region Adding Motercycle
+                                #region Adding Motorcycle
                                 if (checkLicancePlate == true)
                                 {
-                                    MessageBox.Show("This vechile is already in parking lot");
+                                    MessageBox.Show("This vehicle is already in parking lot");
                                     regPlateTextBox.Clear();
                                     break;
                                 }
@@ -163,14 +168,14 @@ namespace UI
                                     }
                                     else
                                     {
-                                        Mc mc = new Mc();
+                                        Mc mc = new();
                                         mc.AddMc(regPlateTextBox.Text.ToString().ToUpper());
                                         parkingControls.ParkVehicle(parkingSpot, regPlateTextBox.Text.ToString());
-                                  
+
 
                                         color.SpotsStatus(parkingSpot, takenSpot);
 
-                                        MessageBox.Show($"Vehicle with licence number {regNumber} is parked in spot number: {parkingSpot.ToString()}!", "Vehicle parked", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        MessageBox.Show($"Vehicle with license number {regNumber} is parked in spot number: {parkingSpot.ToString()}!", "Vehicle parked", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                         regPlateTextBox.Clear();
                                         vehicleCombo.ResetText();
@@ -193,9 +198,10 @@ namespace UI
                     }
                 }
             }
-            
+
         }
 
+        //Remove vehicle from parked vehicles table and calculates how much the stay cost
         private void CheckOutButton_Click(object sender, EventArgs e)
         {
             string regNumber = checkOutTextBox.Text.ToString();
@@ -211,10 +217,10 @@ namespace UI
             Button checkSpot = Controls.Find(checkOutSpot, true).FirstOrDefault() as Button;
 
 
-            if(string.IsNullOrEmpty(regNumber))
+            if (string.IsNullOrEmpty(regNumber))
             {
 
-                MessageBox.Show("Please enter a licence plate of the vehicle to check out!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a license plate of the vehicle to check out!", errorCap, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (amount > 0)
             {
@@ -252,6 +258,7 @@ namespace UI
             }
         }
 
+        //Suggestion function for checkout
         private void checkOutTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -260,6 +267,7 @@ namespace UI
             }
         }
 
+        //To find the vehicles parking spot
         private void searchButton_Click(object sender, EventArgs e)
         {
             string regNumber = checkOutTextBox.Text.ToString();

@@ -5,6 +5,8 @@ namespace Core
 {
     public class ParkingControls
     {
+
+        //Parking vehicle into parking lot
         public void ParkVehicle(int parkingSpot, string regNumber)
         {
             using (var context = new MightyKnightsContext())

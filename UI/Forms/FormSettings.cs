@@ -2,7 +2,7 @@
 {
     public partial class FormSettings : Form
     {
-        Form1 form1 = new Form1();
+        Form1 form1 = new();
         public FormSettings()
         {
             InitializeComponent();

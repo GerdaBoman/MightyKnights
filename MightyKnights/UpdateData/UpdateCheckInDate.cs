@@ -4,6 +4,7 @@ namespace Core.UpdateData
 {
     public class UpdateCheckInDate
     {
+        //Change the arrival date and time of a vehicle
         public void UpdateArrivalTime(string regNumber, DateTime newDate)
         {
             using (var db = new MightyKnightsContext())

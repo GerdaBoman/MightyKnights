@@ -1,26 +1,22 @@
 ﻿using DataAccess.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.HomeCalculations
 {
     public class CountSpaces
     {
+        //Counts how many parking spots are totally full
         public int CountFullSpaces()
         {
-            using(var db = new MightyKnightsContext())
+            using (var db = new MightyKnightsContext())
             {
                 var carSpaces = (from p in db.ParkingLots
-                                  join v in db.Vehicles on p.VehicleId equals v.VehicleId
-                                  where v.Size == 4
-                                  select p.SpotNumber).Count();
+                                 join v in db.Vehicles on p.VehicleId equals v.VehicleId
+                                 where v.Size == 4
+                                 select p.SpotNumber).Count();
 
                 var mCSpaces = (from p in db.ParkingLots
                                 join v in db.Vehicles on p.VehicleId equals v.VehicleId
-                                where v.Size == 2 
+                                where v.Size == 2
                                 select p.SpotNumber).ToList();
 
                 var fullMcSpaces = mCSpaces.GroupBy(x => x)
@@ -34,9 +30,11 @@ namespace Core.HomeCalculations
 
             }
         }
+
+        //Counts how many parking spots are partially full
         public int CountPartialSpaces()
         {
-            using(var db = new MightyKnightsContext())
+            using (var db = new MightyKnightsContext())
             {
                 var mCSpaces = (from p in db.ParkingLots
                                 join v in db.Vehicles on p.VehicleId equals v.VehicleId
@@ -45,14 +43,13 @@ namespace Core.HomeCalculations
                                 {
                                     Vehile = v.VehicleId,
                                     ParkingSpot = p.SpotNumber
-                                }).ToList(); 
-             
+                                }).ToList();
+
 
                 var fullMcSpaces = mCSpaces.GroupBy(x => x.ParkingSpot)
-                                    .Where(x=> x.Count() > 1)
+                                    .Where(x => x.Count() > 1)
                                     .Select(y => y.Key).Count();
 
-                //int partialSpaces = mCSpaces.Count() - fullMcSpaces;
 
                 int partialSpaces = mCSpaces.GroupBy(x => x.ParkingSpot)
                                     .Where(x => x.Count() == 1)
@@ -64,6 +61,7 @@ namespace Core.HomeCalculations
             }
         }
 
+        //Count all the spaces that contains vehicle
         public int CountAllTakenSpaces()
         {
             int fullSpots = CountFullSpaces();

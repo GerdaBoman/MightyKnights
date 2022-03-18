@@ -4,6 +4,7 @@ namespace Core.HistoryMethods
 {
     public class DataBetweenDates
     {
+        //Counts how many vehicles has been parked between start and end date
         public int AmoutVehicles(DateTime fromDate, DateTime toDate)
         {
             TimeSpan range = toDate - fromDate;
@@ -21,6 +22,8 @@ namespace Core.HistoryMethods
             }
 
         }
+
+        //Counts the total of the vehicles that been parked between two dates
         public decimal? TotalEarned(DateTime fromDate, DateTime toDate)
         {
             using (var db = new MightyKnightsContext())

@@ -1,10 +1,10 @@
 ﻿using DataAccess.Data;
-using System.Text;
 
 namespace Core
 {
     public class CheckDbForData
     {
+        //Checks if there is any data in the DB
         public static bool DataExist()
         {
             using (var db = new MightyKnightsContext())
@@ -16,6 +16,8 @@ namespace Core
                 return true;
             }
         }
+
+        //Checks if that vehicle already exist in the DB
 
         public bool CheckIfVehicleExist(string licancePlate)
         {
@@ -32,6 +34,7 @@ namespace Core
             }
         }
 
+        //Check is the parking spot is full
         public bool CheckIfSpotFull(int parkingSpot)
         {
             using (var db = new MightyKnightsContext())
@@ -49,6 +52,8 @@ namespace Core
             }
 
         }
+
+        //Checks if the parking spot is partially full
         public bool CheckIfSpotPartialFull(int parkingSpot)
         {
             using (var db = new MightyKnightsContext())
@@ -66,6 +71,8 @@ namespace Core
             }
 
         }
+
+        //Prints the parkings lot status
 
         public string GetParkingSpotStatus(int selectedSpot)
         {
@@ -90,15 +97,15 @@ namespace Core
 
                     for (int i = 0; i < spotCheck.Count; i++)
                     {
-                        status = $"{i + 1}:\nLicence Plate: " + spotCheck[i].LicencePlate + "\nParking Spot: " +
+                        status = $"{i + 1}:\nLicense Plate: " + spotCheck[i].LicencePlate + "\nParking Spot: " +
                             spotCheck[i].ParkingSpot + "\nVehicle Type: " + spotCheck[i].VehicleType + "\nCheck In Date: " +
                             spotCheck[i].CheckInDate;
 
                         statusList.Add(status);
 
-                        
+
                     }
-                   
+
                     string results = string.Join(Environment.NewLine, statusList);
 
                     return results;
@@ -111,6 +118,7 @@ namespace Core
             }
         }
 
+        //Get what kind of vehicles type the vehicle is from license plate number
         public string GetVehicleType(string regNumber)
         {
             using (var db = new MightyKnightsContext())
@@ -127,6 +135,7 @@ namespace Core
             }
         }
 
+        //Find the parking spot of a vehicle
         public int GetParkingSpot(string regNumber)
         {
             using (var db = new MightyKnightsContext())
@@ -144,6 +153,7 @@ namespace Core
             }
         }
 
+        //Get the date and time the vehicle was checked in
         public DateTime? GetArrivalTime(string regNumber)
         {
             using (var db = new MightyKnightsContext())

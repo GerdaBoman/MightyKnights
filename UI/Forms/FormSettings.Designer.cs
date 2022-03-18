@@ -171,13 +171,13 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(764, 524);
+            this.label1.Location = new System.Drawing.Point(754, 528);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(574, 152);
+            this.label1.Size = new System.Drawing.Size(574, 127);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Things to think about:\r\n\r\n- If you are decreasing parking lot capacity:          " +
-    "            \r\n Make sure no vehicles are parked in those spaces that will be rem" +
-    "oved\r\nto make sure no loss of data!\r\n ";
+            this.label1.Text = "Things to think about:\r\n- If you are decreasing parking lot capacity:            " +
+    "          \r\n Make sure no vehicles are parked in those spaces that will be remov" +
+    "ed\r\nto make sure no loss of data!\r\n ";
             // 
             // FormSettings
             // 

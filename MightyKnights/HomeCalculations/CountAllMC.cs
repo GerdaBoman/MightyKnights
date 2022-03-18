@@ -4,6 +4,7 @@ namespace Core.HomeCalculations
 {
     public class CountAllMC
     {
+        //Counts how many MC are parked in the parking lot
         public int CountMc()
         {
             using (var db = new MightyKnightsContext())

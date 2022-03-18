@@ -1,33 +1,35 @@
 ﻿using DataAccess.Data;
 using DataAccess.Models;
 
-namespace Core;
+namespace Core.Vehicles;
 
-public class Mc : Vehicle
+public class Car : Vehicle
 {
     Config setting = new Config();
-    //public  MC()
+    //public Car()
     //{
     //    setting = Config.ReadSettingsFromFile();
-    //    base.Size = setting.McSize;
+    //    base.Size = setting.CarSize;
     //}
 
-    public void AddMc(string licensePlate)
+    public void AddCar(string licensePlate)
     {
         using (var context = new MightyKnightsContext())
         {
-            var mc = new Mc()
+            var car = new Car()
             {
                 RegNumber = licensePlate,
-                VehicleType = "MC",
-                Size = 2
+                VehicleType = "Car",
+                Size = 4
             };
-            context.Vehicles.Add(mc);
+            context.Vehicles.Add(car);
             context.SaveChanges();
         }
     }
 
-    //public void ParkMc(int parkingSpot, string licensePlate)
+
+
+    //public void ParkCar(int parkingSpot, string licensePlate)
     //{
     //    using (var context = new MightyKnightsContext())
     //    {
@@ -35,13 +37,13 @@ public class Mc : Vehicle
     //                         where v.LicensePlate == licensePlate
     //                         select v.VehicleId).FirstOrDefault();
 
-    //        ParkingLot parkingMc = new ParkingLot();
+    //        ParkingLot parkingCar = new ();
 
-    //        parkingMc.ParkingSpot = parkingSpot;
-    //        parkingMc.VehicleId = vehicleId;
-    //        parkingMc.CheckInDate = DateTime.Now;
+    //        parkingCar.ParkingSpot = parkingSpot;
+    //        parkingCar.VehicleId = vehicleId;
+    //        parkingCar.CheckInDate = DateTime.Now;
 
-    //        context.ParkingLots.Add(parkingMc);
+    //        context.ParkingLots.Add(parkingCar);
     //        context.SaveChanges();
     //    }
     //}

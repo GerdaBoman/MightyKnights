@@ -4,8 +4,12 @@ namespace Core.UpdateData
 {
     public class UpdateVehicleType
     {
+        Config config = new();
+        // Change the vehicle type of the vehicle and give new sizes value to it
         public void EditVehicleType(string regNumber, string newVehicleType)
         {
+            config.ReadFromJson();
+
             using (var db = new MightyKnightsContext())
             {
                 var vehicle = from v in db.Vehicles
@@ -18,11 +22,11 @@ namespace Core.UpdateData
 
                     if (newVehicleType == "Car")
                     {
-                        edit.Size = 4;
+                        edit.Size = config.CarSize;
                     }
                     else if (newVehicleType == "MC")
                     {
-                        edit.Size = 2;
+                        edit.Size = config.McSize;
                     }
 
                 }

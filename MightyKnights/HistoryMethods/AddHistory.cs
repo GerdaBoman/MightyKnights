@@ -6,7 +6,9 @@ namespace Core.HistoryMethods
 {
     public class AddHistory
     {
-        ParkingFeeCalculations parkingFeeCalculations = new ParkingFeeCalculations();
+        ParkingFeeCalculations parkingFeeCalculations = new();
+
+        //Adds all the information of the vehicle to the history table
         public void AddToLogg(string regNumber)
         {
             using (var db = new MightyKnightsContext())
@@ -24,7 +26,7 @@ namespace Core.HistoryMethods
                 string toDecimal = cost.ToString();
                 decimal roundedAmount = Math.Round(decimal.Parse(toDecimal), 2);
 
-                History history = new History();
+                History history = new();
 
                 history.LicencePlate = vehicleInfo[0].RegNumber;
                 history.ParkingSpot = vehicleParkingLotInfo[0].SpotNumber;

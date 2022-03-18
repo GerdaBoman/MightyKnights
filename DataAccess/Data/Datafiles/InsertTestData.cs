@@ -4,10 +4,11 @@ namespace DataAccess.Data.Datafiles
 {
     public class InsertTestData
     {
+        //Test data to be able to test the program
         public void TestData()
         {
             using var db = new MightyKnightsContext();
-           
+
             db.Vehicles.Add(new Vehicle { RegNumber = "abc123", VehicleType = "Car", Size = 4 });
             db.Vehicles.Add(new Vehicle { RegNumber = "bdl2010", VehicleType = "MC", Size = 2 });
             db.Vehicles.Add(new Vehicle { RegNumber = "4tdr9873", VehicleType = "Car", Size = 4 });

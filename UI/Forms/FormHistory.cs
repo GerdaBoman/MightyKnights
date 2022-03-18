@@ -7,7 +7,7 @@ namespace UI.Forms
     {
         ListViewRefresh refresh = new();
         RemoveHistory remove = new();
-        DataBetweenDates data = new DataBetweenDates();
+        DataBetweenDates data = new();
         public FormHistory()
         {
             InitializeComponent();
@@ -24,6 +24,7 @@ namespace UI.Forms
             refresh.RefreshHistoryViewer(historyViewer);
         }
 
+        //Deletes everything from the history table
         private void DeteleButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete the whole history log?", "Warning:", MessageBoxButtons.YesNo);
@@ -40,6 +41,7 @@ namespace UI.Forms
             }
         }
 
+        //Select start and end date time to see statistics of how many vehicles there parked and how much was the total income
         private void selectButton_Click(object sender, EventArgs e)
         {
             string startDate = FromDatePicker.Value.ToShortDateString();
@@ -49,8 +51,8 @@ namespace UI.Forms
 
 
 
-            DateTime fromDate = Convert.ToDateTime(startDate+" " +fromTime);
-            DateTime toDate = Convert.ToDateTime(endDate+" " +toTime);
+            DateTime fromDate = Convert.ToDateTime(startDate + " " + fromTime);
+            DateTime toDate = Convert.ToDateTime(endDate + " " + toTime);
 
 
             if (toDate < fromDate)

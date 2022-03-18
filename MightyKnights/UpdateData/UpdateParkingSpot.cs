@@ -4,6 +4,7 @@ namespace Core.UpdateData
 {
     public class UpdateParkingSpot
     {
+        //Change the parking spot of parked vehicle
         public void ChangeParkingSpot(string regNumber, int newParkingSpot)
         {
             using (var db = new MightyKnightsContext())

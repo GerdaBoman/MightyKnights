@@ -4,6 +4,7 @@ namespace UI.ParkingSpotCosmetic
 {
     public class ParkingSpotColor
     {
+        //Changes the color of the "parking spot" button according if its full or partially empty
         public void SpotsStatus(int parkingSpot, Button buttonStatus)
         {
 

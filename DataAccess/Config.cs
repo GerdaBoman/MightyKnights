@@ -8,7 +8,7 @@ using System.Dynamic;
 /// </summary>
 public class Config
 {
-    //make static :)
+
     public int CarSize { get; set; }
     public int McSize { get; set; }
     public int CarPriceHour { get; set; }
@@ -20,6 +20,8 @@ public class Config
 
     string appSettingsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "appSettings.json");
 
+
+    //Reads the json file and gives values to  prop
     public void ReadFromJson()
     {
         var config = new ConfigurationBuilder()
@@ -33,6 +35,8 @@ public class Config
         ParkingSpotSize = values.ParkingSpotSize;
         ParkingLotSize = values.ParkingLotSize;
     }
+
+    //Updates the json file with new values
     public void UpdateJson(string carPrice, string mcPrice, string parkingSize)
     {
         var json = File.ReadAllText(appSettingsPath);

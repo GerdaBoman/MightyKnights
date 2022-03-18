@@ -4,6 +4,9 @@ namespace Core
 {
     public class ParkingFeeCalculations
     {
+
+        Config config = new();
+        //Calculates the total time that vehicle has been parked for
         public TimeSpan TotalTimeParked(string regNumber)
         {
             DateTime checkOutDay = DateTime.Now;
@@ -24,8 +27,11 @@ namespace Core
             }
         }
 
+        //Calculates how much did the parking cost depending on vehicle type
         public double? TotalAmountToPay(string regNumber)
         {
+            config.ReadFromJson();
+
             double? totalAmount;
             TimeSpan time = TotalTimeParked(regNumber);
             using (var db = new MightyKnightsContext())
@@ -37,11 +43,11 @@ namespace Core
 
                 if (vehicle == "Car")
                 {
-                    return totalAmount = time.TotalHours * 25;
+                    return totalAmount = time.TotalHours * config.CarPriceHour;
                 }
                 else if (vehicle == "MC")
                 {
-                    return totalAmount = time.TotalHours * 10;
+                    return totalAmount = time.TotalHours * config.McPriceHour;
                 }
                 else
                     return totalAmount = null;

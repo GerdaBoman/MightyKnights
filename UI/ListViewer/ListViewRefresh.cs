@@ -4,7 +4,7 @@ namespace UI.ListViewer
 {
     public class ListViewRefresh
     {
-       
+        //Refresh list view in the parking lot to show the most updated information
         public void RefreshParkingLotViewer(ListView listViewer)
         {
 
@@ -23,7 +23,7 @@ namespace UI.ListViewer
 
                 foreach (var parkedVehicle in parkingLotList)
                 {
-                    ListViewItem item = new ListViewItem(parkedVehicle.ParkingSpot.ToString());
+                    ListViewItem item = new(parkedVehicle.ParkingSpot.ToString());
                     item.SubItems.Add(parkedVehicle.LicencePlate.ToString());
                     item.SubItems.Add(parkedVehicle.CheckInDate.ToString());
 
@@ -33,6 +33,7 @@ namespace UI.ListViewer
             }
         }
 
+        //Refreshes list view that shows search results
         public void RefreshSearchViewer(ListView listViewer, string regNumber)
         {
 
@@ -52,7 +53,7 @@ namespace UI.ListViewer
 
                 foreach (var parkedVehicle in searchResult)
                 {
-                    ListViewItem item = new ListViewItem(parkedVehicle.LicancePlate.ToString());
+                    ListViewItem item = new(parkedVehicle.LicancePlate.ToString());
                     item.SubItems.Add(parkedVehicle.VehicleType.ToString());
                     item.SubItems.Add(parkedVehicle.ParkingSpot.ToString());
                     item.SubItems.Add(parkedVehicle.CheckInDate.ToString());
@@ -63,6 +64,8 @@ namespace UI.ListViewer
 
             }
         }
+
+        //REfresh list view in the vehicle management form that shows all parked cars
         public void RefreshManegmentViewer(ListView listViewer)
         {
 
@@ -81,7 +84,7 @@ namespace UI.ListViewer
 
                 foreach (var parkedVehicles in allVehicles)
                 {
-                    ListViewItem item = new ListViewItem(parkedVehicles.LicancePlate.ToString());
+                    ListViewItem item = new(parkedVehicles.LicancePlate.ToString());
                     item.SubItems.Add(parkedVehicles.VehicleType.ToString());
                     item.SubItems.Add(parkedVehicles.ParkingSpot.ToString());
                     item.SubItems.Add(parkedVehicles.CheckInDate.ToString());
@@ -92,6 +95,8 @@ namespace UI.ListViewer
 
             }
         }
+
+        //Refreshes list view in the history from to show all the previous parked vehicles
         public void RefreshHistoryViewer(ListView listViewer)
         {
             using (var db = new MightyKnightsContext())
@@ -103,7 +108,7 @@ namespace UI.ListViewer
 
                 foreach (var history in logg)
                 {
-                    ListViewItem item = new ListViewItem(history.LicencePlate.ToString());
+                    ListViewItem item = new(history.LicencePlate.ToString());
                     item.SubItems.Add(history.ParkingSpot.ToString());
                     item.SubItems.Add(history.ArrivalDate.ToString());
                     item.SubItems.Add(history.DepartureDate.ToString());
@@ -114,6 +119,6 @@ namespace UI.ListViewer
             }
         }
 
-        
+
     }
 }

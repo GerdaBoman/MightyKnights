@@ -36,7 +36,7 @@
             this.vehicleType = new System.Windows.Forms.ColumnHeader();
             this.ParkingSpot = new System.Windows.Forms.ColumnHeader();
             this.CheckInDate = new System.Windows.Forms.ColumnHeader();
-            this.label1 = new System.Windows.Forms.Label();
+            this.licensePlateLabel = new System.Windows.Forms.Label();
             this.parkingLotViewer = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -133,14 +133,14 @@
             this.CheckInDate.Text = "Check in Date";
             this.CheckInDate.Width = 300;
             // 
-            // label1
+            // licensePlateLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(133, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Licence Plate number:";
+            this.licensePlateLabel.AutoSize = true;
+            this.licensePlateLabel.Location = new System.Drawing.Point(133, 125);
+            this.licensePlateLabel.Name = "licensePlateLabel";
+            this.licensePlateLabel.Size = new System.Drawing.Size(123, 15);
+            this.licensePlateLabel.TabIndex = 4;
+            this.licensePlateLabel.Text = "License Plate number:";
             // 
             // parkingLotViewer
             // 
@@ -159,7 +159,7 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Licence Plate";
+            this.columnHeader1.Text = "License Plate";
             this.columnHeader1.Width = 100;
             // 
             // columnHeader2
@@ -184,9 +184,9 @@
             this.licencePlateLabel.ForeColor = System.Drawing.Color.Black;
             this.licencePlateLabel.Location = new System.Drawing.Point(101, 362);
             this.licencePlateLabel.Name = "licencePlateLabel";
-            this.licencePlateLabel.Size = new System.Drawing.Size(122, 15);
+            this.licencePlateLabel.Size = new System.Drawing.Size(121, 15);
             this.licencePlateLabel.TabIndex = 7;
-            this.licencePlateLabel.Text = "Current Licence Plate:";
+            this.licencePlateLabel.Text = "Current License Plate:";
             // 
             // VehicleTypeLabel
             // 
@@ -259,7 +259,7 @@
             this.UpdateLicencePlate.TabIndex = 19;
             this.UpdateLicencePlate.Text = "Update Licence Plate";
             this.UpdateLicencePlate.UseVisualStyleBackColor = true;
-            this.UpdateLicencePlate.Click += new System.EventHandler(this.UpdateLicencePlate_Click);
+            this.UpdateLicencePlate.Click += new System.EventHandler(this.UpdateLicensePlate_Click);
             // 
             // UpdateVehicleType
             // 
@@ -362,9 +362,9 @@
             this.newLicancePlateLabel.AutoSize = true;
             this.newLicancePlateLabel.Location = new System.Drawing.Point(360, 363);
             this.newLicancePlateLabel.Name = "newLicancePlateLabel";
-            this.newLicancePlateLabel.Size = new System.Drawing.Size(109, 15);
+            this.newLicancePlateLabel.Size = new System.Drawing.Size(108, 15);
             this.newLicancePlateLabel.TabIndex = 29;
-            this.newLicancePlateLabel.Text = "New  Licence Plate:";
+            this.newLicancePlateLabel.Text = "New  License Plate:";
             // 
             // NewVehicleTypeLabel
             // 
@@ -401,9 +401,9 @@
             this.label3.ForeColor = System.Drawing.Color.Firebrick;
             this.label3.Location = new System.Drawing.Point(203, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(558, 75);
+            this.label3.Size = new System.Drawing.Size(557, 75);
             this.label3.TabIndex = 33;
-            this.label3.Text = "Search the licence plate number to be able to edit vehicle entry!\r\nVehicles infor" +
+            this.label3.Text = "Search the license plate number to be able to edit vehicle entry!\r\nVehicles infor" +
     "mation will be filled in automaticly.\r\n\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -460,7 +460,7 @@
             this.Controls.Add(this.VehicleTypeLabel);
             this.Controls.Add(this.licencePlateLabel);
             this.Controls.Add(this.parkingLotViewer);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.licensePlateLabel);
             this.Controls.Add(this.searchResultsView);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.RegNummerTextBox);
@@ -483,7 +483,7 @@
         private ColumnHeader vehicleType;
         private ColumnHeader ParkingSpot;
         private ColumnHeader CheckInDate;
-        private Label label1;
+        private Label licensePlateLabel;
         private ListView parkingLotViewer;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;

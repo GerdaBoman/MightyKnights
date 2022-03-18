@@ -1,11 +1,11 @@
 ﻿using DataAccess.Data;
 using DataAccess.Models;
 
-namespace Core
+namespace Core.Vehicles
 {
     public class Bus : Vehicle
     {
-        Config setting = new Config();
+        Config setting = new();
 
         public void AddBus(string licensePlate)
         {

@@ -8,11 +8,11 @@ namespace UI
 {
     public partial class Form1 : Form
     {
-        private static int count;
+
         private IconButton currentButton;
         private Panel leftBorderButton;
         private System.Windows.Forms.Form currentChildForm;
-        public Config config = new Config();
+        public Config config = new();
 
         public Form1()
         {
@@ -22,15 +22,16 @@ namespace UI
             MightyKnightsContext db = new();
             db.Database.EnsureCreated();
 
+            //start form with home panel open
 
-
-            leftBorderButton = new Panel();
-            leftBorderButton.Size = new Size(7, 60);
+            leftBorderButton = new();
+            leftBorderButton.Size = new(7, 60);
             MenuPanel.Controls.Add(leftBorderButton);
             OpenChildForm(new FormHome());
             timer.Start();
         }
 
+        //All menu buttons 
         #region Buttons
         private void logoButton_Click(object sender, EventArgs e)
         {
@@ -78,6 +79,7 @@ namespace UI
 
         #endregion
 
+        //Opens child form if it not open and closes previous one if it is not the same
         private void OpenChildForm(Form childForm)
         {
             if (currentChildForm != null)
@@ -95,6 +97,7 @@ namespace UI
             currentChildFormLabel.Text = childForm.Text;
         }
 
+        //Methods to give buttons highlighted effect upon click 
         #region Button Highlights
 
         private void HighlightButton(object selectedButton, Color colour)
@@ -140,11 +143,14 @@ namespace UI
 
         #endregion
 
-        private void timer1_Tick(object sender, EventArgs e)
+
+        //Timer for clock on status strip
+        private void Timer_Tick(object sender, EventArgs e)
         {
             ClockStatusStrip.Text = DateTime.Now.ToString("T");
         }
 
+        //Make logo as a button that returns to home form
         private void LogoPicture_Click(object sender, EventArgs e)
         {
             currentChildForm.Close();

@@ -75,7 +75,7 @@
             // 
             // licancePlate
             // 
-            this.licancePlate.Text = "Licence Plate";
+            this.licancePlate.Text = "License Plate";
             this.licancePlate.Width = 100;
             // 
             // checkInDate
@@ -134,9 +134,9 @@
             this.registrationPlate.AutoSize = true;
             this.registrationPlate.Location = new System.Drawing.Point(850, 56);
             this.registrationPlate.Name = "registrationPlate";
-            this.registrationPlate.Size = new System.Drawing.Size(120, 15);
+            this.registrationPlate.Size = new System.Drawing.Size(81, 15);
             this.registrationPlate.TabIndex = 16;
-            this.registrationPlate.Text = "Registration Number:";
+            this.registrationPlate.Text = "License PLate:";
             // 
             // parkingLotBindingSource
             // 
@@ -206,9 +206,9 @@
             this.regNumberLabel2.AutoSize = true;
             this.regNumberLabel2.Location = new System.Drawing.Point(850, 541);
             this.regNumberLabel2.Name = "regNumberLabel2";
-            this.regNumberLabel2.Size = new System.Drawing.Size(79, 15);
+            this.regNumberLabel2.Size = new System.Drawing.Size(78, 15);
             this.regNumberLabel2.TabIndex = 23;
-            this.regNumberLabel2.Text = "Licence Plate:";
+            this.regNumberLabel2.Text = "License Plate:";
             // 
             // checkOutTextBox
             // 
@@ -243,9 +243,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(850, 512);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 15);
+            this.label1.Size = new System.Drawing.Size(153, 15);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Enter Licence Plate number:";
+            this.label1.Text = "Enter License Plate number:";
             // 
             // searchButton
             // 
