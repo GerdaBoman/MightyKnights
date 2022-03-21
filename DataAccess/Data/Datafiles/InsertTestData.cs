@@ -9,27 +9,27 @@ namespace DataAccess.Data.Datafiles
         {
             using var db = new MightyKnightsContext();
 
-            db.Vehicles.Add(new Vehicle { RegNumber = "abc123", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "bdl2010", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "4tdr9873", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "7amf124", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "poppy123", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "sofie103", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "jonas002", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "cleas101", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "jonathan", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "samar124", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "patrik65", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "helen34", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "gerda104", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "samuel23", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "victor126", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "bob332", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "el32lie", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "anders643", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "yolo123", VehicleType = "MC", Size = 2 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "boo126", VehicleType = "Car", Size = 4 });
-            db.Vehicles.Add(new Vehicle { RegNumber = "cofi356", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "ABC123", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "BDL2010", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "4TDR9873", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "7AMF124", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "POPPY123", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "SOFIE103", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "JONAS002", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "CLAES101", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "JONATHAN", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "SAMAR124", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "PATRIK65", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "HELEN34", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "GERDA104", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "SAMUEL23", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "VICTOR126", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "BOB332", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "EL32LIE", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "ANDERS643", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "YOLO123", VehicleType = "MC", Size = 2 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "BOO126", VehicleType = "Car", Size = 4 });
+            db.Vehicles.Add(new Vehicle { RegNumber = "COFI356", VehicleType = "MC", Size = 2 });
 
             db.SaveChanges();
 
@@ -58,12 +58,12 @@ namespace DataAccess.Data.Datafiles
 
             db.SaveChanges();
 
-            db.Histories.Add(new History { LicencePlate = "gresw123", ParkingSpot = 23, ArrivalDate = DateTime.Parse("2022/02/12 12:43:31"), DepartureDate = DateTime.Parse("2022/03/11 14:23:22"), TotalCost = 25353.23m });
-            db.Histories.Add(new History { LicencePlate = "233fsfg", ParkingSpot = 12, ArrivalDate = DateTime.Parse("2022/03/15 13:41:15"), DepartureDate = DateTime.Parse("2022/03/15 12:43:12"), TotalCost = 42.54m });
-            db.Histories.Add(new History { LicencePlate = "george123", ParkingSpot = 43, ArrivalDate = DateTime.Parse("2022/03/15 15:33:31"), DepartureDate = DateTime.Parse("2022/03/15 18:23:22"), TotalCost = 80.43m });
-            db.Histories.Add(new History { LicencePlate = "xde234", ParkingSpot = 16, ArrivalDate = DateTime.Parse("2022/03/12 13:13:31"), DepartureDate = DateTime.Parse("2022/03/13 08:23:12"), TotalCost = 1780.32m });
-            db.Histories.Add(new History { LicencePlate = "123dwe", ParkingSpot = 75, ArrivalDate = DateTime.Parse("2022/03/14 12:54:12"), DepartureDate = DateTime.Parse("2022/03/14 14:23:22"), TotalCost = 32.54m });
-            db.Histories.Add(new History { LicencePlate = "53fdex", ParkingSpot = 31, ArrivalDate = DateTime.Parse("2022/03/11 09:15:42"), DepartureDate = DateTime.Parse("2022/03/11 11:22:23"), TotalCost = 35.43m });
+            db.Histories.Add(new History { LicencePlate = "GREWS123", ParkingSpot = 23, ArrivalDate = DateTime.Parse("2022/02/12 12:43:31"), DepartureDate = DateTime.Parse("2022/03/11 14:23:22"), TotalCost = 25353.23m });
+            db.Histories.Add(new History { LicencePlate = "233FSFG", ParkingSpot = 12, ArrivalDate = DateTime.Parse("2022/03/15 13:41:15"), DepartureDate = DateTime.Parse("2022/03/15 12:43:12"), TotalCost = 42.54m });
+            db.Histories.Add(new History { LicencePlate = "GEORGE123", ParkingSpot = 43, ArrivalDate = DateTime.Parse("2022/03/15 15:33:31"), DepartureDate = DateTime.Parse("2022/03/15 18:23:22"), TotalCost = 80.43m });
+            db.Histories.Add(new History { LicencePlate = "XDE234", ParkingSpot = 16, ArrivalDate = DateTime.Parse("2022/03/12 13:13:31"), DepartureDate = DateTime.Parse("2022/03/13 08:23:12"), TotalCost = 1780.32m });
+            db.Histories.Add(new History { LicencePlate = "123DWE", ParkingSpot = 75, ArrivalDate = DateTime.Parse("2022/03/14 12:54:12"), DepartureDate = DateTime.Parse("2022/03/14 14:23:22"), TotalCost = 32.54m });
+            db.Histories.Add(new History { LicencePlate = "53FDEX", ParkingSpot = 31, ArrivalDate = DateTime.Parse("2022/03/11 09:15:42"), DepartureDate = DateTime.Parse("2022/03/11 11:22:23"), TotalCost = 35.43m });
 
             db.SaveChanges();
         }
